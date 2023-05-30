@@ -1,11 +1,370 @@
-*{
-    color: red
+@function em($target, $context: $base__font-size) {
+    @return calc($target / $context) * 1em;
 }
 
-p{
-    font-family: sans-serif;
+@mixin laptop {
+    @media screen and (max-width: 1260px) {
+        @content;
+    }
 }
 
+@mixin DontKnow {
+    @media screen and (max-width: 1092px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 995px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+$base__font-size: 16px;
+
+* {
+    box-sizing: border-box;
+}
+
+html,
 body{
-    background-color: black;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    letter-spacing: .4px
 }
+
+.container{
+    min-height: 100%;
+    position: relative;
+}
+
+button{
+    border: none;
+}
+//======================================================
+//Header CSS/SASS:
+//======================================================
+
+header{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+.Header-Row,
+.actions,
+.Head-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plane{
+    margin-left: em(15px);
+}
+
+.mouse,
+.plane{
+    padding: em(20px) em(15px);
+    letter-spacing: em(3px);
+    border-radius: em(3px);
+}
+
+.contact,
+.Search{
+    padding-right: em(15px)
+}
+
+.mouse{
+    background-color: #4183d7;
+    color: white;
+}
+
+.plane,
+.glass{
+    background-color: #999AA2;
+}
+
+.hamburger{
+    background-color: #333645;
+    color: white;
+    padding: em(15px) em(15px);
+    border-radius: 0.2rem;
+    font-size: em(19px)
+}
+
+#logo{
+    padding-right: em(30px);
+    margin-right: em(30px)
+}
+
+.actions{
+    padding: 0 em(7px);
+}
+
+.Header-Row{
+    padding: em(20px) 0;
+}
+
+#glass_btn{
+    padding: 0 0;
+    font-size: em(20px);
+}
+
+.glass{
+    color: white;
+    padding: em(14px) em(15px); 
+    border-radius: em(3px);
+}
+
+#search_input{
+    padding: em(21px) em(15px);
+    width: em(275px);
+
+    @include laptop{
+        display: none;
+    }
+    
+    @include tablet{
+        display: unset;
+        //width: em(50px)
+    }
+}
+
+.contact{
+    @include tablet{
+        display: none;
+    }
+}
+
+//======================================================
+//FOOTER CSS/SASS:
+//======================================================
+
+footer{
+    background-color: #323544;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer h4{
+    color: white;
+}
+
+.Below-Footer{
+    background-color:#212330; 
+    padding: em(10px) 0;
+}
+
+.Below-Footer p{
+    color: white;
+}
+
+.social-media{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    position: relative;
+    padding: em(16px) em(22px);
+    margin: auto;
+
+    @include laptop{
+        padding: em(16px) 0 0 0;
+        margin: em(5px);
+        left: em(105px)
+    }
+
+    @include DontKnow{
+        left: em(81px);
+    }
+
+    @include tablet{
+        grid-area: Social;
+    }
+}
+
+.Netmatters-Info, 
+.footer-content{
+    display: inline-flex;
+    flex-grow: 1;
+
+    @include laptop{
+        position: relative;
+        flex-wrap: wrap;
+        padding: 0 em(50px)
+    }
+
+    @include DontKnow{
+        padding: 0 em(26px);
+    }
+
+    @include tablet{
+        display: grid;
+        grid-template-areas:
+            "Social Social"
+            "About Services"
+            "Industries Locations";
+    }
+}
+
+.footer-content a{
+    font-size: em(13px)
+}
+
+footer, 
+.Netmatters-Info,
+.footer-content,
+a{
+    text-align: center;
+    
+}
+
+.About-Netmatters{
+    @include tablet{
+        grid-area: About;
+    }
+}
+
+.Our-Services{
+    @include tablet{
+        grid-area: Services;
+    }
+}
+
+.Our-Industries{
+    @include tablet{
+        grid-area: Industries;
+    }
+}
+
+.Locations{
+    @include tablet{
+        grid-area: Locations;
+    }
+}
+
+.About-Netmatters,
+.Our-Services,
+.Our-Industries,
+.Locations{
+    text-align: left;
+    line-height:26px;
+    padding: em(12px) em(22px) em(16px);
+    margin: em(16px) 0;
+    margin-right:7px
+}
+
+.facebook, 
+.linkedin, 
+.twitter,
+.instagram{
+    background: transparent;
+    background-color: #212330;
+    padding: em(12px) em(22px) em(16px);
+}
+
+ol,
+ul{
+    list-style: none
+}
+
+//Links CSS
+
+a:link, a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:hover .facebook {
+    background-color:#3b5998
+}
+a:hover .twitter {
+    background-color:#00aced
+}
+a:hover .instagram {
+    background-color:#d93175
+}
+a:hover .linkedin {
+    background-color:#0077b5
+}
+
+.Netmatters-Info a:active{
+    color: black;
+}
+
+
+
+
+
+
+
+/*
+.social-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.social-media ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}*/

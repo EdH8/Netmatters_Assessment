@@ -1,11 +1,334 @@
 * {
-  color: red;
+  box-sizing: border-box;
 }
 
-p {
-  font-family: sans-serif;
-}
-
+html,
 body {
-  background-color: black;
-}/*# sourceMappingURL=Style.css.map */
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  letter-spacing: 0.4px;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+}
+
+button {
+  border: none;
+}
+
+header {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.Header-Row,
+.actions,
+.Head-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plane {
+  margin-left: 0.9375em;
+}
+
+.mouse,
+.plane {
+  padding: 1.25em 0.9375em;
+  letter-spacing: 0.1875em;
+  border-radius: 0.1875em;
+}
+
+.contact,
+.Search {
+  padding-right: 0.9375em;
+}
+
+.mouse {
+  background-color: #4183d7;
+  color: white;
+}
+
+.plane,
+.glass {
+  background-color: #999AA2;
+}
+
+.hamburger {
+  background-color: #333645;
+  color: white;
+  padding: 0.9375em 0.9375em;
+  border-radius: 0.2rem;
+  font-size: 1.1875em;
+}
+
+#logo {
+  padding-right: 1.875em;
+  margin-right: 1.875em;
+}
+
+.actions {
+  padding: 0 0.4375em;
+}
+
+.Header-Row {
+  padding: 1.25em 0;
+}
+
+#glass_btn {
+  padding: 0 0;
+  font-size: 1.25em;
+}
+
+.glass {
+  color: white;
+  padding: 0.875em 0.9375em;
+  border-radius: 0.1875em;
+}
+
+#search_input {
+  padding: 1.3125em 0.9375em;
+  width: 17.1875em;
+}
+@media screen and (max-width: 1260px) {
+  #search_input {
+    display: none;
+  }
+}
+@media screen and (max-width: 995px) {
+  #search_input {
+    display: unset;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .contact {
+    display: none;
+  }
+}
+
+footer {
+  background-color: #323544;
+  position: fixed;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer h4 {
+  color: white;
+}
+
+.Below-Footer {
+  background-color: #212330;
+  padding: 0.625em 0;
+}
+
+.Below-Footer p {
+  color: white;
+}
+
+.social-media {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+  position: relative;
+  padding: 1em 1.375em;
+  margin: auto;
+}
+@media screen and (max-width: 1260px) {
+  .social-media {
+    padding: 1em 0 0 0;
+    margin: 0.3125em;
+    left: 6.5625em;
+  }
+}
+@media screen and (max-width: 1092px) {
+  .social-media {
+    left: 5.0625em;
+  }
+}
+@media screen and (max-width: 995px) {
+  .social-media {
+    grid-area: Social;
+  }
+}
+
+.Netmatters-Info,
+.footer-content {
+  display: inline-flex;
+  flex-grow: 1;
+}
+@media screen and (max-width: 1260px) {
+  .Netmatters-Info,
+  .footer-content {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0 3.125em;
+  }
+}
+@media screen and (max-width: 1092px) {
+  .Netmatters-Info,
+  .footer-content {
+    padding: 0 1.625em;
+  }
+}
+@media screen and (max-width: 995px) {
+  .Netmatters-Info,
+  .footer-content {
+    display: grid;
+    grid-template-areas: "Social Social" "About Services" "Industries Locations";
+  }
+}
+
+.footer-content a {
+  font-size: 0.8125em;
+}
+
+footer,
+.Netmatters-Info,
+.footer-content,
+a {
+  text-align: center;
+}
+
+@media screen and (max-width: 995px) {
+  .About-Netmatters {
+    grid-area: About;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .Our-Services {
+    grid-area: Services;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .Our-Industries {
+    grid-area: Industries;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .Locations {
+    grid-area: Locations;
+  }
+}
+
+.About-Netmatters,
+.Our-Services,
+.Our-Industries,
+.Locations {
+  text-align: left;
+  line-height: 26px;
+  padding: 0.75em 1.375em 1em;
+  margin: 1em 0;
+  margin-right: 7px;
+}
+
+.facebook,
+.linkedin,
+.twitter,
+.instagram {
+  background: transparent;
+  background-color: #212330;
+  padding: 0.75em 1.375em 1em;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:hover .facebook {
+  background-color: #3b5998;
+}
+
+a:hover .twitter {
+  background-color: #00aced;
+}
+
+a:hover .instagram {
+  background-color: #d93175;
+}
+
+a:hover .linkedin {
+  background-color: #0077b5;
+}
+
+.Netmatters-Info a:active {
+  color: black;
+}
+
+/*
+.social-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.social-media ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}*//*# sourceMappingURL=Style.css.map */
