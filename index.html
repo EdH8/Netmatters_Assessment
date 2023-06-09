@@ -1,90 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<html>
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="Style.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<script src="https://kit.fontawesome.com/0748773ba3.js" crossorigin="anonymous"></script>
-<title>Pretty cool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script src="https://kit.fontawesome.com/0748773ba3.js" crossorigin="anonymous"></script>
+    <title>Pretty cool</title>
 </head>
-
-<div class="container">
 <body>
-
-<!--======================================-->
-<!--Header HTML-->
-<!--======================================-->
-
-<header>
-<div class="Header-Row">
-    <div class="Head-Logo">
-        <a href="#"><img id="logo" src="C:\Users\eddie\Documents\Course_Code\Netmatters_Page/Net_Logo.png"></a>
-    </div>
-<div class="actions">
-    <div class="contact">
-        <a href="#"><i id="mouse" class="mouse fa-solid fa-computer-mouse">Support</i></a>
-        <a href="#"><i id="plane" class="plane fa fa-paper-plane-o">Contact</i></a>
-    </div>
-    <div class="Search">
-        <input id="search_input" type="text" placeholder="Search..."><button id="glass_btn"><i class="glass fa-solid fa-magnifying-glass"></i></button>
-    </div>
-    <i class="hamburger fa-solid fa-bars"></i>
-</div>
-</div>
-</header>
-
+    <div id="container">
+        <div id="content-wrap">
+            <!--======================================-->
+            <!--Header HTML-->
+            <!--======================================-->
+            <header>
+                <div class="Header-Row">
+                    <div class="Head-Logo">
+                        <a href="#"><img id="logo" alt="Netmatters Logo Black" src="Net_Logo.png"></a>
+                    </div>
+                    <div class="actions">
+                        <div class="contact">
+                            <a href="#"><i id="mouse" class="mouse fa-solid fa-computer-mouse">Support</i></a>
+                            <a href="#"><i id="plane" class="plane fa fa-paper-plane-o">Contact</i></a>
+                        </div>
+                        <!--=============================================================================================-->
+                        <div class="Search">
+                            <input id="search_input" type="text" placeholder="Search...">
+                            <button id="glass_btn"><i class="glass fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <!--==================================================================================================-->
+                        <i id="telephone" class="telephone fa-sharp fa-solid fa-phone-volume fa-xl"></i>
+                        <i class="hamburger fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="header-mobile">
+                    <div class="mobile-search">
+                        <input id="input-hidden" type="text" placeholder="Search...">
+                        <span class="glass_size"><i class="mag_glass fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                </div>
+            </header>
 
 
 <!--======================================-->
 <!--Nav Bar HTML-->
 <!--======================================-->
-<!--
+<!-- 
 <nav>
-<ul role="menu">
-    <li>
-        <a href="#"><i class="fa fa-paper-plane-o"></i>afsfsaf</a>
-    </li>
-    <li>
-        <a href="#"></a>
-    </li>
+<div class="nav-row">
+<ul>
+    <div class="bespoke_software">  
+        <a href="#"><i class="fa-solid fa-laptop"></i><small>BESPOKE</small>SOFTWARE</a>
+        <div class="bespoke_dropdown">
+            <a href="#">sdg</a>
+            <a href="#">sdg</a>
+            <a href="#">sdg</a>
+        </div>
+    </div>
 
-    <li>
-        <a href="#"></a>
-    </li>
+    <div class="it_support"> 
+        <a href="#"><i class="fa-solid fa-desktop"></i><small>IT</small>SUPPORT</a>
+    </div>
 
-    <li>
-        <a href="#"></a>
-    </li>
+    <div class="digital_marketing"> 
+        <a href="#"><i class="fa-solid fa-chart-simple"></i><small>DIGITAL</small>MARKETING</a>
+    </div>
 
-    <li>
-        <a href="#"></a>
-    </li>
+    <div class="telecoms_services"> 
+        <a href="#"><i class="fa-sharp fa-solid fa-phone-volume"></i><small>TELECOMS</small>SERVICES</a>
+    </div>
 
-    <li>
-        <a href="#"></a>
-    </li>
+    <div class="web_design"> 
+        <a href="#"><i class="fa-solid fa-code"></i><small>WEB</small>DESIGN</a>
+    </div>
 
-    <li>
-        <a href="#"></a>
-    </li>
+    <div class="cyber_security"> 
+        <a href="#"><i class="fa-solid fa-shield-halved"></i><small>CYBER</small>SECURITY</a>
+    </div>
+
+    <div class="developer_course"> 
+        <a href="#"><i class="fa-sharp fa-solid fa-graduation-cap"></i><small>DEVELOPER</small>COURSE</a>
+    </div>
 </ul>
+</div>
+</nav> -->
 
 
-</nav>
--->
+
 <!--======================================-->
-<!--Something HTML-->
+<!--Background HTML-->
 <!--======================================-->
-<!--
-<img src-="C:\Users\eddie\Documents\Course_Code\Netmatters_Page/building.png">
--->
+
+<div class="background_img">
+    <div class="background_text">
+        <h1>The East Of England's Leading Technology Company</h1>
+        <p>Performance-driven digital and technology services <br> with complete transparency.</p>
+
+        <button id="choose_us">WHY CHOOSE US? <i class="arrow fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>
+
+
+
+
+<!--======================================-->
+<!--CARDS HTML-->
+<!--======================================-->
+
+<div class="wrapper">
+    <div class="text_card">
+        <h2 id="card_our_services"><strong>Our Services</strong></h2>
+
+        <h3 id="card_view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
+    </div>
+    <div class="card_container">
+        <div class="cards">
+            <div class="card_style" id="bespoke_card">
+                <a href="#">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>Bespoke Software</h2>
+                    <p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+
+            <div class="card_style" id="support_card">
+                <a href="#">
+                    <i class="fa-solid fa-desktop"></i>
+                    <h2>IT Support</h2>
+                    <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+
+            <div class="card_style" id="marketing_card">
+                <a href="#">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <h2>Digital Marketing</h2>
+                    <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+
+            <div class="card_style" id="telecoms_card">
+                <a href="#">
+                    <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                    <h2>Telecoms Services</h2>
+                    <p>Business telephony solutions include mobile & connectivity solutions.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+
+            <div class="card_style" id="web_card">
+                <a href="#">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>User-centric design for businesses looking to make a lasting impression.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+
+            <div class="card_style" id="security_card">
+                <a href="#">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Cyber Security</h2>
+                    <p>Prevention, testing, consultancy & breach management services.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+
+            <div class="card_style" id="training_card">
+                <a href="#">
+                    <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                    <h2>Developer Training</h2>
+                    <p>Web design & software training courses designed to secure a job in tech.</p>
+                </a>
+                <button>READ MORE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--======================================-->
+<!--Image Wheel HTML-->
+<!--======================================-->
+
+<div class="wrapper">
+    <div class="Wheel">
+        <img id="ppc" alt="Promt Payment Code" src="PPC.jpg">
+    </div>
+</div>
+
+
+
+
+<!--======================================-->
+<!--REVIEWS HTML-->
+<!--======================================-->
+<div class="reviews_style">
+    <div class="wrapper">
+
+        <div class="reviews_content">
+            <div class="welcome_net">
+                <h2><strong>Welcome To Netmatters</strong></h2>
+
+                <p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in <a href="#">London</a>, <a href="#">Cambridge, </a><a href="#">Wymondham</a>, and <a href="#">Great Yarmouth.</a></strong></p>
+
+                <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+
+                <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
+
+                <button>WHY CHOOSE US? <i class="arrow fa-solid fa-arrow-right"></i></button>
+
+                <button>OUR CULTURE <i class="arrow fa-solid fa-arrow-right"></i></button>
+
+            </div>
+
+            <div class="client_reviews">
+                <h2><strong>What Our Clients Think</strong></h2>
+
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+
+                <p class="ashcroft_review"><strong>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled - they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</strong></p>
+
+                <p id="HOK">Eleanor Bishop, Head of Marketing - <a href="#">Ashcroft Partnership LLP</a></p>
+
+                <button id="google_btn">GOOGLE REVIEWS <i class="arrow fa-solid fa-arrow-right"></i></button>
+                <button id="trustpilot_btn">TRUSTPILOT REVIEWS <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--======================================-->
+<!--LATEST NEWS HTML-->
+<!--======================================-->
+
+<div class="wrapper">
+    <div class="news_container">
+        <div class="news_top">
+            <h2><strong>Latest News</strong></h2>
+            <h3><a href="#">View All <i class="arrow fa-solid fa-arrow-right"></i></a></h3>
+        </div>
+        <div class="news_cards">
+            <div class="news_style" id="news_1">
+                <a href="#">
+                    <img class="news_img" alt="News Image" src="may_notable.png">
+                    <h3 id="may_notable">May 2023 Notables <span class="read_time">- 4 MINUTE READ</span></h3>
+                    <p>Each month, various departments recognise those employees who have excelled in their work and helped...</p>
+                </a>
+                <button>READ MORE</button>
+                <a href="#">
+                    <div class="posted_net">
+                        <img alt="Netmatters Small Logo" src="net_logo_small.png">
+                        <p><strong>Posted by Netmatters</strong> <br>7th June 2023</p>
+                    </div>
+                </a>
+            </div>
+            <div class="news_style" id="news_2">
+                <a href="#">
+                    <img class="news_img" alt="News Image" src="april_notable.png">
+                    <h3 id="april_notable">April Notables 2023 <span class="read_time">- 4 MINUTE READ</span></h3>
+                    <p>Each month, various departments recognise those employees who have excelled in their work and helped...</p>
+                </a>
+                <button>READ MORE</button>
+                <a href="#">
+                    <div class="posted_net">
+                        <img alt="Netmatters Small Logo" src="net_logo_small.png">
+                        <p><strong>Posted by Netmatters</strong> <br>7th June 2023</p>
+                    </div>
+                </a>
+            </div>
+            <div class="news_style" id="news_3">
+                <a href="#">
+                    <img class="news_img" alt="News Image" src="case_study.png">
+                    <h3 id="secure_connected">Staying Secure & Connected With Netmatters -... <span class="read_time">- 6 MINUTE READ</span></h3>
+                    <p>The Client Urban Mission Schools and Community (UMSC) is an independent school aiming to re-engage y...</p>
+                </a>
+                <button>READ MORE</button>
+                <a href="#">
+                    <div class="posted_net">
+                        <img alt="Netmatters Small Logo" src="net_logo_small.png">
+                        <p><strong>Posted by Netmatters</strong> <br>7th June 2023</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+<p>uigoigiugiugiughuiugiug</p>
+            
 <!--======================================-->
 <!--Main HTML-->
 <!--======================================-->
@@ -100,129 +348,74 @@
 
 
 <footer>
-<div class="footer-content"> 
-    <div class="social-media"> 
-    <img src="C:\Users\eddie\Documents\Course_Code\Netmatters_Page/Netmatters_Logo.png">
-    <h4>FOLLOW US ON:</h4>
-        <a href="#"><i class="facebook fa fa-facebook"></i></a>
-        <a href="#"><i class="linkedin fa fa-linkedin"></i></a>
-        <a href="#"><i class="twitter fa fa-twitter"></i></a>
-        <a href="#"><i class="instagram fa fa-instagram"></i></a>
-    </div>
-    <div class="Netmatters-Info">
-    <div class="About-Netmatters">
+    <div class="footer-content"> 
+        <div class="social-media"> 
+            <img alt="Netmatters Logo White" src="Netmatters_Logo.png">
+            <h4>FOLLOW US ON:</h4>
+            <a href="#"><i class="facebook fa fa-facebook"></i></a>
+            <a href="#"><i class="linkedin fa fa-linkedin"></i></a>
+            <a href="#"><i class="twitter fa fa-twitter"></i></a>
+            <a href="#"><i class="instagram fa fa-instagram"></i></a>
+        </div>
+        <div class="Netmatters-Info">
+            <div class="About-Netmatters">
+                <h4>About Netmatters</h4>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Our Careers</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Enviromental Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
 
-    <ul>
-        <h4>About Netmatters</h4>
-        <li>
-            <a href="#">News</a>
-        </li>
-        <li>
-            <a href="#">Our Careers</a>
-        </li>
-        <li>
-            <a href="#">Our Team</a>
-        </li>
-        <li>
-            <a href="#">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#">Cookie Policy</a>
-        </li>
-        <li>
-            <a href="#">Terms & Conditions</a>
-        </li>
-        <li>
-            <a href="#">Enviromental Policy</a>
-        </li>
-        <li>
-            <a href="#">Contact Us</a>
-        </li>
-    </ul>
-    </div>
+            <div class="Our-Services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Bespoke Software</a></li>
+                    <li><a href="#">IT Support</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Telecoms Services</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">Developer Training</a></li>
+                </ul>
+            </div>
 
-    <div class="Our-Services">
-    <ul>
-        <h4>Our Services</h4>
-        <li>
-            <a href="#">Bespoke Software</a>
-        </li>
-        <li>
-            <a href="#">IT Support</a>
-        </li>
-        <li>
-            <a href="#">Digital Marketing</a>
-        </li>
-        <li>
-            <a href="#">Telecoms Services</a>
-        </li>
-        <li>
-            <a href="#">Web Design</a>
-        </li>
-        <li>
-            <a href="#">Cyber Security</a>
-        </li>
-        <li>
-            <a href="#">Developer Training</a>
-        </li>
-    </ul>
-    </div>
+            <div class="Our-Industries">
+                <h4>Our Industries</h4>
+                <ul>
+                    <li><a href="#">Financial Services</a></li>
+                    <li><a href="#">Construction</a></li>
+                    <li><a href="#">Retail & E-Commerce</a></li>
+                    <li><a href="#">Non-Profits</a></li>
+                    <li><a href="#">SME's</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Education & Training</a></li>
+                    <li><a href="#">Travel & Leisure</a></li>
+                </ul>
+            </div>
 
-    <div class="Our-Industries">
-    <ul>
-        <h4>Our Industries</h4>
-        <li>
-            <a href="#">Financial Services</a>
-        </li>
-        <li>
-            <a href="#">Construction</a>
-        </li>
-        <li>
-            <a href="#">Retail & E-Commerce</a>
-        </li>
-        <li>
-            <a href="#">Non-Profits</a>
-        </li>
-        <li>
-            <a href="#">SME's</a>
-        </li>
-        <li>
-            <a href="#">Healthcare</a>
-        </li>
-        <li>
-            <a href="#">Education & Training</a>
-        </li>
-        <li>
-            <a href="#">Travel & Leisure</a>
-        </li>
-    </ul>
+            <div class="Locations">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="#">London Office</a></li>
+                    <li><a href="#">Cambridge Office</a></li>
+                    <li><a href="#">Wymondham Office</a></li>
+                    <li><a href="#">Great Yarmouth Office</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+    <div class="Below-Footer">
+        <p>&copy; Copyright Netmatters 2023. All rights reserved. - Sitemap</p>
     </div>
-
-    <div class="Locations">
-    <ul>
-        <h4>Locations</h4>
-        <li>
-            <a href="#">London Office</a>
-        </li>
-        <li>
-            <a href="#">Cambridge Office</a>
-        </li>
-        <li>
-            <a href="#">Wymondham Office</a>
-        </li>
-        <li>
-            <a href="#">Great Yarmouth Office</a>
-        </li>
-    </ul>
-    </div>
-</div>
-</div> 
-<div class="Below-Footer">
-    <p>&copy Copyright Netmatters 2023. All rights reserved. - Sitemap</p>
-</div>
 </footer>
 
-
+</div>
 </div>
 </body>
 

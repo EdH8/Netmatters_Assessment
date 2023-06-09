@@ -3,24 +3,18 @@
 }
 
 @mixin laptop {
-    @media screen and (max-width: 1260px) {
-        @content;
-    }
-}
-
-@mixin DontKnow {
-    @media screen and (max-width: 1092px){
+    @media screen and (min-width: 993px) and (max-width: 1260px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (max-width: 995px) {
+    @media screen and (max-width: 992px) {
         @content;
     }
 }
 
-@mixin phone {
+@mixin mobile {
     @media screen and (max-width: 768px) {
         @content;
     }
@@ -32,113 +26,171 @@ $base__font-size: 16px;
     box-sizing: border-box;
 }
 
+html{
+    overflow: auto;
+}
 html,
 body{
     height: 100%;
     margin: 0;
-    font-family: sans-serif;
-    letter-spacing: .4px
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .4px;
 }
 
-.container{
-    min-height: 100%;
+.wrapper{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#container{
+    min-height: 100vh;
     position: relative;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100%;
 }
 
 button{
     border: none;
 }
+
 //======================================================
 //Header CSS/SASS:
 //======================================================
 
+//MAIN HEADER ONLY AFFECTS WHERE THE HEADER IS PLACED ON THE SCREEN
+
 header{
-    position: fixed;
+    position: relative;
     display: block;
     top: 0;
     left: 0;
-    width: 100%
+    width: 100%;
+    //padding-top: em(114px);
 }
 
+//======================================
+
+//MAIN DIV'S FOR THE HEADER
 .Header-Row,
 .actions,
 .Head-logo{
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.plane{
-    margin-left: em(15px);
-}
-
-.mouse,
-.plane{
-    padding: em(20px) em(15px);
-    letter-spacing: em(3px);
-    border-radius: em(3px);
-}
-
-.contact,
-.Search{
-    padding-right: em(15px)
-}
-
-.mouse{
-    background-color: #4183d7;
-    color: white;
-}
-
-.plane,
-.glass{
-    background-color: #999AA2;
-}
-
-.hamburger{
-    background-color: #333645;
-    color: white;
-    padding: em(15px) em(15px);
-    border-radius: 0.2rem;
-    font-size: em(19px)
-}
-
-#logo{
-    padding-right: em(30px);
-    margin-right: em(30px)
+    @include mobile{
+        justify-content: space-between;
+    }
 }
 
 .actions{
-    padding: 0 em(7px);
+    @include tablet{
+        display: inline-flex;
+        flex-direction: row;
+    }
 }
+
+//=======================================
+
+//MOBILE SCREEN STYLING MAIN INPUT
+
+//SEARCH CONTAINER
+.mobile-search{
+    @include mobile{
+        display: unset;
+        width: 96%;
+        height: em(56px);
+        position: relative;
+    }
+} 
+
+//ICON
+.mag_glass{
+    position: absolute;
+    font-size: em(15px);
+    padding: em(10px) em(10px);
+    top: 0;
+    right: 0;
+}
+
+//INPUT BOX
+#input-hidden{
+    outline: none;
+    padding-left: em(15px);
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color:#0000001A;
+    font-size: em(15px);
+}
+
+.header-mobile{
+    display: flex;
+    justify-content: center;
+}
+
+.glass_size{
+    font-size: 23px;
+}
+
+//====================================
+
+//COVERS THE ENTIRE HEADER CODE
 
 .Header-Row{
-    padding: em(20px) 0;
-}
-
-#glass_btn{
-    padding: 0 0;
-    font-size: em(20px);
-}
-
-.glass{
-    color: white;
-    padding: em(14px) em(15px); 
-    border-radius: em(3px);
-}
-
-#search_input{
-    padding: em(21px) em(15px);
-    width: em(275px);
-
-    @include laptop{
-        display: none;
-    }
-    
-    @include tablet{
-        display: unset;
-        //width: em(50px)
+    padding: em(20px) 0 em(20px) em(10px);
+    @include mobile{
+        padding: em(20px) em(10px);
     }
 }
+
+//=======================
+
+//TELEPHONE STYLING ONLY
+
+#telephone{
+    padding-right: em(20px)
+}
+
+//==================================
+
+//JUST GETS RID OF THE BORDER BEHIND THE INPUT BOX ON THE MOBILE VIEW
+
+#input-hidden{
+    border: none;
+}
+
+//==============================
+
+//GIVES THE INPUT BOX AND MAGNIFY GLASS A BORDER AROUND IT 
+
+.mobile-search{
+    border-style: groove;
+    @include mobile{
+        margin: 0 auto;
+    }
+}
+
+//===========================
+
+//MAKES IT SO THAT THE TELEPHONE ICON AND THE INPUT BOX INCLUDING THE MAGNIFY GLASS ISNT VISABLE UNLESS THE USER IS ON A MOBILE DEVICE
+
+.mobile-search,
+#telephone,
+.header-mobile{
+    visibility: hidden;
+    display: none;
+    @include mobile{
+        visibility: unset;
+        display: block;
+    }
+}
+
+//============================
+
+//MAKES IT SO THAT YOU CAN SEE THE CONTACT INFO BUTTONS ON BOTH MOBILE AND TABLET
+//COULD MAKE A FUTURE ISSUE DUE TO NOT HAVING @INCLUDE MOBILE{}
 
 .contact{
     @include tablet{
@@ -146,52 +198,839 @@ header{
     }
 }
 
+//GIVES STYLING TO THE HAMBURGER ICON
+
+.hamburger{
+    background-color: #333645;
+    color: white;
+    padding: em(15px) em(15px);
+    border-radius: 0.2rem;
+    font-size: em(19px);
+}
+
+//===============================================================
+
+//USELESS CODE FOR THE @INCLUDE MOBILE VIEWING SCREEN
+
+//MAIN INPUT BOX STYLING
+
+//INPUT FIELD
+
+#search_input{
+    display: unset;
+    padding: 0 em(15px);
+    width: em(280px);
+    height: 56px;
+    display: block;
+    font-size: em(15px);
+    border: 1px solid rgba(0, 0, 0, .2);
+    //outline: lightblue;
+
+    @include laptop{
+        display: none;
+    }
+    
+    @include tablet{
+        display: unset;
+        padding: 0 em(15px);
+        width: em(280px);
+        height: 56px;
+        display: block;
+        font-size: em(15px);
+        border: 1px solid rgba(0, 0, 0, .2);
+    }
+}
+
+//BUTTON
+
+#glass_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0;
+    font-size: em(20px);
+
+    @include laptop{
+        position: relative;
+    }
+
+    @include tablet{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+//FULL CONTAINER OF THE INPUT BOX ICON AND BUTTON
+
+.Search{
+    margin-right: em(10px);
+    border: em(2px);
+    position: relative;
+
+    @include tablet{
+        position: relative;
+    }
+
+    @include mobile{
+        display: none;
+    }
+}
+
+//ICON
+
+.glass{
+    color: white;
+    padding: em(14px) em(15px); 
+    border-radius: em(3px);
+
+}
+//============================================
+
+//BACKGROUND COLOR FOR THE MAGNIFY GLASS AND PLANE
+
+.plane,
+.glass{
+    background-color: #999AA2;
+}
+
+//===========================
+
+//HEADER LOGO STYLING
+
+#logo{
+    @include laptop{
+        padding-right: em(30px);
+        margin-right: em(30px);
+    }
+    @include tablet{
+        width: 85%;
+    }
+    @include mobile{
+        max-width: 100%;
+        display: block;
+    }
+}
+
+//=============================
+
+
+.contact,
+.Search{
+    @include laptop{
+        padding-right: em(15px);
+    }
+}
+
+.plane,
+.glass{
+    background-color: #999AA2;
+}
+
+.plane{
+    margin-left: em(15px);
+    margin-right: em(15px);
+    @include laptop{
+        margin-right: 0;
+    }
+}
+
+.mouse,
+.plane{
+    padding: em(20px) em(15px);
+    letter-spacing: em(3px);
+    border-radius: em(3px);
+    color: white;
+}
+
+.mouse{
+    margin-left: em(15px);
+    background-color: #4183d7;
+
+    @include laptop{
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//======================================================
+//NAVIGATION CSS/SASS:
+//======================================================
+
+// nav{
+//     position: relative;
+//     display: block;
+//     width: 100%;
+//     background-color: #333645;
+//     color: #666;
+//     padding: em(25px);
+// }
+
+// .nav-row a:hover{
+//     background-color: red;
+//     height: 100%;
+// }
+
+// nav ul{
+//     display: flex;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// .nav-row{
+//     display: flex;
+//     justify-content: center;
+//     gap: em(15px);
+// }
+
+// nav a{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .bespoke_software,
+// .it_support,
+// .digital_marketing,
+// .telecoms_services,
+// .web_design,
+// .cyber_security,
+// .developer_course{
+//     padding: 0 em(15px);
+//     margin: 0 em(15px);
+// }
+
+
+
+
+
+
+
+
+
+
+//======================================================
+//Background CSS/SASS:
+//======================================================
+
+
+.background_img{
+    background-image: url("test.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+}
+
+.background_text,
+#choose_us{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 0 em(105px) 0 em(250px);
+
+    @include tablet{
+        margin: 0 auto;
+        text-align: center;
+    }
+    @include mobile{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+#choose_us{
+    flex-direction: unset;
+    margin: 0 0;
+    @include tablet{
+        margin: 0 auto;
+    }
+}
+
+.arrow{
+    align-self: center;
+    margin-left: em(10px);
+    font-size: em(22px);
+}
+
+.background_text h1{
+    font-size: 60px;
+    margin: em(10px) 0;
+}
+
+.background_text p{
+    font-size: x-large;
+    margin: em(10px) 0 em(40px) 0;
+}
+
+#choose_us{
+    align-items: center;
+    color: white;
+    background-color: #926fb1;
+    padding: em(20px);
+    border-radius: em(3px);
+    font-size: medium;
+    width: em(220px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================
+//Info Cards CSS/SASS:
+//======================================================
+
+//POSITIONING CARDS AND TEXT
+
+.text_card{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#card_our_services{
+    margin-left: 90px;
+}
+#card_view_work{
+    margin-right: 90px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    //@include laptop{
+    //    display: flex;
+    //    flex-wrap: wrap;
+    //}
+}
+
+.cards h2{
+    font-weight: unset;
+}
+
+//=====================================
+
+
+//MAIN CUSTOMISING FOR CARDS
+.card_style{
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#bespoke_card,
+#support_card,
+#marketing_card{
+    width: 28%;
+    padding: 25px;
+    margin: 0 0 20px 20px;
+}
+
+#bespoke_card{
+    width: 28%;
+    padding: 25px;
+    margin: 0 0 20px 0;
+}
+
+#web_card,
+#security_card{
+     width: 21%;
+     padding: 20px;
+     margin: 0 7px 0 7px;
+ }
+
+ #telecoms_card{
+    width: 21%;
+    padding: 20px;
+    margin-right: 7px;
+ }
+
+ #training_card{
+     width: 21%;
+     padding: 20px;
+     margin-left: 7px;
+ }
+
+//==============================================
+
+//MAIN CUSTOMISING FOR THE CONTENT INSIDE THE CARDS
+.card_container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto; 
+    color: #333645;
+}
+//===================================================
+
+//BASE BUTTON, LINKS AND ICON STYLING
+.card_container a:visited,
+.text_card a:visited{
+    color: #333645;
+}
+
+.card_container button,
+.card_container i{
+    color: white;
+}
+
+.card_container a,
+.text_card a{
+    text-decoration: none;
+}
+
+.text_card a:hover{
+    text-decoration: underline;
+}
+//==================================
+
+//ALL THE CUSTOMISING FOR THE ICON AND BUTTON
+
+//BESPOKE SOFTWARE
+#bespoke_card button,
+#bespoke_card i{
+    background-color: #67809F;
+}
+
+#bespoke_card:hover button,
+#bespoke_card:hover i{
+    color: #67809F;
+    background-color: white;
+}
+
+//==========
+
+//IT SUPPORT
+#support_card button,
+#support_card i{
+    background-color: #4183D7;
+}
+
+#support_card:hover button,
+#support_card:hover i{
+    color: #4183D7;
+    background-color: white;
+}
+
+//==========
+
+//DIGITAL MARKETING
+#marketing_card button,
+#marketing_card i{
+    background-color:#2ECC71;
+}
+
+#marketing_card:hover button,
+#marketing_card:hover i{
+    color: #2ECC71;
+    background-color: white;
+}
+
+//==========
+
+//TELECOMS SERVICES
+#telecoms_card button,
+#telecoms_card i{
+    background-color: #D64541;
+}
+
+#telecoms_card:hover button,
+#telecoms_card:hover i{
+    color: #D64541;
+    background-color: white;
+}
+
+//==========
+
+//WEB DESIGN
+#web_card button,
+#web_card i{
+    background-color: #926FB1;
+}
+
+#web_card:hover button,
+#web_card:hover i{
+    color: #926FB1;
+    background-color: white;
+}
+
+//==========
+
+//CYBER SECURITY
+#security_card button,
+#security_card i{
+    background-color: #F62459;
+}
+
+#security_card:hover button,
+#security_card:hover i{
+    color: #F62459;
+    background-color: white;
+}
+
+//==========
+
+//DEVELOPER TRAINING
+#training_card button,
+#training_card i{
+    background-color: #CE4125;
+}
+
+#training_card:hover button,
+#training_card:hover i{
+    color: #CE4125;
+    background-color: white;
+}
+//===========================================
+.card_style i{
+    padding: 16px 13px;
+    margin-top: 15px;
+    border-radius: 50%
+}
+
+.card_style button{
+    position: relative;
+    padding: 16px;
+    //margin-bottom: 15px;
+    border-radius: 3px;
+    bottom: 0;
+}
+
+//============================================
+
+//ALL THE TRANSITION EFECTS
+
+.card_style:hover p,
+.card_style:hover h2{
+    color: white;
+}
+
+.card_style:hover{
+    transform: translateY(-10px);
+}
+
+.card_style{
+    transition: .5s;
+}
+
+#bespoke_card:hover{
+    background-color:#67809F;
+}
+
+#support_card:hover{
+    background-color:#4183D7;
+}
+
+#marketing_card:hover{
+    background-color:#2ECC71;
+}
+
+#telecoms_card:hover{
+    background-color:#D64541;
+}
+
+#web_card:hover{
+    background-color:#926FB1;
+}
+
+#security_card:hover{
+    background-color:#F62459;
+}
+
+#training_card:hover{
+    background-color:#CE4125;
+}
+
+//======================================
+
+
+//======================================================
+//Wheel CSS/SASS:
+//======================================================
+
+
+#ppc{
+    display: flex;
+    margin: 50px auto;
+    width: 10%;
+}
+
+
+
+
+//======================================================
+//REVIEWS CSS/SASS:
+//======================================================
+
+//MAIN STYLING
+.reviews_style{
+    padding: em(30px) 0 em(50px) 0;
+    width: 100%;
+    background-color: #333645;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.reviews_style h2{
+    font-size: em(32px);
+}
+
+.reviews_style button{
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 6px;
+    color: white;
+}
+
+.reviews_style a,
+.reviews_style a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.reviews_style a:hover{
+    text-decoration: underline;
+}
+//=============================================
+
+//LAYOUT
+.reviews_content{
+    display: flex;
+    flex-direction: row;
+}
+
+.welcome_net{
+    width: 700px;
+    margin: 0 em(15px) em(15px) em(90px);
+}
+
+.client_reviews{
+    width: 800px;
+    margin: 0 em(90px) em(15px) em(50px);
+}
+//=============================================
+
+//STYLING FOR BOTH WELCOME_NET AND CLIENT_REVIEWS
+.welcome_net p{
+    margin: em(30px) 0;
+}
+
+.welcome_net button{
+    background-color: #272936;
+}
+
+.stars{
+    color: orange;
+    font-size: 40px;
+}
+
+.ashcroft_review{
+    font-size: 20px;
+    font-style: italic;
+}
+
+#google_btn{
+    background-color: #4287F6;
+}
+
+#trustpilot_btn{
+    background-color: #00B67B;
+}
+
+.client_reviews button{
+    margin-top: em(110px);
+}
+
+#HOK{
+    color: #A3A8AC;
+}
+//==================================================
+
+
+
+//======================================================
+//LATEST NEWS CSS/SASS:
+//======================================================
+
+
+.news_container a{
+    text-decoration: none;
+}
+
+#secure_connected{
+    color: #4183d7
+}
+#april_notable{
+    color: #4182d7;
+}
+#may_notable{
+    color: #926fb1;
+}
+
+.read_time{
+    color:rgba(51, 54, 69, .5)
+}
+.news_style:hover{
+    transform: translateY(-10px);
+}
+
+.news_style{
+    transition: .5s;
+}
+
+.news_cards{
+    display: flex;
+    justify-content: center;
+}
+
+.news_top{
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+#news_1{
+
+}
+
+#news_3{
+
+}
+
+#news_3{
+    
+}
+
+.news_style{
+    width: 25%;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 0 0 0 15px;
+}
+
+.news_img{
+    position: relative;
+    width: 100%;
+}
+
+.posted_net{
+    border-width: 75px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+
+
+
+
+
+
+
+
 //======================================================
 //FOOTER CSS/SASS:
 //======================================================
 
 footer{
     background-color: #323544;
-    position: fixed;
+    position: relative;
     display: block;
+    padding-top: em(20px);
     bottom: 0;
     left: 0;
     width: 100%;
+    @include laptop{
+        //padding-top: 0;
+        //bottom: 0;
+    }
 }
 
 footer h4{
     color: white;
+    margin: 0;
+    @include mobile{
+        margin: 0 0 em(10px) 0
+    }
+}
+
+footer ul{
+    padding:0 0;
+    @include mobile{
+        margin: 0 0;
+    }
 }
 
 .Below-Footer{
     background-color:#212330; 
     padding: em(10px) 0;
+    //position: relative;
+    //bottom: 0;
 }
 
 .Below-Footer p{
     color: white;
 }
-
-.social-media{
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: left;
-    position: relative;
-    padding: em(16px) em(22px);
-    margin: auto;
-
-    @include laptop{
-        padding: em(16px) 0 0 0;
-        margin: em(5px);
-        left: em(105px)
-    }
-
-    @include DontKnow{
-        left: em(81px);
+.social-media img{
+    width: 80%;
+    @include mobile{
+        padding-bottom: em(5px);
+        height: 50%;
     }
 
     @include tablet{
-        grid-area: Social;
+        width: em(320px);
+    }
+}
+
+.social-media h4{
+    margin: em(15px) 0 em(15px) 0;
+}
+.social-media{
+    //display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    //position: center;
+    padding: em(16px) em(22px);
+    margin: em(30px) 0;
+
+    @include laptop{
+        padding: em(16px) 0 0 0;
+        margin: 0 0 em(15px) em(81px);
+    }
+
+    @include tablet{
+         grid-area: Social;
+         margin: 0 0 em(10px) em(70px);
+    }
+
+    @include mobile{
+        padding-left: em(15px);
+        margin: 0 0;
     }
 }
 
@@ -203,11 +1042,7 @@ footer h4{
     @include laptop{
         position: relative;
         flex-wrap: wrap;
-        padding: 0 em(50px)
-    }
-
-    @include DontKnow{
-        padding: 0 em(26px);
+        padding: 0 em(50px);
     }
 
     @include tablet{
@@ -216,11 +1051,18 @@ footer h4{
             "Social Social"
             "About Services"
             "Industries Locations";
+        padding: 0 em(40px) 0 em(40px);
+    }
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        padding: 0 em(15px);
     }
 }
 
 .footer-content a{
-    font-size: em(13px)
+    font-size: em(13px);
 }
 
 footer, 
@@ -259,11 +1101,23 @@ a{
 .Our-Services,
 .Our-Industries,
 .Locations{
+    left: 0;
     text-align: left;
     line-height:26px;
-    padding: em(12px) em(22px) em(16px);
-    margin: em(16px) 0;
-    margin-right:7px
+    padding: 0 em(22px) em(16px);
+    margin: 0 em(10px) em(16px);
+    margin-right:7px;
+    position: relative;
+
+    @include tablet{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    @include mobile{
+        margin: em(13px) 0;
+        padding: 0 0;
+    }
 }
 
 .facebook, 
@@ -277,94 +1131,38 @@ a{
 
 ol,
 ul{
-    list-style: none
+    list-style: none;
 }
 
 //Links CSS
 
-a:link, a:visited{
+footer a:link, footer a:visited{
     text-decoration: none;
     color: white;
 }
 
-a:hover{
+footer a:hover{
     text-decoration: underline;
 }
 
 a:hover .facebook {
-    background-color:#3b5998
+    background-color:#3b5998;
 }
 a:hover .twitter {
-    background-color:#00aced
+    background-color:#00aced;
 }
 a:hover .instagram {
-    background-color:#d93175
+    background-color:#d93175;
 }
 a:hover .linkedin {
-    background-color:#0077b5
+    background-color:#0077b5;
 }
-
 .Netmatters-Info a:active{
     color: black;
 }
 
 
 
-
-
-
-
-/*
-.social-menu ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-.social-menu ul li {
-    list-style: none;
-    margin: 0 10px;
-}
-.social-menu ul li .fa {
-    color: #000000;
-    font-size: 25px;
-    line-height: 50px;
-    transition: .5s;
-}
-.social-menu ul li .fa:hover {
-    color: #ffffff;
-}
-.social-menu ul li a {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;
-    text-align: center;
-    transition: 0.5s;
-    transform: translate(0,0px);
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
-}
-
-.social-media ul li a:hover {
-    transform: rotate(0deg) skew(0deg) translate(0, -10px);
-}
-.social-menu ul li:nth-child(1) a:hover {
-    background-color: #3b5999;
-}
-.social-menu ul li:nth-child(2) a:hover {
-    background-color: #55acee;
-}
-.social-menu ul li:nth-child(3) a:hover {
-    background-color: #e4405f;
-}
-.social-menu ul li:nth-child(4) a:hover {
-    background-color: #cd201f;
-}
-.social-menu ul li:nth-child(5) a:hover {
-    background-color: #0077B5;
-}*/
+/* CREATE HTML FOR THE MOBILE VERSION OF THE HEADER WITH A CLASS NAME WE WILL DISPLAY: NONE; IT 
+   THEN ONCE THE SCREEN HITS THE MAX-WIDTH FOR MOBILE USERS THEN 
+   IT WILL APPEAR AND HIDE THE REST OF THE CONTENT THAT ISN'T NEEDED */    
