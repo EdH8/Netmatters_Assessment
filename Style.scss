@@ -54,6 +54,11 @@ button{
     border: none;
 }
 
+h2,
+h3,
+h4 {
+    font-weight:400;
+}
 //======================================================
 //Header CSS/SASS:
 //======================================================
@@ -366,47 +371,163 @@ header{
 //NAVIGATION CSS/SASS:
 //======================================================
 
-// nav{
-//     position: relative;
-//     display: block;
-//     width: 100%;
-//     background-color: #333645;
-//     color: #666;
-//     padding: em(25px);
+nav{ 
+    width: 100%;
+    background-color: #333645;
+    color: #666;
+}
+
+// #bespoke_drop_content:hover #bespoke_arrow{
+//     // display: block;
 // }
 
-// .nav-row a:hover{
-//     background-color: red;
-//     height: 100%;
-// }
+.please{
+    position: absolute;
+    top: 221px;
+    left: 759px;
+    z-index: 2;
+}
 
-// nav ul{
-//     display: flex;
-//     padding: 0;
-//     margin: 0;
-// }
+#bespoke_arrow{
+    width: 0;
+    height: 0;
+    border: 87px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #526781;
+    filter: brightness(150%);
 
-// .nav-row{
-//     display: flex;
-//     justify-content: center;
-//     gap: em(15px);
-// }
+    transform: rotate(180deg);
 
-// nav a{
-//     display: flex;
-//     flex-direction: column;
-// }
+}
 
-// .bespoke_software,
-// .it_support,
-// .digital_marketing,
-// .telecoms_services,
-// .web_design,
-// .cyber_security,
-// .developer_course{
-//     padding: 0 em(15px);
-//     margin: 0 em(15px);
-// }
+.dropdown_ul{
+    padding: em(25px) em(25px);
+}
+
+.dropdown_ul li{
+}
+
+.nav_row ul{
+    padding: 0;
+    margin: 0;
+}
+
+.nav_row{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.dropdown_ul{
+    overflow: hidden;
+}
+.nav_row a{
+    text-decoration: none;
+}
+
+
+.dropdown_content{
+    display: none;
+    position: absolute;
+    top: 221px;
+    left: 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown_text{
+    // margin: 15px 15px;
+}
+
+.dropdown_categories{
+    display: flex;
+    text-align: center;
+    margin: 0 15px;
+}
+
+.dropdown_categories i{
+    font-size: 20px;
+}
+
+.nav_row a:visited{
+    color: white;
+}
+
+.dropdown_ul:hover .dropdown_content{
+    display: block;
+}
+
+.dropdown_ul:hover i{
+    color: white;
+}
+
+
+#bespoke_software:hover,
+#bespoke_drop_content{
+    background-color: #526781;
+}
+
+.laptop{
+    color: #526781;
+}
+
+#it_support:hover,
+#support_drop_content{
+    background-color: #286abd;
+}
+
+.desktop{
+    color: #286abd;
+}
+
+#digital_marketing:hover,
+#digital_drop_content{
+    background-color: #25a25a;
+}
+
+.chart{
+    color: #25a25a;
+}
+
+#telecoms_services:hover,
+#telecoms_drop_content{
+    background-color: #bc2c28;
+}
+
+.phone{
+    color: #bc2c28;
+}
+
+#web_design:hover,
+#design_drop_content{
+    background-color: #79539a;
+}
+
+.code{
+    color: #79539a;
+}
+
+#cyber_security:hover,
+#security_drop_content{
+    background-color: #de093f;
+}
+
+.shield{
+    color: #de093f;
+}
+
+#developer_course:hover,
+#developer_drop_content{
+    background-color: #a3331d;
+}
+
+.cap{
+    color: #a3331d; 
+}
+
+
 
 
 
@@ -423,11 +544,12 @@ header{
 
 
 .background_img{
-    background-image: url("test.jpg");
+    background-image: url("test.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: em(50px) 0 em(80px) 0;
     background-position: center center;
+    z-index: -1;
 }
 
 .background_text,
@@ -818,7 +940,7 @@ header{
 //LAYOUT
 .reviews_content{
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
 }
 
 .welcome_net{
@@ -874,13 +996,73 @@ header{
 //LATEST NEWS CSS/SASS:
 //======================================================
 
+.additional_info{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: #4183d7;
+    color: white;
+    padding: 3px 10px;
+    font-size: 14px;
+    font-style: bold;
+}
+
+.main_news_card button{
+    padding: 12px 15px;
+    color: white;
+    border-radius: 3px;
+}
+
+#news_1 button{
+    background-color: #926fb1;
+}
+
+#news_2 button{
+    background-color: #4182d7;
+}
+
+#news_3 button{
+    background-color: #4183d7;
+}
+
+.posted_net{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.posted_net img{
+    height: 15%;
+    width: 15%;
+}
+
+.posted_net p{
+    margin-left: 10px;
+    color: #333645;
+}
+
+.news_description{
+    color: #666;
+}
+
+#additional_news{
+    background-color: #926fb1;
+}
+
+// #additional_study{
+//     background-color: ;
+// }
+
+.additional_info:hover{
+    text-decoration: underline;
+}
 
 .news_container a{
     text-decoration: none;
 }
 
 #secure_connected{
-    color: #4183d7
+    color: #4183d7;
 }
 #april_notable{
     color: #4182d7;
@@ -896,10 +1078,34 @@ header{
     transform: translateY(-10px);
 }
 
-.news_style{
+.news_style a{
+    text-align: left;
     transition: .5s;
 }
 
+.news_style{
+    position: relative;
+}
+.news_style h3,
+.read_time{
+    font-size: 15px;
+}
+
+.news_description,
+.posted_net p{
+    font-size: 14px;
+}
+
+.main_news_card p,
+.main_news_card h3,
+.main_news_card button{
+    margin-left: 10px;
+}
+.main_news_card button{
+    margin-bottom: 10px;
+}
+
+//POSITIONING OF THE CARDS AND TEXT ABOVE THE CARDS
 .news_cards{
     display: flex;
     justify-content: center;
@@ -907,21 +1113,23 @@ header{
 
 .news_top{
     display: flex;
-    margin-top: 25px;
+    margin: 25px 140px 0 150px;
     justify-content: space-between;
 }
 
-#news_1{
+//===========================================================
 
-}
-
-#news_3{
-
-}
-
-#news_3{
-    
-}
+// #news_1{
+// 
+// }
+// 
+// #news_3{
+// 
+// }
+// 
+// #news_3{
+    // 
+// }
 
 .news_style{
     width: 25%;
@@ -945,10 +1153,55 @@ header{
 
 
 
+//======================================================
+//NEWSLETTER SIGN-UP CSS/SASS:
+//======================================================
+
+
+.newsletter_container{
+    background-color: #DDD;
+}
+
+.newsletter_sign_up{
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+}
+
+.newsletter_sign_up{
+    padding: 25px 0;
+    margin: 0 100px;
+}
+
+.newsletter_sign_up h2{
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.newsletter_sign_up h2,
+.newsletter_sign_up label,
+.checkbox_privacy{
+    color: #333645;
+}
 
 
 
-
+.newsletter_sign_up button{
+    background-color: #333645;
+    color: white;
+    padding: 15px 5px;
+    border-radius: 3px;
+    width: 100px;
+}
+.newsletter_container button{
+    background-color: #333645;
+    color: white;
+    padding: 13px 15px;
+    border-radius: 3px;
+}
+.text_input{
+    padding: 15px;
+} 
 
 //======================================================
 //FOOTER CSS/SASS:
