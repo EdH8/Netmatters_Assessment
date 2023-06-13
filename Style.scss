@@ -59,6 +59,7 @@ h3,
 h4 {
     font-weight:400;
 }
+
 //======================================================
 //Header CSS/SASS:
 //======================================================
@@ -205,13 +206,48 @@ header{
 
 //GIVES STYLING TO THE HAMBURGER ICON
 
-.hamburger{
+.hamburger-menu {
+    height: 56px;
+    width: 60px;
     background-color: #333645;
-    color: white;
-    padding: em(15px) em(15px);
+    position: relative;
+    // padding: em(15px) em(15px);
     border-radius: 0.2rem;
-    font-size: em(19px);
 }
+
+.ham-bar {
+    width: 70%;
+    height: 4px;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+.bar-top {
+    top: 30%;
+}
+
+.bar-bottom {
+    top: 70%;
+}
+
+// .hamburger-menu.active .bar-top {
+//     transform: translate(-50%, -50%) rotate(-315deg);
+//     top: 50%;
+// }
+
+// .hamburger-menu.active .bar-mid {
+//     opacity: 0;
+// }
+
+// .hamburger-menu.active .bar-bottom {
+//     transform: translate(-50%, -50%) rotate(-225deg);
+//     top: 50%;
+// }
 
 //===============================================================
 
@@ -362,11 +398,6 @@ header{
 
 
 
-
-
-
-
-
 //======================================================
 //NAVIGATION CSS/SASS:
 //======================================================
@@ -374,37 +405,185 @@ header{
 nav{ 
     width: 100%;
     background-color: #333645;
-    color: #666;
+    @include tablet{
+        display: none;
+    }
 }
 
-// #bespoke_drop_content:hover #bespoke_arrow{
-//     // display: block;
+// .please{
+//     display: flex;
+//     flex-direction: row;
 // }
 
-.please{
-    position: absolute;
-    top: 221px;
-    left: 759px;
-    z-index: 2;
+// .nav_row{
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     // text-align: center;
+//     // display: flex;
+//     // justify-content: center;
+//     // position: relative;
+// }
+
+.dropdown_categories{
+    display: flex;
 }
 
-#bespoke_arrow{
-    width: 0;
-    height: 0;
-    border: 87px solid transparent;
-    border-top: 0;
-    border-bottom: 48px solid #526781;
-    filter: brightness(150%);
+// .dropdown_categories li{
+//     display: inline;
+// }
 
-    transform: rotate(180deg);
+// .dropdown_categories a{
+//     display: inline-flex;
+// }
 
-}
+// .dropdown_categories{
+//     position: relative;
+// }
 
-.dropdown_ul{
+// .down_arrow{
+//     display: none;
+// }
+
+// .drop_down:hover #bespoke_arrow,
+// .drop_down:hover #support_arrow,
+// .drop_down:hover #digital_arrow,
+// .drop_down:hover #telecoms_arrow,
+// .drop_downhover #design_arrow,
+// .drop_down:hover #security_arrow,
+// .drop_downu:hover #developer_arrow{
+//     display: block;
+//     // @include laptop{
+//     //     display: block;
+//     // }
+// }
+
+
+// #bespoke_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -40px;
+//     width: 0;
+//     height: 0;
+//     border: 87px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #526781;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+//     // @include laptop{
+//     //     border: 60px solid transparent;
+//     // }
+// }
+
+// #support_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -41px;
+//     width: 0;
+//     height: 0;  
+//     border: 81px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #286abd;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+// }
+
+// #digital_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -41px;
+//     width: 0;
+//     height: 0;
+//     border: 90px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #25a25a;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+// }
+
+// #telecoms_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -40px;
+//     width: 0;
+//     height: 0;
+//     border: 82px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #bc2c28;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+// }
+
+// #design_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -40px;
+//     width: 0;
+//     height: 0;
+//     border: 72px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #79539a;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+// }
+
+// #security_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -40px;
+//     width: 0;
+//     height: 0;
+//     border: 83px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #de093f;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+// }
+
+// #developer_arrow:after{
+//     content: '';
+//     display: inline-block;
+//     vertical-align: bottom;
+//     position:absolute;
+//     top: 82px;
+//     left: -40px;
+//     width: 0;
+//     height: 0;
+//     border: 82px solid transparent;
+//     border-top: 0;
+//     border-bottom: 48px solid #a3331d;
+//     filter: brightness(120%);
+//     transform: rotate(180deg);
+//     z-index: 5;
+// }
+
+.drop_down{
     padding: em(25px) em(25px);
-}
-
-.dropdown_ul li{
+    // margin: 0 auto;
 }
 
 .nav_row ul{
@@ -412,19 +591,13 @@ nav{
     margin: 0;
 }
 
-.nav_row{
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.dropdown_ul{
-    overflow: hidden;
-}
 .nav_row a{
     text-decoration: none;
 }
 
+.dropdown_text h2{
+    color: white;
+}
 
 .dropdown_content{
     display: none;
@@ -435,16 +608,16 @@ nav{
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
-
-.dropdown_text{
-    // margin: 15px 15px;
+    padding: 50px;
+    background-color: #526781;
 }
 
 .dropdown_categories{
-    display: flex;
     text-align: center;
-    margin: 0 15px;
+
+    // @include laptop{
+    //     max-width: 100px;
+    // }
 }
 
 .dropdown_categories i{
@@ -455,16 +628,12 @@ nav{
     color: white;
 }
 
-.dropdown_ul:hover .dropdown_content{
-    display: block;
-}
-
-.dropdown_ul:hover i{
+.drop_down:hover i{
     color: white;
 }
 
 
-#bespoke_software:hover,
+#bespoke_drop_down:hover,
 #bespoke_drop_content{
     background-color: #526781;
 }
@@ -473,7 +642,7 @@ nav{
     color: #526781;
 }
 
-#it_support:hover,
+#support_drop_down:hover,
 #support_drop_content{
     background-color: #286abd;
 }
@@ -482,7 +651,7 @@ nav{
     color: #286abd;
 }
 
-#digital_marketing:hover,
+#digital_drop_down:hover,
 #digital_drop_content{
     background-color: #25a25a;
 }
@@ -491,7 +660,7 @@ nav{
     color: #25a25a;
 }
 
-#telecoms_services:hover,
+#telecoms_drop_down:hover,
 #telecoms_drop_content{
     background-color: #bc2c28;
 }
@@ -500,7 +669,7 @@ nav{
     color: #bc2c28;
 }
 
-#web_design:hover,
+#design_drop_down:hover,
 #design_drop_content{
     background-color: #79539a;
 }
@@ -509,7 +678,7 @@ nav{
     color: #79539a;
 }
 
-#cyber_security:hover,
+#security_drop_down:hover,
 #security_drop_content{
     background-color: #de093f;
 }
@@ -518,7 +687,7 @@ nav{
     color: #de093f;
 }
 
-#developer_course:hover,
+#developer_drop_down:hover,
 #developer_drop_content{
     background-color: #a3331d;
 }
@@ -527,16 +696,63 @@ nav{
     color: #a3331d; 
 }
 
+.dropdown_header{
+    font-size: 22px;
+}
+
+#bespoke_header{
+
+    margin-left: 50px;
+}
+
+#support_header{
+    margin-left: 70px;
+}
+
+#digital_header{
+
+    margin-left: 35px;
+}
+
+#telecoms_header{
+
+    margin-left: 85px;
+}
+
+#design_header{
+
+    margin-left: 75px;
+}
+
+#security_header{
+
+    margin-left: 60px;
+}
+
+#developer_header{
+
+    margin-left: 60px;
+}
 
 
+.dropdown_list{
+    display: flex;
+    margin: 15px;
+}
 
+.dropdown_list{
+    margin-right: 100px;
+}
 
+.dropdown_list li{
+    font-size: 18px;
+    padding: 15px 0;
+}
 
-
-
-
-
-
+.dropdown_list i{
+    font-size: 18px;
+    margin-right: 10px;
+}
 
 //======================================================
 //Background CSS/SASS:
@@ -625,30 +841,81 @@ nav{
 
 .text_card{
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    @include mobile{
+        display: block;
+        margin-left: 10px;
+    }
 }
 
-#card_our_services{
-    margin-left: 90px;
+
+.bottom_text_card{
+    display: none;
+    visibility: none;
+    @include phone{
+        display: block;
+        text-align: center;
+    }
 }
+
+
 #card_view_work{
-    margin-right: 90px;
+    margin-left: 825px;
+    @include laptop{
+        margin-left: 635px;
+    }
+    @include tablet{
+        margin-left: 415px;
+    }
+
+    @include mobile{
+        display: none;
+    }
 }
 
-.cards{
+// .cards{
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+
+//     //@include laptop{
+//     //    display: flex;
+//     //    flex-wrap: wrap;
+//     //}
+// }
+
+// .cards h2{
+//     font-weight: unset;
+// }
+
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
+
+.top_cards,
+.bottom_cards{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 
-    //@include laptop{
-    //    display: flex;
-    //    flex-wrap: wrap;
-    //}
+    @include mobile{
+        flex-direction: column;
+    }
 }
 
-.cards h2{
-    font-weight: unset;
+.top_cards{
+    @include tablet{
+        flex-direction: column;
+    }
+}
+
+.bottom_cards{
+    @include laptop{
+        flex-wrap: wrap;
+    }
+    @include tablet{
+        flex-wrap: wrap;
+    }
 }
 
 //=====================================
@@ -664,35 +931,51 @@ nav{
 #bespoke_card,
 #support_card,
 #marketing_card{
-    width: 28%;
+    width: 357px;
+    // width: 280px;
     padding: 25px;
-    margin: 0 0 20px 20px;
+    margin: 15px;
+
+    @include laptop{
+        margin: 0 15px;
+        width: 296px;
+    }
+
+    @include tablet{
+        margin: 25px 0 0 0;
+        width: 720px
+    }
+
+    @include mobile{
+        margin: 25px 0 0 0;
+        width: 98%
+    }
+    
 }
 
-#bespoke_card{
-    width: 28%;
-    padding: 25px;
-    margin: 0 0 20px 0;
-}
-
+#telecoms_card,
 #web_card,
-#security_card{
-     width: 21%;
-     padding: 20px;
-     margin: 0 7px 0 7px;
- }
-
- #telecoms_card{
-    width: 21%;
+#security_card,
+#training_card{
+    width: 260px;
     padding: 20px;
-    margin-right: 7px;
- }
+    margin: 15px;
 
- #training_card{
-     width: 21%;
-     padding: 20px;
-     margin-left: 7px;
- }
+    @include laptop{
+        margin: 15px;
+        width: 460px
+    }
+
+    @include tablet{
+        margin: 10px;
+        width: 350px;
+    }
+    @include mobile{
+        margin: 25px 0 0 0;
+        width: 98%
+    }
+}
+
 
 //==============================================
 
@@ -709,7 +992,8 @@ nav{
 
 //BASE BUTTON, LINKS AND ICON STYLING
 .card_container a:visited,
-.text_card a:visited{
+.text_card a:visited,
+.bottom_text_card a:visited{
     color: #333645;
 }
 
@@ -719,11 +1003,13 @@ nav{
 }
 
 .card_container a,
-.text_card a{
+.text_card a,
+.bottom_text_card a{
     text-decoration: none;
 }
 
-.text_card a:hover{
+.text_card a:hover,
+.bottom_text_card a:hover{
     text-decoration: underline;
 }
 //==================================
@@ -893,7 +1179,7 @@ nav{
 //======================================================
 
 
-#ppc{
+.ppc{
     display: flex;
     margin: 50px auto;
     width: 10%;
@@ -915,6 +1201,16 @@ nav{
     letter-spacing: 1px;
 }
 
+.reviews_style a,
+.reviews_style a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.reviews_style a:hover{
+    text-decoration: underline;
+}
+
 .reviews_style h2{
     font-size: em(32px);
 }
@@ -926,32 +1222,64 @@ nav{
     color: white;
 }
 
-.reviews_style a,
-.reviews_style a:visited{
-    text-decoration: none;
-    color: white;
-}
-
-.reviews_style a:hover{
-    text-decoration: underline;
-}
-//=============================================
-
-//LAYOUT
+// //LAYOUT
 .reviews_content{
     display: flex;
-    // flex-direction: row;
+    @include laptop{
+        justify-content: center;
+    }
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mobile{
+        flex-wrap: wrap;
+        flex-direction: unset;
+        align-items: unset;
+    }
+}
+
+.reviews_content button{
+    @include laptop{
+        display: flex;
+        justify-content: column;
+    }
 }
 
 .welcome_net{
     width: 700px;
     margin: 0 em(15px) em(15px) em(90px);
+    @include laptop{
+        margin: 0;
+        width: 450px
+    }
+    @include tablet{
+        margin: 0;
+        width: 500px;
+    }
+    @include mobile{
+        width: 100%;
+    }
 }
 
 .client_reviews{
     width: 800px;
     margin: 0 em(90px) em(15px) em(50px);
+    @include laptop{
+        margin: 0;
+        width: 450px
+    }
+    @include tablet{
+        margin: 0;
+        width: 500px;
+    }
+    @include mobile{
+        width: 100%;
+    }
 }
+
+
 //=============================================
 
 //STYLING FOR BOTH WELCOME_NET AND CLIENT_REVIEWS
@@ -977,8 +1305,13 @@ nav{
     background-color: #4287F6;
 }
 
+#culture_btn{
+    margin-top: 30px;
+}
+
 #trustpilot_btn{
     background-color: #00B67B;
+    margin-top: 15px;
 }
 
 .client_reviews button{
@@ -1004,13 +1337,24 @@ nav{
     color: white;
     padding: 3px 10px;
     font-size: 14px;
-    font-style: bold;
 }
 
 .main_news_card button{
     padding: 12px 15px;
     color: white;
     border-radius: 3px;
+}
+
+#news_2{
+    @include laptop{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+    @include mobile{
+        display: unset;
+    }
 }
 
 #news_1 button{
@@ -1029,11 +1373,18 @@ nav{
     display: flex;
     align-items: center;
     margin: 0 10px;
+    @include laptop{
+        margin: 10px 20px 0 20px;
+    }
 }
 
 .posted_net img{
     height: 15%;
     width: 15%;
+    @include mobile{
+        width: 8%;
+        height: 8%;
+    }
 }
 
 .posted_net p{
@@ -1048,10 +1399,6 @@ nav{
 #additional_news{
     background-color: #926fb1;
 }
-
-// #additional_study{
-//     background-color: ;
-// }
 
 .additional_info:hover{
     text-decoration: underline;
@@ -1100,36 +1447,101 @@ nav{
 .main_news_card h3,
 .main_news_card button{
     margin-left: 10px;
+    @include laptop{
+        margin-left: 20px;
+    }
 }
 .main_news_card button{
     margin-bottom: 10px;
+}
+
+#news_1 button{
+    @include laptop{
+        margin-top: 89px;
+    }
+    @include tablet{
+        margin-top: 70px;
+    }
+    @include mobile{
+        margin-top: 0;
+    }
+}
+#news_1 button,
+#news_2 button{
+    @include mobile{
+        margin-top: 30px;
+    }
+}
+#news_3 button{
+    @include laptop{
+        margin-top: 70px;
+    }
+    @include tablet{
+        margin-top: 51px;
+    }
+    @include mobile{
+        margin-top: 30px;
+    }
 }
 
 //POSITIONING OF THE CARDS AND TEXT ABOVE THE CARDS
 .news_cards{
     display: flex;
     justify-content: center;
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+.news_top a:hover,
+.news_bottom a:hover{
+    text-decoration: underline;
+}
+
+.news_top a:visited,
+.news_bottom a:visited{
+    color: #333645;
 }
 
 .news_top{
     display: flex;
     margin: 25px 140px 0 150px;
     justify-content: space-between;
+    @include laptop{
+        margin: 0;
+        justify-content: center;
+    }
+    @include tablet{
+        margin: 0;
+        justify-content: center;
+    }
+    @include mobile{
+        margin: 0 0 0 35px;
+        justify-content: unset;
+        font-size: 22px;
+    }
+}
+
+#view_all{
+    @include laptop{
+        margin-left: 440px;
+    }
+    @include tablet{
+        margin-left: 395px;
+    }
+    @include mobile{
+        display: none;
+    }
+}
+.news_bottom{
+    display: none;
+    @include mobile{
+        display: unset;
+        margin: 0 auto;
+    }
 }
 
 //===========================================================
-
-// #news_1{
-// 
-// }
-// 
-// #news_3{
-// 
-// }
-// 
-// #news_3{
-    // 
-// }
 
 .news_style{
     width: 25%;
@@ -1137,6 +1549,30 @@ nav{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 0 0 0 15px;
+    @include laptop{
+        width: 350px;
+        // width: 35%;
+        height: 550px;
+    }
+    @include tablet{
+        width: 320px;
+        // width: 32%;
+        height: 500px;
+    }
+    @include mobile{
+        width: 90%;
+        height: 650px;
+        margin: 20px 35px 0 35px;
+    }
+}
+
+#news_3{
+    @include tablet{
+        margin-left: 30px;
+    }
+    @include mobile{
+        margin-left: 35px;
+    }
 }
 
 .news_img{
@@ -1157,51 +1593,219 @@ nav{
 //NEWSLETTER SIGN-UP CSS/SASS:
 //======================================================
 
+label.required:after{
+    content: " *";
+    color: #d24d57
+}
+
+form{
+    @include laptop{
+        margin: 0 120px;
+    }
+
+    @include tablet{
+        margin: 0 100px;
+    }
+    @include mobile{
+        margin: 0;
+    }
+}
+
+.newletter_header{
+    font-size: 24px;
+}
+
+.newsletter_sign_up button{
+    background-color: #333645;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+// form{
+//     // @include laptop{
+
+//     // }
+
+// }
+
+.input_text{
+    display: inline-flex;
+
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.name_input,
+.email_input{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox_privacy{
+    display: inline-flex;
+
+    // @include tablet{
+    //     width: 80%;
+    // }
+
+    @include mobile{
+        width: 90%;
+    }
+}
+
+.newsletter_text_input{
+    height: 40px;
+    width: 569px;
+
+    @include laptop{
+        width: 420px;
+    }
+
+    @include tablet{
+        max-width: 800px;
+    }
+
+    @include mobile{
+        width: 95%;
+    }
+}
+
+.name_input,
+.email_input,
+.checkbox_privacy,
+.newletter_header,
+.newsletter_sign_up button{
+    // @include tablet{
+    //     margin: 0 225px;
+    // }
+    @include mobile{
+        margin-left: 10px;
+    }
+}
+.name_input{
+    margin-right: 15px;
+    @include tablet{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.email_input{
+    margin-left: 15px;
+    @include tablet{
+        margin-left: 0;
+    }
+    @include mobile{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+#newsletter_checkbox{
+    border: 3px solid #333645;
+    width: 2%;
+    margin-right: 15px;
+}
 
 .newsletter_container{
     background-color: #DDD;
-}
-
-.newsletter_sign_up{
-    display: flex;
-    flex-direction: column;
-    // flex-wrap: wrap;
-}
-
-.newsletter_sign_up{
+    max-width: 100%;
     padding: 25px 0;
-    margin: 0 100px;
-}
-
-.newsletter_sign_up h2{
-    font-size: 32px;
-    font-weight: 400;
 }
 
 .newsletter_sign_up h2,
-.newsletter_sign_up label,
-.checkbox_privacy{
+.newsletter_sign_up label{
+    color: #333645;
+}
+
+.newsletter_sign_up p{
+    font-weight: 500;
+}
+
+#newsletter_privacy:visited{
     color: #333645;
 }
 
 
 
-.newsletter_sign_up button{
-    background-color: #333645;
-    color: white;
-    padding: 15px 5px;
-    border-radius: 3px;
-    width: 100px;
-}
-.newsletter_container button{
-    background-color: #333645;
-    color: white;
-    padding: 13px 15px;
-    border-radius: 3px;
-}
-.text_input{
-    padding: 15px;
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .newsletter_container{
+//     background-color: #DDD;
+// }
+
+// .newsletter_sign_up{
+//     display: flex;
+//     flex-direction: column;
+//     // flex-wrap: wrap;
+// }
+
+// .newsletter_sign_up{
+//     padding: 25px 0;
+//     margin: 0 100px;
+// }
+
+// .newsletter_sign_up h2{
+//     font-size: 32px;
+//     font-weight: 400;
+// }
+
+// .newsletter_sign_up h2,
+// .newsletter_sign_up label,
+// .checkbox_privacy{
+//     color: #333645;
+// }
+
+
+
+// .newsletter_sign_up button{
+//     background-color: #333645;
+//     color: white;
+//     padding: 15px 5px;
+//     border-radius: 3px;
+//     width: 100px;
+// }
+// .newsletter_container button{
+//     background-color: #333645;
+//     color: white;
+//     padding: 13px 15px;
+//     border-radius: 3px;
+// }
+// .text_input{
+//     padding: 15px;
+// } 
 
 //======================================================
 //FOOTER CSS/SASS:
@@ -1278,7 +1882,7 @@ footer ul{
 
     @include tablet{
          grid-area: Social;
-         margin: 0 0 em(10px) em(70px);
+         margin: 0 0 em(10px) em(50px);
     }
 
     @include mobile{
