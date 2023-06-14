@@ -60,11 +60,16 @@ h4 {
     font-weight:400;
 }
 
+ol,
+ul{
+    list-style: none;
+}
+
 //======================================================
 //Header CSS/SASS:
 //======================================================
 
-//MAIN HEADER ONLY AFFECTS WHERE THE HEADER IS PLACED ON THE SCREEN
+
 
 header{
     position: relative;
@@ -72,19 +77,14 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    //padding-top: em(114px);
 }
 
-//======================================
-
-//MAIN DIV'S FOR THE HEADER
 .Header-Row,
 .actions,
 .Head-logo{
     display: flex;
     justify-content: center;
     align-items: center;
-
     @include mobile{
         justify-content: space-between;
     }
@@ -97,11 +97,6 @@ header{
     }
 }
 
-//=======================================
-
-//MOBILE SCREEN STYLING MAIN INPUT
-
-//SEARCH CONTAINER
 .mobile-search{
     @include mobile{
         display: unset;
@@ -111,7 +106,6 @@ header{
     }
 } 
 
-//ICON
 .mag_glass{
     position: absolute;
     font-size: em(15px);
@@ -120,9 +114,7 @@ header{
     right: 0;
 }
 
-//INPUT BOX
 #input-hidden{
-    outline: none;
     padding-left: em(15px);
     width: 100%;
     height: 100%;
@@ -134,15 +126,12 @@ header{
 .header-mobile{
     display: flex;
     justify-content: center;
+    margin-bottom: em(15px);
 }
 
 .glass_size{
-    font-size: 23px;
+    font-size: em(23px);
 }
-
-//====================================
-
-//COVERS THE ENTIRE HEADER CODE
 
 .Header-Row{
     padding: em(20px) 0 em(20px) em(10px);
@@ -151,25 +140,13 @@ header{
     }
 }
 
-//=======================
-
-//TELEPHONE STYLING ONLY
-
 #telephone{
     padding-right: em(20px)
 }
 
-//==================================
-
-//JUST GETS RID OF THE BORDER BEHIND THE INPUT BOX ON THE MOBILE VIEW
-
 #input-hidden{
     border: none;
 }
-
-//==============================
-
-//GIVES THE INPUT BOX AND MAGNIFY GLASS A BORDER AROUND IT 
 
 .mobile-search{
     border-style: groove;
@@ -177,10 +154,6 @@ header{
         margin: 0 auto;
     }
 }
-
-//===========================
-
-//MAKES IT SO THAT THE TELEPHONE ICON AND THE INPUT BOX INCLUDING THE MAGNIFY GLASS ISNT VISABLE UNLESS THE USER IS ON A MOBILE DEVICE
 
 .mobile-search,
 #telephone,
@@ -193,38 +166,30 @@ header{
     }
 }
 
-//============================
-
-//MAKES IT SO THAT YOU CAN SEE THE CONTACT INFO BUTTONS ON BOTH MOBILE AND TABLET
-//COULD MAKE A FUTURE ISSUE DUE TO NOT HAVING @INCLUDE MOBILE{}
-
 .contact{
     @include tablet{
         display: none;
     }
 }
 
-//GIVES STYLING TO THE HAMBURGER ICON
-
 .hamburger-menu {
-    height: 56px;
-    width: 60px;
+    height: em(56px);
+    width: em(60px);
     background-color: #333645;
     position: relative;
-    // padding: em(15px) em(15px);
     border-radius: 0.2rem;
 }
 
 .ham-bar {
     width: 70%;
-    height: 4px;
+    height: em(4px);
     background-color: white;
-    border-radius: 25px;
+    border-radius: em(25px);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform .6s, opacity .8s, top .6s;
+    // transition: transform .6s, opacity .8s, top .6s;
 }
 
 .bar-top {
@@ -249,14 +214,6 @@ header{
 //     top: 50%;
 // }
 
-//===============================================================
-
-//USELESS CODE FOR THE @INCLUDE MOBILE VIEWING SCREEN
-
-//MAIN INPUT BOX STYLING
-
-//INPUT FIELD
-
 #search_input{
     display: unset;
     padding: 0 em(15px);
@@ -265,7 +222,6 @@ header{
     display: block;
     font-size: em(15px);
     border: 1px solid rgba(0, 0, 0, .2);
-    //outline: lightblue;
 
     @include laptop{
         display: none;
@@ -281,8 +237,6 @@ header{
         border: 1px solid rgba(0, 0, 0, .2);
     }
 }
-
-//BUTTON
 
 #glass_btn{
     position: absolute;
@@ -302,8 +256,6 @@ header{
     }
 }
 
-//FULL CONTAINER OF THE INPUT BOX ICON AND BUTTON
-
 .Search{
     margin-right: em(10px);
     border: em(2px);
@@ -318,26 +270,17 @@ header{
     }
 }
 
-//ICON
-
 .glass{
     color: white;
     padding: em(14px) em(15px); 
     border-radius: em(3px);
 
 }
-//============================================
-
-//BACKGROUND COLOR FOR THE MAGNIFY GLASS AND PLANE
 
 .plane,
 .glass{
     background-color: #999AA2;
 }
-
-//===========================
-
-//HEADER LOGO STYLING
 
 #logo{
     @include laptop{
@@ -352,9 +295,6 @@ header{
         display: block;
     }
 }
-
-//=============================
-
 
 .contact,
 .Search{
@@ -393,16 +333,178 @@ header{
     }
 }
 
-
-
-
-
-
 //======================================================
 //NAVIGATION CSS/SASS:
 //======================================================
 
+.drop_down{
+    position: relative;
+}
+
+.down_arrow{
+    display: none;
+}
+
+.drop_down:hover #bespoke_arrow,
+.drop_down:hover #support_arrow,
+.drop_down:hover #digital_arrow,
+.drop_down:hover #telecoms_arrow,
+.drop_down:hover #design_arrow,
+.drop_down:hover #security_arrow,
+.drop_down:hover #developer_arrow{
+    display: block;
+}
+
+#bespoke_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #526781;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #526781;
+    }
+}
+
+#support_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #286abd;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #286abd;
+    }
+}
+
+#digital_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #25a25a;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #25a25a;
+    }
+}
+
+#telecoms_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #bc2c28;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #bc2c28;
+    }
+}
+
+#design_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #79539a;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #79539a;
+    }
+}
+
+#security_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #de093f;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #de093f;
+    }
+}
+
+#developer_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #a3331d;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #a3331d;
+    }
+}
+
 nav{ 
+    display: flex;
+    justify-content: center;
     width: 100%;
     background-color: #333645;
     @include tablet{
@@ -410,188 +512,35 @@ nav{
     }
 }
 
-// .please{
-//     display: flex;
-//     flex-direction: row;
-// }
-
-// .nav_row{
-//     display: flex;
-//     flex-direction: row;
-//     width: 100%;
-//     // text-align: center;
-//     // display: flex;
-//     // justify-content: center;
-//     // position: relative;
-// }
-
-.dropdown_categories{
-    display: flex;
+.drop_down a:visited{
+    color: white;
 }
 
-// .dropdown_categories li{
-//     display: inline;
-// }
+#bespoke_content:hover #bespoke_drop_content,
+#support_content:hover #support_drop_content,
+#digital_content:hover #digital_drop_content,
+#telecoms_content:hover #telecoms_drop_content,
+#design_content:hover #design_drop_content,
+#security_content:hover #security_drop_content,
+#developer_content:hover #developer_drop_content{
+    display: block;
+}
 
-// .dropdown_categories a{
-//     display: inline-flex;
-// }
-
-// .dropdown_categories{
-//     position: relative;
-// }
-
-// .down_arrow{
-//     display: none;
-// }
-
-// .drop_down:hover #bespoke_arrow,
-// .drop_down:hover #support_arrow,
-// .drop_down:hover #digital_arrow,
-// .drop_down:hover #telecoms_arrow,
-// .drop_downhover #design_arrow,
-// .drop_down:hover #security_arrow,
-// .drop_downu:hover #developer_arrow{
-//     display: block;
-//     // @include laptop{
-//     //     display: block;
-//     // }
-// }
-
-
-// #bespoke_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -40px;
-//     width: 0;
-//     height: 0;
-//     border: 87px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #526781;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-//     // @include laptop{
-//     //     border: 60px solid transparent;
-//     // }
-// }
-
-// #support_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -41px;
-//     width: 0;
-//     height: 0;  
-//     border: 81px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #286abd;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-// }
-
-// #digital_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -41px;
-//     width: 0;
-//     height: 0;
-//     border: 90px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #25a25a;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-// }
-
-// #telecoms_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -40px;
-//     width: 0;
-//     height: 0;
-//     border: 82px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #bc2c28;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-// }
-
-// #design_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -40px;
-//     width: 0;
-//     height: 0;
-//     border: 72px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #79539a;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-// }
-
-// #security_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -40px;
-//     width: 0;
-//     height: 0;
-//     border: 83px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #de093f;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-// }
-
-// #developer_arrow:after{
-//     content: '';
-//     display: inline-block;
-//     vertical-align: bottom;
-//     position:absolute;
-//     top: 82px;
-//     left: -40px;
-//     width: 0;
-//     height: 0;
-//     border: 82px solid transparent;
-//     border-top: 0;
-//     border-bottom: 48px solid #a3331d;
-//     filter: brightness(120%);
-//     transform: rotate(180deg);
-//     z-index: 5;
-// }
 
 .drop_down{
+    width: 160px;
     padding: em(25px) em(25px);
-    // margin: 0 auto;
+    @include laptop{
+        width: 140px;
+    }
 }
 
-.nav_row ul{
+nav ul{
     padding: 0;
     margin: 0;
 }
 
-.nav_row a{
+nav a{
     text-decoration: none;
 }
 
@@ -612,19 +561,20 @@ nav{
     background-color: #526781;
 }
 
+#bespoke_drop_down:hover .dropdown_content{
+    display: block;
+}
+
+
 .dropdown_categories{
     text-align: center;
-
-    // @include laptop{
-    //     max-width: 100px;
-    // }
 }
 
 .dropdown_categories i{
     font-size: 20px;
 }
 
-.nav_row a:visited{
+nav a:visited{
     color: white;
 }
 
@@ -700,58 +650,23 @@ nav{
     font-size: 22px;
 }
 
-#bespoke_header{
-
-    margin-left: 50px;
-}
-
-#support_header{
-    margin-left: 70px;
-}
-
-#digital_header{
-
-    margin-left: 35px;
-}
-
-#telecoms_header{
-
-    margin-left: 85px;
-}
-
-#design_header{
-
-    margin-left: 75px;
-}
-
-#security_header{
-
-    margin-left: 60px;
-}
-
-#developer_header{
-
-    margin-left: 60px;
-}
-
-
 .dropdown_list{
     display: flex;
-    margin: 15px;
 }
 
-.dropdown_list{
-    margin-right: 100px;
-}
 
 .dropdown_list li{
     font-size: 18px;
     padding: 15px 0;
+    margin-right: 75px;
+    @include laptop{
+        margin-right: 60px;
+    }
 }
 
 .dropdown_list i{
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 //======================================================
@@ -777,10 +692,12 @@ nav{
 
     @include tablet{
         margin: 0 auto;
+        width: 700px;
         text-align: center;
     }
     @include mobile{
         margin: 0 auto;
+        width: 700px;
         text-align: center;
     }
 }
@@ -795,7 +712,6 @@ nav{
 }
 
 .arrow{
-    align-self: center;
     margin-left: em(10px);
     font-size: em(22px);
 }
@@ -803,6 +719,9 @@ nav{
 .background_text h1{
     font-size: 60px;
     margin: em(10px) 0;
+    @include tablet{
+        font-size: 50px;
+    }
 }
 
 .background_text p{
@@ -819,17 +738,6 @@ nav{
     font-size: medium;
     width: em(220px);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -852,10 +760,6 @@ nav{
 .bottom_text_card{
     display: none;
     visibility: none;
-    @include phone{
-        display: block;
-        text-align: center;
-    }
 }
 
 
@@ -872,25 +776,6 @@ nav{
         display: none;
     }
 }
-
-// .cards{
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-
-//     //@include laptop{
-//     //    display: flex;
-//     //    flex-wrap: wrap;
-//     //}
-// }
-
-// .cards h2{
-//     font-weight: unset;
-// }
-
-    // display: flex;
-    // justify-content: center;
-    // flex-wrap: wrap;
 
 .top_cards,
 .bottom_cards{
@@ -932,7 +817,6 @@ nav{
 #support_card,
 #marketing_card{
     width: 357px;
-    // width: 280px;
     padding: 25px;
     margin: 15px;
 
@@ -1111,7 +995,8 @@ nav{
     color: #CE4125;
     background-color: white;
 }
-//===========================================
+//===================
+
 .card_style i{
     padding: 16px 13px;
     margin-top: 15px;
@@ -1121,14 +1006,14 @@ nav{
 .card_style button{
     position: relative;
     padding: 16px;
-    //margin-bottom: 15px;
+
     border-radius: 3px;
     bottom: 0;
 }
 
-//============================================
+//=====================
 
-//ALL THE TRANSITION EFECTS
+//ALL THE HOVER EFECTS
 
 .card_style:hover p,
 .card_style:hover h2{
@@ -1178,21 +1063,16 @@ nav{
 //Wheel CSS/SASS:
 //======================================================
 
-
 .ppc{
     display: flex;
     margin: 50px auto;
     width: 10%;
 }
 
-
-
-
 //======================================================
 //REVIEWS CSS/SASS:
 //======================================================
 
-//MAIN STYLING
 .reviews_style{
     padding: em(30px) 0 em(50px) 0;
     width: 100%;
@@ -1222,7 +1102,6 @@ nav{
     color: white;
 }
 
-// //LAYOUT
 .reviews_content{
     display: flex;
     @include laptop{
@@ -1260,6 +1139,7 @@ nav{
     }
     @include mobile{
         width: 100%;
+        margin-left: 10px;
     }
 }
 
@@ -1276,13 +1156,10 @@ nav{
     }
     @include mobile{
         width: 100%;
+        margin-left: 10px;
     }
 }
 
-
-//=============================================
-
-//STYLING FOR BOTH WELCOME_NET AND CLIENT_REVIEWS
 .welcome_net p{
     margin: em(30px) 0;
 }
@@ -1321,9 +1198,6 @@ nav{
 #HOK{
     color: #A3A8AC;
 }
-//==================================================
-
-
 
 //======================================================
 //LATEST NEWS CSS/SASS:
@@ -1335,12 +1209,12 @@ nav{
     right: 0;
     background-color: #4183d7;
     color: white;
-    padding: 3px 10px;
-    font-size: 14px;
+    padding: em(3px) em(10px);
+    font-size: em(14px);
 }
 
 .main_news_card button{
-    padding: 12px 15px;
+    padding: em(12px) em(15px);
     color: white;
     border-radius: 3px;
 }
@@ -1372,9 +1246,9 @@ nav{
 .posted_net{
     display: flex;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 em(10px);
     @include laptop{
-        margin: 10px 20px 0 20px;
+        margin: em(10px) em(20px) 0 em(20px);
     }
 }
 
@@ -1388,7 +1262,7 @@ nav{
 }
 
 .posted_net p{
-    margin-left: 10px;
+    margin-left: em(10px);
     color: #333645;
 }
 
@@ -1435,56 +1309,57 @@ nav{
 }
 .news_style h3,
 .read_time{
-    font-size: 15px;
+    font-size: em(15px);
 }
 
 .news_description,
 .posted_net p{
-    font-size: 14px;
+    font-size: em(14px);
 }
 
 .main_news_card p,
 .main_news_card h3,
 .main_news_card button{
-    margin-left: 10px;
+    margin-left: em(10px);
     @include laptop{
-        margin-left: 20px;
+        margin-left: em(20px);
     }
 }
 .main_news_card button{
-    margin-bottom: 10px;
+    margin-bottom: em(10px);
 }
 
 #news_1 button{
     @include laptop{
-        margin-top: 89px;
+        margin-top: em(89px);
     }
     @include tablet{
-        margin-top: 70px;
+        margin-top: em(70px);
     }
     @include mobile{
         margin-top: 0;
     }
 }
+
 #news_1 button,
 #news_2 button{
     @include mobile{
-        margin-top: 30px;
-    }
-}
-#news_3 button{
-    @include laptop{
-        margin-top: 70px;
-    }
-    @include tablet{
-        margin-top: 51px;
-    }
-    @include mobile{
-        margin-top: 30px;
+        margin-top: em(30px);
     }
 }
 
-//POSITIONING OF THE CARDS AND TEXT ABOVE THE CARDS
+#news_3 button{
+    @include laptop{
+        margin-top: em(70px);
+    }
+    @include tablet{
+        margin-top: em(51px);
+    }
+    @include mobile{
+        margin-top: em(30px);
+    }
+}
+
 .news_cards{
     display: flex;
     justify-content: center;
@@ -1505,7 +1380,7 @@ nav{
 
 .news_top{
     display: flex;
-    margin: 25px 140px 0 150px;
+    margin: em(25px) em(140px) 0 em(150px);
     justify-content: space-between;
     @include laptop{
         margin: 0;
@@ -1516,18 +1391,18 @@ nav{
         justify-content: center;
     }
     @include mobile{
-        margin: 0 0 0 35px;
+        margin: 0 0 0 em(35px);
         justify-content: unset;
-        font-size: 22px;
+        font-size: em(22px);
     }
 }
 
 #view_all{
     @include laptop{
-        margin-left: 440px;
+        margin-left: em(440px);
     }
     @include tablet{
-        margin-left: 395px;
+        margin-left: em(395px);
     }
     @include mobile{
         display: none;
@@ -1541,37 +1416,33 @@ nav{
     }
 }
 
-//===========================================================
-
 .news_style{
     width: 25%;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 0 0 0 15px;
+    margin: 0 0 0 em(15px);
     @include laptop{
         width: 350px;
-        // width: 35%;
         height: 550px;
     }
     @include tablet{
         width: 320px;
-        // width: 32%;
         height: 500px;
     }
     @include mobile{
         width: 90%;
         height: 650px;
-        margin: 20px 35px 0 35px;
+        margin: em(20px) em(35px) 0 em(35px);
     }
 }
 
 #news_3{
     @include tablet{
-        margin-left: 30px;
+        margin-left: em(30px);
     }
     @include mobile{
-        margin-left: 35px;
+        margin-left: em(35px);
     }
 }
 
@@ -1600,36 +1471,40 @@ label.required:after{
 
 form{
     @include laptop{
-        margin: 0 120px;
+        width: 900px;
     }
 
     @include tablet{
-        margin: 0 100px;
+        width: 600px;
     }
-    @include mobile{
-        margin: 0;
+}
+
+.newsletter_container{
+    background-color: #DDD;
+    max-width: 100%;
+    padding: em(25px) 0;
+    @include laptop{
+        display: flex;
+        justify-content: center;
+    }
+    @include tablet{
+        display: flex;
+        justify-content: center;
     }
 }
 
 .newletter_header{
-    font-size: 24px;
+    font-size: em(24px);
 }
 
 .newsletter_sign_up button{
     background-color: #333645;
     color: white;
-    padding: 12px 18px;
+    padding: em(12px) em(18px);
     border-radius: 3px;
-    font-size: 15px;
-    margin-top: 10px;
+    font-size: em(15px);
+    margin-top: em(10px);
 }
-
-// form{
-//     // @include laptop{
-
-//     // }
-
-// }
 
 .input_text{
     display: inline-flex;
@@ -1653,14 +1528,6 @@ form{
 
 .checkbox_privacy{
     display: inline-flex;
-
-    // @include tablet{
-    //     width: 80%;
-    // }
-
-    @include mobile{
-        width: 90%;
-    }
 }
 
 .newsletter_text_input{
@@ -1670,14 +1537,6 @@ form{
     @include laptop{
         width: 420px;
     }
-
-    @include tablet{
-        max-width: 800px;
-    }
-
-    @include mobile{
-        width: 95%;
-    }
 }
 
 .name_input,
@@ -1685,18 +1544,15 @@ form{
 .checkbox_privacy,
 .newletter_header,
 .newsletter_sign_up button{
-    // @include tablet{
-    //     margin: 0 225px;
-    // }
     @include mobile{
-        margin-left: 10px;
+        margin-left: em(10px);
     }
 }
 .name_input{
     margin-right: 15px;
     @include tablet{
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: em(10px);
     }
 }
 
@@ -1706,20 +1562,14 @@ form{
         margin-left: 0;
     }
     @include mobile{
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-left: em(10px);
+        margin-top: em(10px);
     }
 }
 #newsletter_checkbox{
     border: 3px solid #333645;
     width: 2%;
-    margin-right: 15px;
-}
-
-.newsletter_container{
-    background-color: #DDD;
-    max-width: 100%;
-    padding: 25px 0;
+    margin-right: em(15px);
 }
 
 .newsletter_sign_up h2,
@@ -1736,93 +1586,14 @@ form{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .newsletter_container{
-//     background-color: #DDD;
-// }
-
-// .newsletter_sign_up{
-//     display: flex;
-//     flex-direction: column;
-//     // flex-wrap: wrap;
-// }
-
-// .newsletter_sign_up{
-//     padding: 25px 0;
-//     margin: 0 100px;
-// }
-
-// .newsletter_sign_up h2{
-//     font-size: 32px;
-//     font-weight: 400;
-// }
-
-// .newsletter_sign_up h2,
-// .newsletter_sign_up label,
-// .checkbox_privacy{
-//     color: #333645;
-// }
-
-
-
-// .newsletter_sign_up button{
-//     background-color: #333645;
-//     color: white;
-//     padding: 15px 5px;
-//     border-radius: 3px;
-//     width: 100px;
-// }
-// .newsletter_container button{
-//     background-color: #333645;
-//     color: white;
-//     padding: 13px 15px;
-//     border-radius: 3px;
-// }
-// .text_input{
-//     padding: 15px;
-// } 
-
 //======================================================
 //FOOTER CSS/SASS:
 //======================================================
 
 footer{
     background-color: #323544;
-    position: relative;
-    display: block;
     padding-top: em(20px);
-    bottom: 0;
-    left: 0;
     width: 100%;
-    @include laptop{
-        //padding-top: 0;
-        //bottom: 0;
-    }
 }
 
 footer h4{
@@ -1843,13 +1614,12 @@ footer ul{
 .Below-Footer{
     background-color:#212330; 
     padding: em(10px) 0;
-    //position: relative;
-    //bottom: 0;
 }
 
 .Below-Footer p{
     color: white;
 }
+
 .social-media img{
     width: 80%;
     @include mobile{
@@ -1858,20 +1628,16 @@ footer ul{
     }
 
     @include tablet{
-        width: em(320px);
+        width: 320px;
     }
 }
 
 .social-media h4{
     margin: em(15px) 0 em(15px) 0;
 }
+
 .social-media{
-    //display: inline-flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     text-align: left;
-    align-items: center;
-    //position: center;
     padding: em(16px) em(22px);
     margin: em(30px) 0;
 
@@ -1894,10 +1660,8 @@ footer ul{
 .Netmatters-Info, 
 .footer-content{
     display: inline-flex;
-    flex-grow: 1;
 
     @include laptop{
-        position: relative;
         flex-wrap: wrap;
         padding: 0 em(50px);
     }
@@ -1927,7 +1691,6 @@ footer,
 .footer-content,
 a{
     text-align: center;
-    
 }
 
 .About-Netmatters{
@@ -1958,13 +1721,10 @@ a{
 .Our-Services,
 .Our-Industries,
 .Locations{
-    left: 0;
     text-align: left;
     line-height:26px;
     padding: 0 em(22px) em(16px);
     margin: 0 em(10px) em(16px);
-    margin-right:7px;
-    position: relative;
 
     @include tablet{
         padding-bottom: 0;
@@ -1981,14 +1741,8 @@ a{
 .linkedin, 
 .twitter,
 .instagram{
-    background: transparent;
     background-color: #212330;
     padding: em(12px) em(22px) em(16px);
-}
-
-ol,
-ul{
-    list-style: none;
 }
 
 //Links CSS
@@ -2017,9 +1771,3 @@ a:hover .linkedin {
 .Netmatters-Info a:active{
     color: black;
 }
-
-
-
-/* CREATE HTML FOR THE MOBILE VERSION OF THE HEADER WITH A CLASS NAME WE WILL DISPLAY: NONE; IT 
-   THEN ONCE THE SCREEN HITS THE MAX-WIDTH FOR MOBILE USERS THEN 
-   IT WILL APPEAR AND HIDE THE REST OF THE CONTENT THAT ISN'T NEEDED */    
