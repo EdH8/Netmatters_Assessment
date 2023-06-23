@@ -1,0 +1,226 @@
+//======================================================
+//FOOTER CSS/SASS:
+//======================================================
+
+footer{
+    background-color: #323544;
+    padding-top: em(20px);
+    width: 100%;
+}
+
+footer h4{
+    color: white;
+    margin: 0;
+    @include mobile{
+        margin: 0 0 em(10px) 0
+    }
+}
+
+footer ul{
+    padding:0 0;
+    @include mobile{
+        margin: 0 0;
+    }
+}
+
+.Below-Footer{
+    background-color:#212330; 
+    padding: em(10px) 0;
+}
+
+.Below-Footer p{
+    color: white;
+}
+
+.social-media img{
+    width: 80%;
+    @include mobile{
+        padding-bottom: em(5px);
+        height: 50%;
+    }
+
+    @include tablet{
+        width: 320px;
+    }
+}
+
+.social-media h4{
+    margin: em(15px) 0 em(15px) 0;
+}
+
+.social-media{
+    text-align: left;
+    padding: em(16px) em(22px);
+    margin: em(30px) 0;
+
+    @include laptop{
+        padding: em(16px) 0 0 0;
+        // margin: 0 0 em(15px) em(70px);
+        margin: 0 0 15px 55px;
+    }
+
+    @include tablet{
+         grid-area: Social;
+         margin: 0 0 em(10px) em(35px);
+        // margin: unset;
+    }
+
+    @include mobile{
+        padding-left: em(15px);
+        margin: 0 0;
+    }
+}
+
+.Netmatters-Info, 
+.footer-content{
+    display: inline-flex;
+
+    @include laptop{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        margin-left: 15px;
+        // padding: 0 em(50px);
+    }
+
+    @include tablet{
+        display: grid;
+        grid-template-areas:
+            "Social Social"
+            "About Services"
+            "Industries Locations";
+        padding: 0 em(40px) 0 em(40px);
+    }
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        padding: 0 em(15px);
+    }
+}
+
+.footer-content a{
+    font-size: em(13px);
+}
+
+footer, 
+.Netmatters-Info,
+.footer-content,
+a{
+    text-align: center;
+}
+
+.About-Netmatters{
+    @include tablet{
+        grid-area: About;
+    }
+}
+
+.Our-Services{
+    @include tablet{
+        grid-area: Services;
+    }
+}
+
+.Our-Industries{
+    @include tablet{
+        grid-area: Industries;
+    }
+}
+
+.Locations{
+    @include tablet{
+        grid-area: Locations;
+    }
+}
+
+.About-Netmatters,
+.Our-Services,
+.Our-Industries,
+.Locations{
+    text-align: left;
+    line-height:26px;
+    // padding: 0 em(22px) em(16px);
+    margin: 0 em(20px) em(16px);
+
+    @include tablet{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    @include mobile{
+        margin: em(13px) 0;
+        padding: 0 0;
+    }
+}
+
+.facebook, 
+.linkedin, 
+.twitter,
+.instagram{
+    background-color: #212330;
+    padding: em(16px) em(22px);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.something_two,
+.something_three{
+    display: inline-block;
+    @include small{
+        display: flex;
+    }
+}
+
+.facebook{
+    @include small{
+        padding: 16px 38px;
+    }
+} 
+
+.linkedin{
+    @include small{
+        padding: 16px 36px;
+    }
+}
+
+.twitter{
+    @include small{
+        margin-top: 10px;
+        padding: 16px 35px;
+    }
+}
+.instagram{
+    @include small{
+        margin-top: 10px;
+        padding: 16px 36px;
+    }
+}
+
+//Links CSS
+
+footer a:link, 
+footer a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+a:hover .facebook {
+    background-color:#3b5998;
+}
+a:hover .twitter {
+    background-color:#00aced;
+}
+a:hover .instagram {
+    background-color:#d93175;
+}
+a:hover .linkedin {
+    background-color:#0077b5;
+}
+.Netmatters-Info a:active{
+    color: black;
+}

@@ -1,0 +1,347 @@
+//======================================================
+//Info Cards CSS/SASS:
+//======================================================
+
+//POSITIONING CARDS AND TEXT
+
+.text_card{
+    display: flex;
+    justify-content: center;
+    @include mobile{
+        display: block;
+        margin-left: 10px;
+    }
+}
+
+
+.bottom_text_card{
+    display: none;
+    visibility: none;
+    @include mobile{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.view_work{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#card_view_work{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 60px 0 0 600px;
+    @include laptop{
+        margin-left: 420px;
+    }
+    @include tablet{
+        margin-left: 200px;
+    }
+    @include mobile{
+        display: none;
+    }
+}
+
+#card_our_services{
+    color: #333645;
+    font-size: 50px;
+}
+
+.top_cards,
+.bottom_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+.top_cards{
+    @include tablet{
+        flex-direction: column;
+    }
+}
+
+.bottom_cards{
+    @include laptop{
+        flex-wrap: wrap;
+    }
+    @include tablet{
+        flex-wrap: wrap;
+    }
+}
+
+//=====================================
+
+
+//MAIN CUSTOMISING FOR CARDS
+.card_style{
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#marketing_card{
+    height: 300.833px;
+    @include laptop{
+        height: 318.833px;
+    }
+    @include tablet{
+        height: 282.833px;
+    }
+}
+
+#marketing_card button{
+    @include tablet{
+        margin-top: 20px;
+    }
+}
+
+#bespoke_card,
+#support_card,
+#marketing_card{
+    width: 357px;
+    padding: 25px;
+    margin: 15px;
+
+    @include laptop{
+        margin: 0 15px;
+        width: 296px;
+    }
+
+    @include tablet{
+        margin: 25px 0 0 0;
+        width: 720px
+    }
+
+    @include mobile{
+        margin: 25px 0 0 0;
+        width: 95%
+    }
+    
+}
+
+#telecoms_card,
+#web_card,
+#security_card,
+#training_card{
+    width: 260px;
+    padding: 20px;
+    margin: 15px;
+
+    @include laptop{
+        margin: 15px;
+        width: 460px
+    }
+
+    @include tablet{
+        margin: 10px;
+        width: 350px;
+    }
+    @include mobile{
+        margin: 25px 0 0 0;
+        width: 95%
+    }
+}
+
+
+//==============================================
+
+//MAIN CUSTOMISING FOR THE CONTENT INSIDE THE CARDS
+.card_container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto; 
+    color: #333645;
+}
+//===================================================
+
+//BASE BUTTON, LINKS AND ICON STYLING
+.card_container a:link,
+.text_card a:link,
+.bottom_text_card a:link,
+.card_container a:visited,
+.text_card a:visited,
+.bottom_text_card a:visited{
+    color: #333645;
+}
+
+.card_container button,
+.card_container i{
+    color: white;
+}
+
+.card_container a,
+.text_card a,
+.bottom_text_card a{
+    text-decoration: none;
+}
+
+.text_card a:hover,
+.bottom_text_card a:hover{
+    text-decoration: underline;
+}
+//==================================
+
+//ALL THE CUSTOMISING FOR THE ICON AND BUTTON
+
+//BESPOKE SOFTWARE
+#bespoke_card button,
+#bespoke_card i{
+    background-color: #67809F;
+}
+
+#bespoke_card:hover button,
+#bespoke_card:hover i{
+    color: #67809F;
+    background-color: white;
+}
+
+//==========
+
+//IT SUPPORT
+#support_card button,
+#support_card i{
+    background-color: #4183D7;
+}
+
+#support_card:hover button,
+#support_card:hover i{
+    color: #4183D7;
+    background-color: white;
+}
+
+//==========
+
+//DIGITAL MARKETING
+#marketing_card button,
+#marketing_card i{
+    background-color:#2ECC71;
+}
+
+#marketing_card:hover button,
+#marketing_card:hover i{
+    color: #2ECC71;
+    background-color: white;
+}
+
+//==========
+
+//TELECOMS SERVICES
+#telecoms_card button,
+#telecoms_card i{
+    background-color: #D64541;
+}
+
+#telecoms_card:hover button,
+#telecoms_card:hover i{
+    color: #D64541;
+    background-color: white;
+}
+
+//==========
+
+//WEB DESIGN
+#web_card button,
+#web_card i{
+    background-color: #926FB1;
+}
+
+#web_card:hover button,
+#web_card:hover i{
+    color: #926FB1;
+    background-color: white;
+}
+
+//==========
+
+//CYBER SECURITY
+#security_card button,
+#security_card i{
+    background-color: #F62459;
+}
+
+#security_card:hover button,
+#security_card:hover i{
+    color: #F62459;
+    background-color: white;
+}
+
+//==========
+
+//DEVELOPER TRAINING
+#training_card button,
+#training_card i{
+    background-color: #CE4125;
+}
+
+#training_card:hover button,
+#training_card:hover i{
+    color: #CE4125;
+    background-color: white;
+}
+//===================
+
+.card_style i{
+    padding: 16px 13px;
+    margin-top: 15px;
+    border-radius: 50%
+}
+
+.card_style button{
+    position: relative;
+    padding: 16px;
+
+    border-radius: 3px;
+    bottom: 0;
+}
+
+//=====================
+
+//ALL THE HOVER EFECTS
+
+.card_style:hover p,
+.card_style:hover h2{
+    color: white;
+}
+
+.card_style:hover{
+    transform: translateY(-10px);
+}
+
+.card_style{
+    transition: .5s;
+}
+
+#bespoke_card:hover{
+    background-color:#67809F;
+}
+
+#support_card:hover{
+    background-color:#4183D7;
+}
+
+#marketing_card:hover{
+    background-color:#2ECC71;
+}
+
+#telecoms_card:hover{
+    background-color:#D64541;
+}
+
+#web_card:hover{
+    background-color:#926FB1;
+}
+
+#security_card:hover{
+    background-color:#F62459;
+}
+
+#training_card:hover{
+    background-color:#CE4125;
+}

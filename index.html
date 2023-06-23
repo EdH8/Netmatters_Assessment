@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="SCSS/Style.css">
     <script src="https://kit.fontawesome.com/0748773ba3.js" crossorigin="anonymous"></script>
     <title>Pretty cool</title>
 </head>
 
 <body>
     <div id="container">
-        <!-- <div id="content-wrap"> -->
             <!--======================================-->
             <!--Header HTML-->
             <!--======================================-->
             <header>
                 <div class="Header-Row">
                     <div class="Head-Logo">
-                        <a href="#"><img id="logo" alt="Netmatters Logo Black" src="Net_Logo.png"></a>
+                        <a href="#"><img id="logo" alt="Netmatters Logo Black" src="SCSS/Images/Net_Logo.png"></a>
                     </div>
                     <div class="actions">
                         <div class="contact">
                             <a href="#"><i id="mouse" class="mouse fa-solid fa-computer-mouse">Support</i></a>
                             <a href="#"><i id="plane" class="plane fa fa-paper-plane-o">Contact</i></a>
                         </div>
-                        <!--=============================================================================================-->
                         <div class="Search">
                             <input id="search_input" type="text" placeholder="Search...">
                             <button id="glass_btn"><i class="glass fa-solid fa-magnifying-glass"></i></button>
                         </div>
-                        <!--==================================================================================================-->
                         <i id="telephone" class="telephone fa-sharp fa-solid fa-phone-volume fa-xl"></i>
                         <div class="hamburger-menu">
                             <div class="ham-bar bar-top"></div>
@@ -371,14 +368,14 @@
 <!--======================================-->
 
 <div class="background_img">
-    <div class="background_text">
-        <h1>The East Of England's Leading Technology Company</h1>
-        <p>Performance-driven digital and technology services <br> with complete transparency.</p>
-
-        <button id="choose_us">WHY CHOOSE US? <i class="arrow fa-solid fa-arrow-right"></i></button>
+    <div class="wrapper">
+        <div class="background_text">
+            <h1>The East Of England's Leading Technology Company</h1>
+            <p>Performance-driven digital and technology services <br> with complete transparency.</p>
+            <button id="choose_us">WHY CHOOSE US? <i class="arrow fa-solid fa-arrow-right"></i></button>
+        </div>
     </div>
 </div>
-
 
 
 
@@ -389,7 +386,7 @@
 <div class="wrapper">
     <div class="text_card">
         <h2 id="card_our_services"><strong>Our Services</strong></h2>
-        <h3 id="card_view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
+        <h3 class="view_work" id="card_view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
     </div>
 <div class="card_container">
         <div class="cards">
@@ -461,7 +458,7 @@
         </div>
     </div>
     <div class="bottom_text_card">
-        <h3><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
+        <h3 class="view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
     </div>
 </div>
 
@@ -474,7 +471,7 @@
 
 <div class="wrapper">
     <div class="Wheel">
-        <img class="ppc" alt="Promt Payment Code" src="PPC.jpg">
+        <img class="ppc" alt="Promt Payment Code" src="SCSS/Images/PPC.jpg">
     </div>
 </div>
 
@@ -486,7 +483,6 @@
 <!--======================================-->
 <div class="reviews_style">
     <div class="wrapper">
-
         <div class="reviews_content">
             <div class="welcome_net">
                 <div class="welcome_header">
@@ -494,11 +490,11 @@
                 </div>
 
                 <div class="welcome_text">
-                    <p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in <a href="#">London</a>, <a href="#">Cambridge, </a><a href="#">Wymondham</a>, and <a href="#">Great Yarmouth.</a></strong></p>
+                    <p class="main_text"><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in <a href="#">London</a>, <a href="#">Cambridge, </a><a href="#">Wymondham</a>, and <a href="#">Great Yarmouth.</a></strong></p>
 
-                    <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+                    <p class="main_text">We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
 
-                    <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
+                    <p class="main_text">We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
                 </div>
 
                 <div class="welcome_btns">
@@ -541,25 +537,27 @@
     <div class="news_container">
         <div class="news_top">
             <h2><strong>Latest News</strong></h2>
-            <h3 id="view_all"><a href="#">View All <i class="arrow fa-solid fa-arrow-right"></i></a></h3>
+            <h3 class="view_all" id="top_view_all"><a href="#">View All <i class="news_arrow fa-solid fa-arrow-right"></i></a></h3>
         </div>
         <div class="news_cards">
             <div class="news_style" id="news_1">
                 <div class="main_news_card">
                 <a href="#">
-                    <img class="news_img" alt="News Image" src="may_notable.png">
+                    <img class="news_img" alt="News Image" src="SCSS/Images/may_notable.png">
                 </a>
                     <a class="additional_info" id="additional_news" href="#">News</a>
+
                 <a href="#">    
                     <h3 id="may_notable">May 2023 Notables <span class="read_time">- 4 MINUTE READ</span></h3>
-                    <p class="news_description">Each month, various departments recognise those employees who have excelled in their work and helped...</p>
+                    <p id="may_description" class="news_description">Each month, various departments recognise those employees who have excelled in their work and helped...</p>
                 </a>
+
                 <button>READ MORE</button>
                 </div>
                 <a href="#">
                     
                     <div class="posted_net">
-                        <img alt="Netmatters Small Logo" src="net_logo_small.png">
+                        <img alt="Netmatters Small Logo" src="SCSS/Images/net_logo_small.png">
                         <p><strong>Posted by Netmatters</strong> <br>7th June 2023</p>
                     </div>
                 </a>
@@ -568,7 +566,7 @@
             <div class="news_style" id="news_2">
                 <div class="main_news_card">
                 <a href="#">
-                    <img class="news_img" alt="News Image" src="april_notable.png">
+                    <img class="news_img" alt="News Image" src="SCSS/Images/april_notable.png">
                 </a>
                     <a class="additional_info" href="#">News</a>
                 <a href="#">
@@ -580,7 +578,7 @@
                 <a href="#">
 
                     <div class="posted_net">
-                        <img alt="Netmatters Small Logo" src="net_logo_small.png">
+                        <img alt="Netmatters Small Logo" src="SCSS/Images/net_logo_small.png">
                         <p><strong>Posted by Netmatters</strong> <br>7th June 2023</p>
                     </div>
                 </a>
@@ -589,7 +587,7 @@
             <div class="news_style" id="news_3">
                 <div class="main_news_card">
                 <a href="#">
-                    <img class="news_img" alt="News Image" src="case_study.png">
+                    <img class="news_img" alt="News Image" src="SCSS/Images/case_study.png">
                 </a>
                     <a class="additional_info" id="additional_study" href="#">Case Study</a>
                 <a href="#">
@@ -599,15 +597,14 @@
                 <button>READ MORE</button>
                 </div>
                 <a href="#">
-
                     <div class="posted_net">
-                        <img alt="Netmatters Small Logo" src="net_logo_small.png">
+                        <img alt="Netmatters Small Logo" src="SCSS/Images/net_logo_small.png">
                         <p><strong>Posted by Netmatters</strong> <br>7th June 2023</p>
                     </div>
                 </a>
             </div>
             <div class="news_bottom">
-                <h3><a href="#">View All <i class="arrow fa-solid fa-arrow-right"></i></a></h3>
+                <h3 class="view_all"><a href="#">View All <i class="news_arrow fa-solid fa-arrow-right"></i></a></h3>
             </div>
         </div>
     </div>
@@ -621,7 +618,7 @@
 
 <div class="wrapper">
     <div class="Wheel">
-        <img class="ppc" alt="Promt Payment Code" src="PPC.jpg">
+        <img class="ppc" alt="Promt Payment Code" src="SCSS/Images/PPC.jpg">
     </div>
 </div>
 
@@ -631,110 +628,126 @@
 <!--NEWSLETTER SIGN-UP HTML-->
 <!--======================================-->
 
-<div class="newsletter_container">
-    <div class="wrapper">
+<!-- <div class="newsletter_container"> -->
         <form>
-            <div class="newsletter_sign_up">
-                <div class="newletter_header">
-                    <h2>Email Newsletter Sign-Up</h2>
-                </div>
-                <div class="newsletter_inputs">
-                    <div class="input_text">
-                        <div class="name_input">
-                            <label for="full-name" class="text_input required">Your Name</label>
-                            <input type="text" class="newsletter_text_input" id="full-name" name="full-name" required>
+            <div class="wrapper">
+                <div class="newsletter_container">
+                    <div class="newsletter_sign_up">
+                        <div class="newletter_header">
+                            <h2>Email Newsletter Sign-Up</h2>
                         </div>
-                        <div class="email_input">
-                            <label for="email" class="text_input required">Your Email</label>
-                            <input type="email" class="newsletter_text_input" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                        <div class="newsletter_inputs">
+                            <div class="input_text">
+                                <div class="name_input">
+                                    <label for="full-name" class="text_input required">Your Name</label><br>
+                                    <input type="text" class="newsletter_text_input" id="full-name" name="full-name" required>
+                                </div>
+                                <div class="email_input">
+                                    <label for="email" class="text_input required">Your Email</label><br>
+                                    <input type="email" class="newsletter_text_input" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                                </div>
+                            </div>
+                            <div class="checkbox_privacy">
+                                <input id="newsletter_checkbox" type="checkbox">
+                                <p id="checkbox_text">Please tick this box if you wish to receive marketing information from us. Please see our <a id="newsletter_privacy" href="#">Privacy Policy</a> for more information on how we keep your data safe.</p>
+                            </div>
                         </div>
+                        <!-- <button type="submit" class="sub_btn">SUBSCRIBE</button> -->
                     </div>
-                    <div class="checkbox_privacy">
-                        <input id="newsletter_checkbox" type="checkbox">
-                        <p>Please tick this box if you wish to receive marketing information from us. Please see our <a id="newsletter_privacy" href="#">Privacy Policy</a> for more information on how we keep your data safe.</p>
-                    </div>
+                    <button type="submit" class="sub_btn">SUBSCRIBE</button>
                 </div>
-                <button type="submit" class="sub_btn">SUBSCRIBE</button>
             </div>
         </form>
-    </div>
-</div>
+<!-- </div> -->
 
 <!--======================================-->
 <!--Footer HTML-->
 <!--======================================-->
 
+<!-- <div class="wrapper"> -->
+    <footer>
+        <div class="wrapper">
+        <div class="footer-content"> 
+            <div class="social-media"> 
+                <div class="footer_logo">
+                    <img alt="Netmatters Logo White" src="SCSS/Images/Netmatters_Logo.png">
+                </div>
+                <div class="social_header">
+                    <h4>FOLLOW US ON:</h4>
+                </div>
+                <div class="social_media_links">
+                    <div class="something_two">
+                        <a href="#"><i class="facebook fa fa-facebook"></i></a>
+                        <a href="#"><i class="linkedin fa fa-linkedin"></i></a>
+                    </div>
+                    <div class="something_three">
+                        <a href="#"><i class="twitter fa fa-twitter"></i></a>
+                        <a href="#"><i class="instagram fa fa-instagram"></i></a>
+                    </div>
 
-<footer>
-    <div class="footer-content"> 
-        <div class="social-media"> 
-            <img alt="Netmatters Logo White" src="Netmatters_Logo.png">
-            <h4>FOLLOW US ON:</h4>
-            <a href="#"><i class="facebook fa fa-facebook"></i></a>
-            <a href="#"><i class="linkedin fa fa-linkedin"></i></a>
-            <a href="#"><i class="twitter fa fa-twitter"></i></a>
-            <a href="#"><i class="instagram fa fa-instagram"></i></a>
-        </div>
-        <div class="Netmatters-Info">
-            <div class="About-Netmatters">
-                <h4>About Netmatters</h4>
-                <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Our Careers</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Enviromental Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
+                </div>
             </div>
+            <div class="Netmatters-Info">
+                <div class="About-Netmatters">
+                    <h4>About Netmatters</h4>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Our Careers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Enviromental Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
 
-            <div class="Our-Services">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#">Bespoke Software</a></li>
-                    <li><a href="#">IT Support</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">Telecoms Services</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Cyber Security</a></li>
-                    <li><a href="#">Developer Training</a></li>
-                </ul>
-            </div>
+                <div class="Our-Services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Bespoke Software</a></li>
+                        <li><a href="#">IT Support</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Telecoms Services</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Cyber Security</a></li>
+                        <li><a href="#">Developer Training</a></li>
+                    </ul>
+                </div>
 
-            <div class="Our-Industries">
-                <h4>Our Industries</h4>
-                <ul>
-                    <li><a href="#">Financial Services</a></li>
-                    <li><a href="#">Construction</a></li>
-                    <li><a href="#">Retail & E-Commerce</a></li>
-                    <li><a href="#">Non-Profits</a></li>
-                    <li><a href="#">SME's</a></li>
-                    <li><a href="#">Healthcare</a></li>
-                    <li><a href="#">Education & Training</a></li>
-                    <li><a href="#">Travel & Leisure</a></li>
-                </ul>
-            </div>
+                <div class="Our-Industries">
+                    <h4>Our Industries</h4>
+                    <ul>
+                        <li><a href="#">Financial Services</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Retail & E-Commerce</a></li>
+                        <li><a href="#">Non-Profits</a></li>
+                        <li><a href="#">SME's</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Education & Training</a></li>
+                        <li><a href="#">Travel & Leisure</a></li>
+                    </ul>
+                </div>
 
-            <div class="Locations">
-                <h4>Locations</h4>
-                <ul>
-                    <li><a href="#">London Office</a></li>
-                    <li><a href="#">Cambridge Office</a></li>
-                    <li><a href="#">Wymondham Office</a></li>
-                    <li><a href="#">Great Yarmouth Office</a></li>
-                </ul>
+                <div class="Locations">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="#">London Office</a></li>
+                        <li><a href="#">Cambridge Office</a></li>
+                        <li><a href="#">Wymondham Office</a></li>
+                        <li><a href="#">Great Yarmouth Office</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </div> 
-    <div class="Below-Footer">
-        <p>&copy; Copyright Netmatters 2023. All rights reserved. - Sitemap</p>
+        </div> 
     </div>
-</footer>
-
-
+        <div class="Below-Footer">
+            <p>&copy; Copyright Netmatters 2023. All rights reserved. - Sitemap</p>
+        </div>
+    </footer>
 </div>
+
+<!-- </div> -->
 </body>
 
 </html>

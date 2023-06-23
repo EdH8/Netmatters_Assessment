@@ -1,0 +1,337 @@
+//======================================================
+//NAVIGATION CSS/SASS:
+//======================================================
+
+.drop_down{
+    position: relative;
+}
+
+.down_arrow{
+    display: none;
+}
+
+.drop_down:hover #bespoke_arrow,
+.drop_down:hover #support_arrow,
+.drop_down:hover #digital_arrow,
+.drop_down:hover #telecoms_arrow,
+.drop_down:hover #design_arrow,
+.drop_down:hover #security_arrow,
+.drop_down:hover #developer_arrow{
+    display: block;
+}
+
+#bespoke_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #526781;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #526781;
+    }
+}
+
+#support_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #286abd;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #286abd;
+    }
+}
+
+#digital_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #25a25a;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #25a25a;
+    }
+}
+
+#telecoms_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #bc2c28;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #bc2c28;
+    }
+}
+
+#design_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #79539a;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #79539a;
+    }
+}
+
+#security_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #de093f;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #de093f;
+    }
+}
+
+#developer_arrow:after{
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    position:absolute;
+    top: 107px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 80px solid transparent;
+    border-top: 0;
+    border-bottom: 48px solid #a3331d;
+    filter: brightness(120%);
+    transform: rotate(180deg);
+    z-index: 5;
+    @include laptop{
+        border: 70px solid transparent;
+        border-bottom: 48px solid #a3331d;
+    }
+}
+
+nav{ 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #333645;
+    @include tablet{
+        display: none;
+    }
+}
+
+.drop_down a:visited,
+.drop_down a:link{
+    color: white;
+}
+
+#bespoke_content:hover #bespoke_drop_content,
+#support_content:hover #support_drop_content,
+#digital_content:hover #digital_drop_content,
+#telecoms_content:hover #telecoms_drop_content,
+#design_content:hover #design_drop_content,
+#security_content:hover #security_drop_content,
+#developer_content:hover #developer_drop_content{
+    display: block;
+}
+
+
+.drop_down{
+    width: 160px;
+    padding: em(25px) em(25px);
+    @include laptop{
+        width: 140px;
+    }
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.dropdown_text h2{
+    color: white;
+}
+
+.dropdown_content{
+    display: none;
+    position: absolute;
+    top: 221px;
+    left: 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 50px;
+    background-color: #526781;
+}
+
+#bespoke_drop_down:hover .dropdown_content{
+    display: block;
+}
+
+
+.dropdown_categories{
+    text-align: center;
+}
+
+.dropdown_categories i{
+    font-size: 20px;
+}
+
+nav a:visited,
+nav a:link{
+    color: white;
+}
+
+.drop_down:hover i{
+    color: white;
+}
+
+
+#bespoke_drop_down:hover,
+#bespoke_drop_content{
+    background-color: #526781;
+}
+
+.laptop{
+    color: #526781;
+}
+
+#support_drop_down:hover,
+#support_drop_content{
+    background-color: #286abd;
+}
+
+.desktop{
+    color: #286abd;
+}
+
+#digital_drop_down:hover,
+#digital_drop_content{
+    background-color: #25a25a;
+}
+
+.chart{
+    color: #25a25a;
+}
+
+#telecoms_drop_down:hover,
+#telecoms_drop_content{
+    background-color: #bc2c28;
+}
+
+.phone{
+    color: #bc2c28;
+}
+
+#design_drop_down:hover,
+#design_drop_content{
+    background-color: #79539a;
+}
+
+.code{
+    color: #79539a;
+}
+
+#security_drop_down:hover,
+#security_drop_content{
+    background-color: #de093f;
+}
+
+.shield{
+    color: #de093f;
+}
+
+#developer_drop_down:hover,
+#developer_drop_content{
+    background-color: #a3331d;
+}
+
+.cap{
+    color: #a3331d; 
+}
+
+.dropdown_header{
+    font-size: 22px;
+}
+
+.dropdown_list{
+    display: flex;
+}
+
+
+.dropdown_list li{
+    font-size: 18px;
+    padding: 15px 0;
+    margin-right: 75px;
+    @include laptop{
+        margin-right: 60px;
+    }
+}
+
+.dropdown_list i{
+    font-size: 18px;
+    margin-right: 15px;
+}

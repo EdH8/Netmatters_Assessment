@@ -1,0 +1,140 @@
+//======================================================
+//REVIEWS CSS/SASS:
+//======================================================
+
+.reviews_style{
+    padding: em(30px) 0 em(50px) 0;
+    width: 100%;
+    background-color: #333645;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.reviews_style a:link,
+.reviews_style a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.reviews_style a:hover{
+    text-decoration: underline;
+}
+
+.reviews_style h2{
+    font-size: em(32px);
+}
+
+.reviews_style button{
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 6px;
+    color: white;
+}
+
+.reviews_content{
+    display: flex;
+    @include laptop{
+        justify-content: center;
+    }
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mobile{
+        flex-wrap: wrap;
+        flex-direction: unset;
+        align-items: unset;
+    }
+}
+
+.reviews_content button{
+    @include laptop{
+        display: flex;
+        justify-content: column;
+    }
+}
+
+.welcome_net{
+    width: 700px;
+    padding: 0 25px;
+    // margin: 0 em(15px) em(15px) em(70px);
+    @include laptop{
+        margin: 0;
+        width: 450px
+    }
+    @include tablet{
+        margin: 0;
+        width: 800px;
+    }
+    @include mobile{
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+.client_reviews{
+    width: 800px;
+    padding: 0 25px;
+    // margin: 0 em(90px) em(15px) em(50px);
+    @include laptop{
+        margin: 0;
+        width: 450px
+    }
+    @include tablet{
+        margin: 0;
+        width: 800px;
+    }
+    @include mobile{
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+.client_text strong{
+    font-size: 26px;
+}
+
+.main_text,
+.ashcroft_review{
+    line-height: 30px;
+}
+
+.welcome_net p{
+    margin: em(30px) 0;
+}
+
+.welcome_net button{
+    background-color: #272936;
+}
+
+.stars{
+    color: orange;
+    font-size: 40px;
+}
+
+.ashcroft_review{
+    font-size: 20px;
+    font-style: italic;
+}
+
+#google_btn{
+    background-color: #4287F6;
+}
+
+#culture_btn{
+    margin-top: 30px;
+}
+
+#trustpilot_btn{
+    background-color: #00B67B;
+    margin-top: 15px;
+}
+
+.client_reviews button{
+    margin-top: em(110px);
+}
+
+#HOK{
+    color: #A3A8AC;
+}
