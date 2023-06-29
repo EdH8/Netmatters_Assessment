@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="SCSS/Style.css">
     <script src="https://kit.fontawesome.com/0748773ba3.js" crossorigin="anonymous"></script>
-    <title>Pretty cool</title>
+    <title>Netmatters Remake</title>
 </head>
 
 <body>
@@ -14,31 +14,33 @@
             <!--Header HTML-->
             <!--======================================-->
             <header>
-                <div class="Header-Row">
-                    <div class="Head-Logo">
-                        <a href="#"><img id="logo" alt="Netmatters Logo Black" src="SCSS/Images/Net_Logo.png"></a>
+                <div class="wrapper">
+                    <div class="Header-Row">
+                        <div class="Head-Logo">
+                            <a href="#"><img id="logo" alt="Netmatters Logo Black" src="SCSS/Images/Net_Logo.png"></a>
+                        </div>
+                        <div class="actions">
+                            <div class="contact">
+                                <a href="#"><i id="mouse" class="mouse fa-solid fa-computer-mouse">Support</i></a>
+                                <a href="#"><i id="plane" class="plane fa fa-paper-plane-o">Contact</i></a>
+                            </div>
+                            <div class="Search">
+                                <input id="search_input" type="text" placeholder="Search...">
+                                <button id="glass_btn"><i class="glass fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <i id="telephone" class="telephone fa-sharp fa-solid fa-phone-volume fa-xl"></i>
+                            <div class="hamburger-menu">
+                                <div class="ham-bar bar-top"></div>
+                                <div class="ham-bar bar-mid"></div>
+                                <div class="ham-bar bar-bottom"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <div class="contact">
-                            <a href="#"><i id="mouse" class="mouse fa-solid fa-computer-mouse">Support</i></a>
-                            <a href="#"><i id="plane" class="plane fa fa-paper-plane-o">Contact</i></a>
+                    <div class="header-mobile">
+                        <div class="mobile-search">
+                            <input id="input-hidden" type="text" placeholder="Search...">
+                            <span class="glass_size"><i class="mag_glass fa-solid fa-magnifying-glass"></i></span>
                         </div>
-                        <div class="Search">
-                            <input id="search_input" type="text" placeholder="Search...">
-                            <button id="glass_btn"><i class="glass fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                        <i id="telephone" class="telephone fa-sharp fa-solid fa-phone-volume fa-xl"></i>
-                        <div class="hamburger-menu">
-                            <div class="ham-bar bar-top"></div>
-                            <div class="ham-bar bar-mid"></div>
-                            <div class="ham-bar bar-bottom"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-mobile">
-                    <div class="mobile-search">
-                        <input id="input-hidden" type="text" placeholder="Search...">
-                        <span class="glass_size"><i class="mag_glass fa-solid fa-magnifying-glass"></i></span>
                     </div>
                 </div>
             </header>
@@ -359,8 +361,7 @@
             </div>
         </div>
     
-    
-        </nav>
+</nav>
 
 
 <!--======================================-->
@@ -382,86 +383,86 @@
 <!--======================================-->
 <!--CARDS HTML-->
 <!--======================================-->
+<section>
+    <div class="wrapper">
+        <div class="text_card">
+            <h2 id="card_our_services"><strong>Our Services</strong></h2>
+            <h3 class="view_work" id="card_view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
+        </div>
+        <div class="card_container">
+            <div class="cards">
+                <div class="top_cards">
+                    <div class="card_style" id="bespoke_card">
+                        <a href="#">
+                            <i class="fa-solid fa-laptop"></i>
+                            <h2>Bespoke Software</h2>
+                            <p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
 
-<div class="wrapper">
-    <div class="text_card">
-        <h2 id="card_our_services"><strong>Our Services</strong></h2>
-        <h3 class="view_work" id="card_view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
-    </div>
-<div class="card_container">
-        <div class="cards">
-            <div class="top_cards">
-                <div class="card_style" id="bespoke_card">
-                    <a href="#">
-                        <i class="fa-solid fa-laptop"></i>
-                        <h2>Bespoke Software</h2>
-                        <p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
-                    </a>
-                    <button>READ MORE</button>
-                </div>
+                    <div class="card_style" id="support_card">
+                        <a href="#">
+                            <i class="fa-solid fa-desktop"></i>
+                            <h2>IT Support</h2>
+                            <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
 
-                <div class="card_style" id="support_card">
-                    <a href="#">
-                        <i class="fa-solid fa-desktop"></i>
-                        <h2>IT Support</h2>
-                        <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
-                    </a>
-                    <button>READ MORE</button>
+                    <div class="card_style" id="marketing_card">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <h2>Digital Marketing</h2>
+                            <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
                 </div>
+                <div class="bottom_cards">
+                    <div class="card_style" id="telecoms_card">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                            <h2>Telecoms Services</h2>
+                            <p>Business telephony solutions include mobile & connectivity solutions.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
 
-                <div class="card_style" id="marketing_card">
-                    <a href="#">
-                        <i class="fa-solid fa-chart-simple"></i>
-                        <h2>Digital Marketing</h2>
-                        <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
-                    </a>
-                    <button>READ MORE</button>
-                </div>
-            </div>
-            <div class="bottom_cards">
-                <div class="card_style" id="telecoms_card">
-                    <a href="#">
-                        <i class="fa-sharp fa-solid fa-phone-volume"></i>
-                        <h2>Telecoms Services</h2>
-                        <p>Business telephony solutions include mobile & connectivity solutions.</p>
-                    </a>
-                    <button>READ MORE</button>
-                </div>
+                    <div class="card_style" id="web_card">
+                        <a href="#">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Web Design</h2>
+                            <p>User-centric design for businesses looking to make a lasting impression.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
 
-                <div class="card_style" id="web_card">
-                    <a href="#">
-                        <i class="fa-solid fa-code"></i>
-                        <h2>Web Design</h2>
-                        <p>User-centric design for businesses looking to make a lasting impression.</p>
-                    </a>
-                    <button>READ MORE</button>
-                </div>
+                    <div class="card_style" id="security_card">
+                        <a href="#">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h2>Cyber Security</h2>
+                            <p>Prevention, testing, consultancy & breach management services.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
 
-                <div class="card_style" id="security_card">
-                    <a href="#">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h2>Cyber Security</h2>
-                        <p>Prevention, testing, consultancy & breach management services.</p>
-                    </a>
-                    <button>READ MORE</button>
-                </div>
-
-                <div class="card_style" id="training_card">
-                    <a href="#">
-                        <i class="fa-sharp fa-solid fa-graduation-cap"></i>
-                        <h2>Developer Training</h2>
-                        <p>Web design & software training courses designed to secure a job in tech.</p>
-                    </a>
-                    <button>READ MORE</button>
+                    <div class="card_style" id="training_card">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                            <h2>Developer Training</h2>
+                            <p>Web design & software training courses designed to secure a job in tech.</p>
+                        </a>
+                        <button>READ MORE</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="bottom_text_card">
+            <h3 class="view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
+        </div>
     </div>
-    <div class="bottom_text_card">
-        <h3 class="view_work"><a href="#">View Our Work <i class="fa-solid fa-arrow-right"></i></a></h3>
-    </div>
-</div>
-
+</section>
 
 
 
@@ -571,7 +572,7 @@
                     <a class="additional_info" href="#">News</a>
                 <a href="#">
                     <h3 id="april_notable">April Notables 2023 <span class="read_time">- 4 MINUTE READ</span></h3>
-                    <p class="news_description">Each month, various departments recognise those employees who have excelled in their work and helped...</p>
+                    <p id="april_description" class="news_description">Each month, various departments recognise those employees who have excelled in their work and helped...</p>
                 </a>
                 <button>READ MORE</button>
                 </div>
@@ -604,7 +605,7 @@
                 </a>
             </div>
             <div class="news_bottom">
-                <h3 class="view_all"><a href="#">View All <i class="news_arrow fa-solid fa-arrow-right"></i></a></h3>
+                <h3 id="something" class="view_all"><a href="#">View All <i class="news_arrow fa-solid fa-arrow-right"></i></a></h3>
             </div>
         </div>
     </div>
@@ -676,11 +677,11 @@
                     <h4>FOLLOW US ON:</h4>
                 </div>
                 <div class="social_media_links">
-                    <div class="something_two">
+                    <div class="face_link">
                         <a href="#"><i class="facebook fa fa-facebook"></i></a>
                         <a href="#"><i class="linkedin fa fa-linkedin"></i></a>
                     </div>
-                    <div class="something_three">
+                    <div class="twitter_insta">
                         <a href="#"><i class="twitter fa fa-twitter"></i></a>
                         <a href="#"><i class="instagram fa fa-instagram"></i></a>
                     </div>

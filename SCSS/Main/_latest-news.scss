@@ -45,9 +45,15 @@
 .posted_net{
     display: flex;
     align-items: center;
-    margin: 0 em(10px);
+    margin: 0 em(25px);
     @include laptop{
         margin: em(10px) em(20px) 0 em(20px);
+    }
+    @include tablet{
+        margin: 10px 25px 0 25px;
+    }
+    @include mobile{
+        margin: 0 em(25px);
     }
 }
 
@@ -124,35 +130,90 @@
 
 //POSITIONING FOR THE P AND H3 ELEMENTS WITHIN THE CARD
 
-.main_news_card p,
+// .main_news_card p,
+// .main_news_card h3{
+//     @include laptop{
+//         margin-top: 25px;
+//     }
+// }
+
+// .main_news_card p,
 .main_news_card h3{
+    margin: 25px 25px 0 25px;
     @include laptop{
-        margin-top: 25px;
+        margin: 25px 20px 0 20px;
+        // margin-top: 25px;
+        // margin-left: em(20px);
+    }
+    @include tablet{
+        margin: 25px 20px 0 20px;
+    }
+    @include mobile{
+        margin: 25px 25px;
     }
 }
 
-.main_news_card p,
-.main_news_card h3,
-.main_news_card button{
-    margin-left: em(10px);
+.main_news_card p{
+    margin: 25px 25px 0 25px;
     @include laptop{
-        margin-left: em(20px);
+        margin: 25px 20px 0 20px;
+        // margin-top: 25px;
+        // margin-left: em(20px);
+    }
+    @include tablet{
+        margin: 25px 20px 0 20px;
+    }
+    @include mobile{
+        margin: 25px 25px;
     }
 }
-.main_news_card button{
-    margin-bottom: em(10px);
+
+#may_description{
+    margin-top: 45px;
+    @include laptop{
+        margin-top: 42px;
+    }
+    @include tablet{
+        margin-top: 42px;
+    }
+    @include mobile{
+        margin: 25px 25px;
+    }
 }
+
+#april_description{
+    margin-top: 45px;
+}
+
+
+
+.main_news_card button{
+    margin-left: 25px;
+    margin-bottom: em(10px);
+    @include laptop{
+        margin-left: 20px;
+    }
+    @include tablet{
+        margin: 0 0 0 20px;
+    }
+    @include mobile{
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+
 
 //INSIDE THE CARD STYLING (BUTTON)
 
 #news_1 button{
-    margin-top: 90px;
+    margin-top: 60px;
     margin-bottom: em(20px);
     @include laptop{
-        margin-top: 48px;
+        margin-top: 47px;
     }
     @include tablet{
-        margin-top: 60px;
+        margin-top: 23px;
         margin-bottom: 20px;
     }
     @include mobile{
@@ -161,7 +222,7 @@
 }
 
 #news_2 button{
-    margin-top: 90px;
+    margin-top: 60px;
     margin-bottom: em(20px);
     @include mobile{
         margin-top: em(30px);
@@ -169,13 +230,13 @@
 }
 
 #news_3 button{
-    margin-top: 71px;
+    margin-top: 61px;
     margin-bottom: em(20px);
     @include laptop{
         margin-top: 30px;
     }
     @include tablet{
-        margin-top: 42px;
+        margin-top: 21px;
         margin-bottom: 20px;
     }
 }
@@ -213,7 +274,7 @@
         justify-content: center;
     }
     @include mobile{
-        margin: 0 0 0 em(35px);
+        // margin: 0 0 0 em(35px);
         justify-content: unset;
         font-size: em(22px);
     }
@@ -221,18 +282,29 @@
 
 //TOP HEADER CHANGER
 
+// #top_view_all{
+//     margin-top: 25px;
+//     margin-left: 760px;
+//     @include laptop{
+//         margin-left: em(400px);
+//     }
+//     @include tablet{
+//         margin-left: em(260px);
+//     }
+//     @include mobile{
+//         display: none;
+//     }
+// }
+
 #top_view_all{
-    margin-top: 25px;
-    margin-left: 760px;
-    @include laptop{
-        margin-left: em(400px);
-    }
-    @include tablet{
-        margin-left: em(260px);
-    }
     @include mobile{
         display: none;
     }
+}
+
+.news_top{
+    display: flex;
+    justify-content: space-between;
 }
 .news_bottom{
     display: none;
@@ -259,39 +331,61 @@
 }
 
 .news_style{
-    width: 350px;
+    width: 400px;
     height: 550px;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 0 0 0 em(15px);
+    // margin: 0 0 0 em(15px);
     @include laptop{
         width: 425px;
         height: 560px;
     }
     @include tablet{
-        width: 320px;
+        width: 340px;
         height: 500px;
     }
     @include mobile{
         width: unset;
         height: unset;
-        margin: 0 15px;
+        // margin: 0 15px;
     }
 }
+
+#news_1{
+    margin-right: 15px;
+    @include mobile{
+        margin: unset;
+    }
+}
+
+#news_2{
+    margin: 0 15px;
+    @include mobile{
+        margin: unset;
+    }
+}
+
+#news_3{
+    margin-left: 15px;
+    @include mobile{
+        margin: unset;
+    }
+}
+
 
 .news_arrow{
     margin-left: 5px;
 }
 
-#news_3{
-    @include tablet{
-        margin-left: em(30px);
-    }
-    @include mobile{
-        margin: 0 15px;
-    }
-}
+// #news_3{
+//     @include tablet{
+//         margin-left: em(30px);
+//     }
+//     @include mobile{
+//         margin: 0 15px;
+//     }
+// }
 
 #news_2,
 #news_3{
@@ -314,9 +408,21 @@
 }
 
 .view_all{
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .news_top strong{
     font-size: 30px;
 }
+
+// .news_bottom h3{
+//     margin-top: 40px;
+// }
+
+.view_all{
+    margin-top: 50px;
+}
+
+// #something{
+//     margin-top: 40px;
+// }

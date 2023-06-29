@@ -29,14 +29,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #526781;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #526781;
     }
 }
@@ -50,14 +50,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #286abd;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #286abd;
     }
 }
@@ -71,14 +71,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #25a25a;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #25a25a;
     }
 }
@@ -92,14 +92,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #bc2c28;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #bc2c28;
     }
 }
@@ -113,14 +113,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #79539a;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #79539a;
     }
 }
@@ -134,14 +134,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #de093f;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #de093f;
     }
 }
@@ -155,14 +155,14 @@
     left: 0;
     width: 0;
     height: 0;
-    border: 80px solid transparent;
+    border: 83px solid transparent;
     border-top: 0;
     border-bottom: 48px solid #a3331d;
     filter: brightness(120%);
     transform: rotate(180deg);
     z-index: 5;
     @include laptop{
-        border: 70px solid transparent;
+        border: 61.5px solid transparent;
         border-bottom: 48px solid #a3331d;
     }
 }
@@ -194,10 +194,12 @@ nav{
 
 
 .drop_down{
-    width: 160px;
+    // width: 160px;
+    width: 166px;
     padding: em(25px) em(25px);
     @include laptop{
-        width: 140px;
+        width: 123px;
+        padding: 25px 15px;
     }
 }
 
@@ -334,4 +336,8 @@ nav a:link{
 .dropdown_list i{
     font-size: 18px;
     margin-right: 15px;
+}
+
+.drop_down small{
+    font-size: 10px;
 }

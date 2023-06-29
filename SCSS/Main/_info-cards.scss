@@ -6,10 +6,9 @@
 
 .text_card{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     @include mobile{
         display: block;
-        margin-left: 10px;
     }
 }
 
@@ -31,13 +30,13 @@
 #card_view_work{
     font-size: 24px;
     font-weight: 600;
-    margin: 60px 0 0 600px;
-    @include laptop{
-        margin-left: 420px;
-    }
-    @include tablet{
-        margin-left: 200px;
-    }
+    margin: 60px 0 0 0;
+    // @include laptop{
+    //     margin-left: 420px;
+    // }
+    // @include tablet{
+    //     margin-left: 200px;
+    // }
     @include mobile{
         display: none;
     }
@@ -46,6 +45,12 @@
 #card_our_services{
     color: #333645;
     font-size: 50px;
+    @include mobile{
+        font-size: 40px;
+    }
+    @include small{
+        font-size: 45px;
+    }
 }
 
 .top_cards,
@@ -92,34 +97,52 @@
     @include tablet{
         height: 282.833px;
     }
+    @include mobile{
+        height: unset;
+    }
+    // @include small{
+    //     height: 300px;
+    // }
+}
+
+#training_card{
+    @include tablet{
+        height: 272.833px;
+    }
+    @include mobile{
+        height: unset;
+    }
 }
 
 #marketing_card button{
     @include tablet{
         margin-top: 20px;
     }
+    @include mobile{
+        margin-top: unset;
+    }
 }
 
 #bespoke_card,
 #support_card,
 #marketing_card{
-    width: 357px;
+    width: 368px;
     padding: 25px;
-    margin: 15px;
+    // margin: 15px;
 
     @include laptop{
-        margin: 0 15px;
+        // margin: 0 15px;
         width: 296px;
     }
 
     @include tablet{
-        margin: 25px 0 0 0;
-        width: 720px
+        // margin: 25px 0 0 0;
+        width: 710px
     }
 
     @include mobile{
-        margin: 25px 0 0 0;
-        width: 95%
+        // margin: 25px 0 0 0;
+        width: 100%
     }
     
 }
@@ -128,22 +151,98 @@
 #web_card,
 #security_card,
 #training_card{
-    width: 260px;
+    width: 270px;
     padding: 20px;
-    margin: 15px;
+    // margin: 15px;
 
     @include laptop{
-        margin: 15px;
-        width: 460px
+        // margin: 15px;
+        width: 415px
     }
 
     @include tablet{
-        margin: 10px;
-        width: 350px;
+        // margin: 10px;
+        width: 335px;
     }
     @include mobile{
-        margin: 25px 0 0 0;
-        width: 95%
+        // margin: 25px 0 0 0;
+        width: 100%
+    }
+}
+
+#bespoke_card{
+    margin: 0 15px 15px 0;
+    @include tablet{
+        margin: 0 0 20px 0;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
+    }
+}
+
+#support_card{
+    margin: 0 15px 15px 15px;
+    @include tablet{
+        margin: 0 0 20px 0;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
+    }
+}
+
+#marketing_card{
+    margin: 0 0 15px 15px;
+    @include tablet{
+        margin: 0 0 20px 0;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
+    }
+}
+
+#telecoms_card{
+    margin: 15px 15px 0 0;
+    @include tablet{ 
+        margin: 20px 20px 0 0;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
+    }
+}
+
+#web_card{
+    margin: 15px 15px 0 15px;
+    @include laptop{
+        margin-right: unset;
+    }
+    @include tablet{
+        margin: 20px 0 0 20px;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
+    }
+}
+
+#security_card{
+    margin: 15px 15px 0 15px;
+    @include laptop{
+        margin-left: unset;
+    }
+    @include tablet{
+        margin: 20px 20px 0 0;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
+    }
+}
+
+#training_card{
+    margin: 15px 0 0 15px;
+    @include tablet{
+        margin: 20px 0 0 20px;
+    }
+    @include mobile{
+        margin: 0 0 15px 0;
     }
 }
 

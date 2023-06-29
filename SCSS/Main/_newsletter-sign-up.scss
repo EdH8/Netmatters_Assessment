@@ -17,18 +17,15 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include laptop{
-        margin: 0 auto;
-        width: 900px;
-    }
-    @include tablet{
-        margin: 0 auto;
-        width: 700px;
-    }
-    @include mobile{
-        margin: 0 0 0 25px;
-        width: unset;
-    }
+ 
+    // @include tablet{
+    //     margin: 0 auto;
+    //     width: 700px;
+    // }
+    // @include mobile{
+    //     margin: 0 0 0 25px;
+    //     width: unset;
+    // }
 }
 
 
@@ -63,18 +60,19 @@ form{
 }
 
 .newsletter_text_input{
-    height: 40px;
-    width: 569px;
+    height: 45px;
+    width: 565px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
 
     @include laptop{
-        width: 420px;
+        width: 415px;
     }
 
     @include tablet{
-        width: 675px;
+        width: 710px;
     }
     @include mobile{
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -98,7 +96,7 @@ form{
 }
 
 #newsletter_checkbox{
-    border: 5px solid #333645;
+    border: 1px solid #000000;
     width: 30px;
     height: 30px;
     margin: 25px em(15px) 0 0;
@@ -108,9 +106,14 @@ form{
         margin-top: 18px;
     }
     @include tablet{
-        width: 55px;
-        height: 55px;
-        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        margin-top: unset;
+        // margin-top: 20px;
+    }
+    @include small{
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -119,11 +122,16 @@ form{
     color: #333645;
 }
 
+.newsletter_sign_up label{
+    font-weight: 600;
+}
+
 .newsletter_sign_up p{
     font-weight: 500;
 }
 
-#newsletter_privacy:visited{
+#newsletter_privacy:visited,
+#newsletter_privacy:link{
     color: #333645;
 }
 

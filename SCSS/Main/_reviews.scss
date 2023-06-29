@@ -10,6 +10,11 @@
     letter-spacing: 1px;
 }
 
+.welcome_header strong,
+.client_header strong{
+    font-size: 40px;
+}
+
 .reviews_style a:link,
 .reviews_style a:visited{
     text-decoration: none;
@@ -57,7 +62,8 @@
 
 .welcome_net{
     width: 700px;
-    padding: 0 25px;
+    // padding: 0 25px;
+    padding-right: 10px;
     // margin: 0 em(15px) em(15px) em(70px);
     @include laptop{
         margin: 0;
@@ -65,17 +71,19 @@
     }
     @include tablet{
         margin: 0;
-        width: 800px;
+        width: 710px;
+        padding: unset;
     }
     @include mobile{
         width: 100%;
-        margin-left: 10px;
+        // margin-left: 10px;
     }
 }
 
 .client_reviews{
     width: 800px;
-    padding: 0 25px;
+    // padding: 0 25px;
+    padding-left: 10px;
     // margin: 0 em(90px) em(15px) em(50px);
     @include laptop{
         margin: 0;
@@ -83,11 +91,12 @@
     }
     @include tablet{
         margin: 0;
-        width: 800px;
+        width: 710px;
+        padding: unset;
     }
     @include mobile{
         width: 100%;
-        margin-left: 10px;
+        // margin-left: 10px;
     }
 }
 
@@ -123,7 +132,9 @@
 }
 
 #culture_btn{
-    margin-top: 30px;
+    @include laptop{
+        margin-top: 30px;
+    }
 }
 
 #trustpilot_btn{
@@ -133,8 +144,20 @@
 
 .client_reviews button{
     margin-top: em(110px);
+    @include laptop{
+        margin-top: 40px;
+    }
+    @include tablet{
+        margin-top: 30px;
+    }
 }
 
 #HOK{
     color: #A3A8AC;
+}
+
+.welcome_btns button{
+    @include tablet{
+        margin-bottom: 30px;
+    }
 }

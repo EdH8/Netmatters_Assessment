@@ -23,6 +23,13 @@ header{
     }
 }
 
+.Head-Logo{
+    margin-right: 75px;
+    @include laptop{
+        margin-right: unset;
+    }
+}
+
 .actions{
     @include tablet{
         display: inline-flex;
@@ -33,7 +40,7 @@ header{
 .mobile-search{
     @include mobile{
         display: unset;
-        width: 96%;
+        width: 100%;
         height: em(56px);
         position: relative;
     }
@@ -69,10 +76,11 @@ header{
 }
 
 .Header-Row{
-    padding: em(20px) 0 em(20px) em(10px);
-    @include mobile{
-        padding: em(20px) em(10px);
-    }
+    // padding: em(20px) 0 em(20px) em(10px);
+    padding: 20px 0;
+    // @include mobile{
+    //     padding: em(20px) em(10px);
+    // }
 }
 
 #telephone{
@@ -160,7 +168,7 @@ header{
     @include tablet{
         display: unset;
         padding: 0 em(15px);
-        width: em(280px);
+        width: em(250px);
         height: 56px;
         display: block;
         font-size: em(15px);
@@ -190,6 +198,9 @@ header{
     margin-right: em(10px);
     border: em(2px);
     position: relative;
+    @include laptop{
+        margin: unset;
+    }
 
     @include tablet{
         position: relative;
@@ -214,14 +225,14 @@ header{
 
 #logo{
     @include laptop{
-        padding-right: em(30px);
-        margin-right: em(30px);
+        // padding-right: em(30px);
+        margin-right: em(15px);
     }
     @include tablet{
-        width: 85%;
+        width: 100%;
     }
     @include mobile{
-        max-width: 100%;
+        // width: 100%;
         display: block;
     }
 }
@@ -242,6 +253,7 @@ header{
     margin-left: em(15px);
     margin-right: em(15px);
     @include laptop{
+        margin-left: 5px;
         margin-right: 0;
     }
 }
@@ -252,6 +264,9 @@ header{
     letter-spacing: em(3px);
     border-radius: em(3px);
     color: white;
+    @include laptop{
+        padding: 20px 10px;
+    }
 }
 
 .mouse{

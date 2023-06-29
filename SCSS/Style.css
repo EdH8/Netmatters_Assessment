@@ -16,7 +16,23 @@ body {
 
 .wrapper {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 1200px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 750px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    max-width: unset;
+  }
 }
 
 #container {
@@ -65,6 +81,15 @@ header {
   }
 }
 
+.Head-Logo {
+  margin-right: 75px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .Head-Logo {
+    margin-right: unset;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .actions {
     display: inline-flex;
@@ -75,7 +100,7 @@ header {
 @media screen and (max-width: 767px) {
   .mobile-search {
     display: unset;
-    width: 96%;
+    width: 100%;
     height: 3.5em;
     position: relative;
   }
@@ -111,12 +136,7 @@ header {
 }
 
 .Header-Row {
-  padding: 1.25em 0 1.25em 0.625em;
-}
-@media screen and (max-width: 767px) {
-  .Header-Row {
-    padding: 1.25em 0.625em;
-  }
+  padding: 20px 0;
 }
 
 #telephone {
@@ -195,7 +215,7 @@ header {
   #search_input {
     display: unset;
     padding: 0 0.9375em;
-    width: 17.5em;
+    width: 15.625em;
     height: 56px;
     display: block;
     font-size: 0.9375em;
@@ -228,6 +248,11 @@ header {
   border: 0.125em;
   position: relative;
 }
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .Search {
+    margin: unset;
+  }
+}
 @media screen and (max-width: 992px) {
   .Search {
     position: relative;
@@ -252,18 +277,16 @@ header {
 
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #logo {
-    padding-right: 1.875em;
-    margin-right: 1.875em;
+    margin-right: 0.9375em;
   }
 }
 @media screen and (max-width: 992px) {
   #logo {
-    width: 85%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
   #logo {
-    max-width: 100%;
     display: block;
   }
 }
@@ -286,6 +309,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .plane {
+    margin-left: 5px;
     margin-right: 0;
   }
 }
@@ -296,6 +320,12 @@ header {
   letter-spacing: 0.1875em;
   border-radius: 0.1875em;
   color: white;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .mouse,
+  .plane {
+    padding: 20px 10px;
+  }
 }
 
 .mouse {
@@ -335,7 +365,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #526781;
   filter: brightness(120%);
@@ -344,7 +374,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #bespoke_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #526781;
   }
 }
@@ -358,7 +388,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #286abd;
   filter: brightness(120%);
@@ -367,7 +397,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #support_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #286abd;
   }
 }
@@ -381,7 +411,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #25a25a;
   filter: brightness(120%);
@@ -390,7 +420,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #digital_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #25a25a;
   }
 }
@@ -404,7 +434,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #bc2c28;
   filter: brightness(120%);
@@ -413,7 +443,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #telecoms_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #bc2c28;
   }
 }
@@ -427,7 +457,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #79539a;
   filter: brightness(120%);
@@ -436,7 +466,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #design_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #79539a;
   }
 }
@@ -450,7 +480,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #de093f;
   filter: brightness(120%);
@@ -459,7 +489,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #security_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #de093f;
   }
 }
@@ -473,7 +503,7 @@ header {
   left: 0;
   width: 0;
   height: 0;
-  border: 80px solid transparent;
+  border: 83px solid transparent;
   border-top: 0;
   border-bottom: 48px solid #a3331d;
   filter: brightness(120%);
@@ -482,7 +512,7 @@ header {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #developer_arrow:after {
-    border: 70px solid transparent;
+    border: 61.5px solid transparent;
     border-bottom: 48px solid #a3331d;
   }
 }
@@ -515,12 +545,13 @@ nav {
 }
 
 .drop_down {
-  width: 160px;
+  width: 166px;
   padding: 1.5625em 1.5625em;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .drop_down {
-    width: 140px;
+    width: 123px;
+    padding: 25px 15px;
   }
 }
 
@@ -658,6 +689,10 @@ nav a:link {
   margin-right: 15px;
 }
 
+.drop_down small {
+  font-size: 10px;
+}
+
 .background_img {
   background-image: url("Images/background.png");
   background-repeat: no-repeat;
@@ -672,14 +707,6 @@ nav a:link {
   display: flex;
   flex-direction: column;
   color: white;
-}
-@media screen and (min-width: 993px) and (max-width: 1260px) {
-  .background_text,
-  #choose_us {
-    margin: 0 0 0 50px;
-    text-align: left;
-    align-items: left;
-  }
 }
 @media screen and (max-width: 992px) {
   .background_text,
@@ -714,6 +741,11 @@ nav a:link {
     font-size: 50px;
   }
 }
+@media screen and (max-width: 767px) {
+  .background_text h1 {
+    font-size: 40px;
+  }
+}
 
 .background_text p {
   font-size: x-large;
@@ -732,12 +764,11 @@ nav a:link {
 
 .text_card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
   .text_card {
     display: block;
-    margin-left: 10px;
   }
 }
 
@@ -760,17 +791,7 @@ nav a:link {
 #card_view_work {
   font-size: 24px;
   font-weight: 600;
-  margin: 60px 0 0 600px;
-}
-@media screen and (min-width: 993px) and (max-width: 1260px) {
-  #card_view_work {
-    margin-left: 420px;
-  }
-}
-@media screen and (max-width: 992px) {
-  #card_view_work {
-    margin-left: 200px;
-  }
+  margin: 60px 0 0 0;
 }
 @media screen and (max-width: 767px) {
   #card_view_work {
@@ -781,6 +802,16 @@ nav a:link {
 #card_our_services {
   color: #333645;
   font-size: 50px;
+}
+@media screen and (max-width: 767px) {
+  #card_our_services {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #card_our_services {
+    font-size: 45px;
+  }
 }
 
 .top_cards,
@@ -832,25 +863,44 @@ nav a:link {
     height: 282.833px;
   }
 }
+@media screen and (max-width: 767px) {
+  #marketing_card {
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #training_card {
+    height: 272.833px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #training_card {
+    height: unset;
+  }
+}
 
 @media screen and (max-width: 992px) {
   #marketing_card button {
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  #marketing_card button {
+    margin-top: unset;
+  }
+}
 
 #bespoke_card,
 #support_card,
 #marketing_card {
-  width: 357px;
+  width: 368px;
   padding: 25px;
-  margin: 15px;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #bespoke_card,
   #support_card,
   #marketing_card {
-    margin: 0 15px;
     width: 296px;
   }
 }
@@ -858,16 +908,14 @@ nav a:link {
   #bespoke_card,
   #support_card,
   #marketing_card {
-    margin: 25px 0 0 0;
-    width: 720px;
+    width: 710px;
   }
 }
 @media screen and (max-width: 767px) {
   #bespoke_card,
   #support_card,
   #marketing_card {
-    margin: 25px 0 0 0;
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -875,17 +923,15 @@ nav a:link {
 #web_card,
 #security_card,
 #training_card {
-  width: 260px;
+  width: 270px;
   padding: 20px;
-  margin: 15px;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #telecoms_card,
   #web_card,
   #security_card,
   #training_card {
-    margin: 15px;
-    width: 460px;
+    width: 415px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -893,8 +939,7 @@ nav a:link {
   #web_card,
   #security_card,
   #training_card {
-    margin: 10px;
-    width: 350px;
+    width: 335px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -902,8 +947,115 @@ nav a:link {
   #web_card,
   #security_card,
   #training_card {
-    margin: 25px 0 0 0;
-    width: 95%;
+    width: 100%;
+  }
+}
+
+#bespoke_card {
+  margin: 0 15px 15px 0;
+}
+@media screen and (max-width: 992px) {
+  #bespoke_card {
+    margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #bespoke_card {
+    margin: 0 0 15px 0;
+  }
+}
+
+#support_card {
+  margin: 0 15px 15px 15px;
+}
+@media screen and (max-width: 992px) {
+  #support_card {
+    margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #support_card {
+    margin: 0 0 15px 0;
+  }
+}
+
+#marketing_card {
+  margin: 0 0 15px 15px;
+}
+@media screen and (max-width: 992px) {
+  #marketing_card {
+    margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #marketing_card {
+    margin: 0 0 15px 0;
+  }
+}
+
+#telecoms_card {
+  margin: 15px 15px 0 0;
+}
+@media screen and (max-width: 992px) {
+  #telecoms_card {
+    margin: 20px 20px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #telecoms_card {
+    margin: 0 0 15px 0;
+  }
+}
+
+#web_card {
+  margin: 15px 15px 0 15px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  #web_card {
+    margin-right: unset;
+  }
+}
+@media screen and (max-width: 992px) {
+  #web_card {
+    margin: 20px 0 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #web_card {
+    margin: 0 0 15px 0;
+  }
+}
+
+#security_card {
+  margin: 15px 15px 0 15px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  #security_card {
+    margin-left: unset;
+  }
+}
+@media screen and (max-width: 992px) {
+  #security_card {
+    margin: 20px 20px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #security_card {
+    margin: 0 0 15px 0;
+  }
+}
+
+#training_card {
+  margin: 15px 0 0 15px;
+}
+@media screen and (max-width: 992px) {
+  #training_card {
+    margin: 20px 0 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #training_card {
+    margin: 0 0 15px 0;
   }
 }
 
@@ -1086,6 +1238,11 @@ nav a:link {
   letter-spacing: 1px;
 }
 
+.welcome_header strong,
+.client_header strong {
+  font-size: 40px;
+}
+
 .reviews_style a:link,
 .reviews_style a:visited {
   text-decoration: none;
@@ -1139,7 +1296,7 @@ nav a:link {
 
 .welcome_net {
   width: 700px;
-  padding: 0 25px;
+  padding-right: 10px;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .welcome_net {
@@ -1150,19 +1307,19 @@ nav a:link {
 @media screen and (max-width: 992px) {
   .welcome_net {
     margin: 0;
-    width: 800px;
+    width: 710px;
+    padding: unset;
   }
 }
 @media screen and (max-width: 767px) {
   .welcome_net {
     width: 100%;
-    margin-left: 10px;
   }
 }
 
 .client_reviews {
   width: 800px;
-  padding: 0 25px;
+  padding-left: 10px;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .client_reviews {
@@ -1173,13 +1330,13 @@ nav a:link {
 @media screen and (max-width: 992px) {
   .client_reviews {
     margin: 0;
-    width: 800px;
+    width: 710px;
+    padding: unset;
   }
 }
 @media screen and (max-width: 767px) {
   .client_reviews {
     width: 100%;
-    margin-left: 10px;
   }
 }
 
@@ -1214,8 +1371,10 @@ nav a:link {
   background-color: #4287F6;
 }
 
-#culture_btn {
-  margin-top: 30px;
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  #culture_btn {
+    margin-top: 30px;
+  }
 }
 
 #trustpilot_btn {
@@ -1226,9 +1385,25 @@ nav a:link {
 .client_reviews button {
   margin-top: 6.875em;
 }
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .client_reviews button {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .client_reviews button {
+    margin-top: 30px;
+  }
+}
 
 #HOK {
   color: #A3A8AC;
+}
+
+@media screen and (max-width: 992px) {
+  .welcome_btns button {
+    margin-bottom: 30px;
+  }
 }
 
 .additional_info {
@@ -1278,11 +1453,21 @@ nav a:link {
 .posted_net {
   display: flex;
   align-items: center;
-  margin: 0 0.625em;
+  margin: 0 1.5625em;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .posted_net {
     margin: 0.625em 1.25em 0 1.25em;
+  }
+}
+@media screen and (max-width: 992px) {
+  .posted_net {
+    margin: 10px 25px 0 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .posted_net {
+    margin: 0 1.5625em;
   }
 }
 
@@ -1363,42 +1548,100 @@ nav a:link {
   font-size: 0.875em;
 }
 
+.main_news_card h3 {
+  margin: 25px 25px 0 25px;
+}
 @media screen and (min-width: 993px) and (max-width: 1260px) {
-  .main_news_card p,
   .main_news_card h3 {
-    margin-top: 25px;
+    margin: 25px 20px 0 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main_news_card h3 {
+    margin: 25px 20px 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main_news_card h3 {
+    margin: 25px 25px;
   }
 }
 
-.main_news_card p,
-.main_news_card h3,
-.main_news_card button {
-  margin-left: 0.625em;
+.main_news_card p {
+  margin: 25px 25px 0 25px;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
-  .main_news_card p,
-  .main_news_card h3,
-  .main_news_card button {
-    margin-left: 1.25em;
+  .main_news_card p {
+    margin: 25px 20px 0 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main_news_card p {
+    margin: 25px 20px 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main_news_card p {
+    margin: 25px 25px;
   }
 }
 
+#may_description {
+  margin-top: 45px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  #may_description {
+    margin-top: 42px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #may_description {
+    margin-top: 42px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #may_description {
+    margin: 25px 25px;
+  }
+}
+
+#april_description {
+  margin-top: 45px;
+}
+
 .main_news_card button {
+  margin-left: 25px;
   margin-bottom: 0.625em;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .main_news_card button {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main_news_card button {
+    margin: 0 0 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main_news_card button {
+    margin-left: 25px;
+    margin-bottom: 30px;
+  }
 }
 
 #news_1 button {
-  margin-top: 90px;
+  margin-top: 60px;
   margin-bottom: 1.25em;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #news_1 button {
-    margin-top: 48px;
+    margin-top: 47px;
   }
 }
 @media screen and (max-width: 992px) {
   #news_1 button {
-    margin-top: 60px;
+    margin-top: 23px;
     margin-bottom: 20px;
   }
 }
@@ -1409,7 +1652,7 @@ nav a:link {
 }
 
 #news_2 button {
-  margin-top: 90px;
+  margin-top: 60px;
   margin-bottom: 1.25em;
 }
 @media screen and (max-width: 767px) {
@@ -1419,7 +1662,7 @@ nav a:link {
 }
 
 #news_3 button {
-  margin-top: 71px;
+  margin-top: 61px;
   margin-bottom: 1.25em;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
@@ -1429,7 +1672,7 @@ nav a:link {
 }
 @media screen and (max-width: 992px) {
   #news_3 button {
-    margin-top: 42px;
+    margin-top: 21px;
     margin-bottom: 20px;
   }
 }
@@ -1475,30 +1718,20 @@ nav a:link {
 }
 @media screen and (max-width: 767px) {
   .news_top {
-    margin: 0 0 0 2.1875em;
     justify-content: unset;
     font-size: 1.375em;
   }
 }
 
-#top_view_all {
-  margin-top: 25px;
-  margin-left: 760px;
-}
-@media screen and (min-width: 993px) and (max-width: 1260px) {
-  #top_view_all {
-    margin-left: 25em;
-  }
-}
-@media screen and (max-width: 992px) {
-  #top_view_all {
-    margin-left: 16.25em;
-  }
-}
 @media screen and (max-width: 767px) {
   #top_view_all {
     display: none;
   }
+}
+
+.news_top {
+  display: flex;
+  justify-content: space-between;
 }
 
 .news_bottom {
@@ -1532,12 +1765,11 @@ nav a:link {
 }
 
 .news_style {
-  width: 350px;
+  width: 400px;
   height: 550px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 0 0 0 0.9375em;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .news_style {
@@ -1547,7 +1779,7 @@ nav a:link {
 }
 @media screen and (max-width: 992px) {
   .news_style {
-    width: 320px;
+    width: 340px;
     height: 500px;
   }
 }
@@ -1555,23 +1787,38 @@ nav a:link {
   .news_style {
     width: unset;
     height: unset;
-    margin: 0 15px;
+  }
+}
+
+#news_1 {
+  margin-right: 15px;
+}
+@media screen and (max-width: 767px) {
+  #news_1 {
+    margin: unset;
+  }
+}
+
+#news_2 {
+  margin: 0 15px;
+}
+@media screen and (max-width: 767px) {
+  #news_2 {
+    margin: unset;
+  }
+}
+
+#news_3 {
+  margin-left: 15px;
+}
+@media screen and (max-width: 767px) {
+  #news_3 {
+    margin: unset;
   }
 }
 
 .news_arrow {
   margin-left: 5px;
-}
-
-@media screen and (max-width: 992px) {
-  #news_3 {
-    margin-left: 1.875em;
-  }
-}
-@media screen and (max-width: 767px) {
-  #news_3 {
-    margin: 0 15px;
-  }
 }
 
 #news_2,
@@ -1595,11 +1842,15 @@ nav a:link {
 }
 
 .view_all {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .news_top strong {
   font-size: 30px;
+}
+
+.view_all {
+  margin-top: 50px;
 }
 
 label.required:after {
@@ -1617,24 +1868,6 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media screen and (min-width: 993px) and (max-width: 1260px) {
-  .newsletter_container {
-    margin: 0 auto;
-    width: 900px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .newsletter_container {
-    margin: 0 auto;
-    width: 700px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .newsletter_container {
-    margin: 0 0 0 25px;
-    width: unset;
-  }
 }
 
 .newletter_header {
@@ -1671,22 +1904,23 @@ form {
 }
 
 .newsletter_text_input {
-  height: 40px;
-  width: 569px;
+  height: 45px;
+  width: 565px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .newsletter_text_input {
-    width: 420px;
+    width: 415px;
   }
 }
 @media screen and (max-width: 992px) {
   .newsletter_text_input {
-    width: 675px;
+    width: 710px;
   }
 }
 @media screen and (max-width: 767px) {
   .newsletter_text_input {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -1714,7 +1948,7 @@ form {
 }
 
 #newsletter_checkbox {
-  border: 5px solid #333645;
+  border: 1px solid #000000;
   width: 30px;
   height: 30px;
   margin: 25px 0.9375em 0 0;
@@ -1728,9 +1962,15 @@ form {
 }
 @media screen and (max-width: 992px) {
   #newsletter_checkbox {
-    width: 55px;
-    height: 55px;
-    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: unset;
+  }
+}
+@media screen and (max-width: 480px) {
+  #newsletter_checkbox {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -1739,11 +1979,16 @@ form {
   color: #333645;
 }
 
+.newsletter_sign_up label {
+  font-weight: 600;
+}
+
 .newsletter_sign_up p {
   font-weight: 500;
 }
 
-#newsletter_privacy:visited {
+#newsletter_privacy:visited,
+#newsletter_privacy:link {
   color: #333645;
 }
 
@@ -1787,7 +2032,7 @@ footer ul {
 }
 
 .social-media img {
-  width: 80%;
+  width: 300px;
 }
 @media screen and (max-width: 767px) {
   .social-media img {
@@ -1800,6 +2045,11 @@ footer ul {
     width: 320px;
   }
 }
+@media screen and (max-width: 480px) {
+  .social-media img {
+    width: 250px;
+  }
+}
 
 .social-media h4 {
   margin: 0.9375em 0 0.9375em 0;
@@ -1807,24 +2057,21 @@ footer ul {
 
 .social-media {
   text-align: left;
-  padding: 1em 1.375em;
-  margin: 1.875em 0;
+  margin: 1.875em 92px 1.875em 0;
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   .social-media {
-    padding: 1em 0 0 0;
-    margin: 0 0 15px 55px;
+    margin: 0 0 20px 0;
   }
 }
 @media screen and (max-width: 992px) {
   .social-media {
     grid-area: Social;
-    margin: 0 0 0.625em 2.1875em;
+    margin: 0 0 0.625em 0;
   }
 }
 @media screen and (max-width: 767px) {
   .social-media {
-    padding-left: 0.9375em;
     margin: 0 0;
   }
 }
@@ -1838,8 +2085,6 @@ footer ul {
   .footer-content {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 20px;
-    margin-left: 15px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1847,7 +2092,6 @@ footer ul {
   .footer-content {
     display: grid;
     grid-template-areas: "Social Social" "About Services" "Industries Locations";
-    padding: 0 2.5em 0 2.5em;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1855,7 +2099,6 @@ footer ul {
   .footer-content {
     display: flex;
     flex-direction: column;
-    padding: 0 0.9375em;
   }
 }
 
@@ -1900,15 +2143,25 @@ a {
 .Locations {
   text-align: left;
   line-height: 26px;
-  margin: 0 1.25em 1em;
+  width: 140px;
+  margin: 0 0 16px 3.25em;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .About-Netmatters,
+  .Our-Services,
+  .Our-Industries,
+  .Locations {
+    width: 215px;
+    margin: unset;
+  }
 }
 @media screen and (max-width: 992px) {
   .About-Netmatters,
   .Our-Services,
   .Our-Industries,
   .Locations {
-    padding-bottom: 0;
-    margin-bottom: 0;
+    width: 320px;
+    margin: unset;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1931,13 +2184,13 @@ a {
   font-size: 16px;
 }
 
-.something_two,
-.something_three {
+.face_link,
+.twitter_insta {
   display: inline-block;
 }
 @media screen and (max-width: 480px) {
-  .something_two,
-  .something_three {
+  .face_link,
+  .twitter_insta {
     display: flex;
   }
 }

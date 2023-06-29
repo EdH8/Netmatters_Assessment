@@ -33,7 +33,8 @@ footer ul{
 }
 
 .social-media img{
-    width: 80%;
+    width: 300px;
+    // width: 80%;
     @include mobile{
         padding-bottom: em(5px);
         height: 50%;
@@ -41,6 +42,9 @@ footer ul{
 
     @include tablet{
         width: 320px;
+    }
+    @include small{
+        width: 250px;
     }
 }
 
@@ -50,23 +54,23 @@ footer ul{
 
 .social-media{
     text-align: left;
-    padding: em(16px) em(22px);
-    margin: em(30px) 0;
+    // padding: em(16px) em(22px);
+    margin: em(30px) 92px em(30px) 0;
 
     @include laptop{
-        padding: em(16px) 0 0 0;
+        // padding: em(16px) 0 0 0;
         // margin: 0 0 em(15px) em(70px);
-        margin: 0 0 15px 55px;
+        margin: 0 0 20px 0;
     }
 
     @include tablet{
          grid-area: Social;
-         margin: 0 0 em(10px) em(35px);
+         margin: 0 0 em(10px) 0;
         // margin: unset;
     }
 
     @include mobile{
-        padding-left: em(15px);
+        // padding-left: em(15px);
         margin: 0 0;
     }
 }
@@ -78,8 +82,8 @@ footer ul{
     @include laptop{
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 0 20px;
-        margin-left: 15px;
+        // padding: 0 55px;
+        // margin-left: 15px;
         // padding: 0 em(50px);
     }
 
@@ -89,13 +93,13 @@ footer ul{
             "Social Social"
             "About Services"
             "Industries Locations";
-        padding: 0 em(40px) 0 em(40px);
+        // padding: 0 em(40px) 0 em(40px);
     }
 
     @include mobile{
         display: flex;
         flex-direction: column;
-        padding: 0 em(15px);
+        // padding: 0 em(15px);
     }
 }
 
@@ -140,12 +144,21 @@ a{
 .Locations{
     text-align: left;
     line-height:26px;
-    // padding: 0 em(22px) em(16px);
-    margin: 0 em(20px) em(16px);
+    width: 140px;
+    // padding: 0 0 0 15px;
+    margin: 0 0 16px em(52px);
+
+    @include laptop{
+        width: 215px;
+        // margin: 0 24px;
+        margin: unset;
+    }
 
     @include tablet{
-        padding-bottom: 0;
-        margin-bottom: 0;
+        width: 320px;
+        margin: unset;
+        // padding-bottom: 0;
+        // margin-bottom: 0;
     }
 
     @include mobile{
@@ -153,6 +166,10 @@ a{
         padding: 0 0;
     }
 }
+
+// .Locations{
+//     margin: 0 0 16px 20px;
+// }
 
 .facebook, 
 .linkedin, 
@@ -164,8 +181,8 @@ a{
     font-size: 16px;
 }
 
-.something_two,
-.something_three{
+.face_link,
+.twitter_insta{
     display: inline-block;
     @include small{
         display: flex;

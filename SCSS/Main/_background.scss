@@ -18,11 +18,11 @@
     flex-direction: column;
     color: white;
 
-    @include laptop{
-        margin: 0 0 0 50px;
-        text-align: left;
-        align-items: left;
-    }
+    // @include laptop{
+    //     // margin: 0 0 0 50px;
+    //     text-align: left;
+    //     align-items: left;
+    // }
 
     @include tablet{
         margin: 0;
@@ -50,6 +50,9 @@
     margin: em(10px) 0;
     @include tablet{
         font-size: 50px;
+    }
+    @include mobile{
+        font-size: 40px;
     }
 }
 
