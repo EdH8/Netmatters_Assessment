@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="SCSS/Style.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
     <script src="https://kit.fontawesome.com/0748773ba3.js" crossorigin="anonymous"></script>
     <title>Netmatters Remake</title>
 </head>
@@ -648,10 +649,15 @@
                                     <input type="email" class="newsletter_text_input" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                                 </div>
                             </div>
-                            <div class="checkbox_privacy">
+                            <!-- <div class="checkbox_privacy">
                                 <input id="newsletter_checkbox" type="checkbox">
-                                <p id="checkbox_text">Please tick this box if you wish to receive marketing information from us. Please see our <a id="newsletter_privacy" href="#">Privacy Policy</a> for more information on how we keep your data safe.</p>
+                                <label for="newsletter_checkbox" id="checkbox_text">Please tick this box if you wish to receive marketing information from us. Please see our <a id="newsletter_privacy" href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
+                            </div> -->
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="cb1">
+                                <span id="checkbox_text" class="something">Please tick this box if you wish to receive marketing information from us. Please see our <a id="newsletter_privacy" href="#">Privacy Policy</a> for more information on how we keep your data safe.</span>
                             </div>
+                            <!-- for="cb1" -->
                         </div>
                         <!-- <button type="submit" class="sub_btn">SUBSCRIBE</button> -->
                     </div>
@@ -660,6 +666,8 @@
             </div>
         </form>
 <!-- </div> -->
+
+<!-- <p id="checkbox_text">Please tick this box if you wish to receive marketing information from us. Please see our <a id="newsletter_privacy" href="#">Privacy Policy</a> for more information on how we keep your data safe.</p> -->
 
 <!--======================================-->
 <!--Footer HTML-->
@@ -742,8 +750,10 @@
             </div>
         </div> 
     </div>
-        <div class="Below-Footer">
-            <p>&copy; Copyright Netmatters 2023. All rights reserved. - Sitemap</p>
+        <div class="Below-Footer" id="Below_Footer">
+            <div class="wrapper">
+                <p>&copy; Copyright Netmatters 2023. All rights reserved. - Sitemap</p>
+            </div>
         </div>
     </footer>
 </div>

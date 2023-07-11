@@ -34,7 +34,6 @@ footer ul{
 
 .social-media img{
     width: 300px;
-    // width: 80%;
     @include mobile{
         padding-bottom: em(5px);
         height: 50%;
@@ -112,6 +111,10 @@ footer,
 .footer-content,
 a{
     text-align: center;
+}
+
+#Below_Footer{
+    text-align: left;
 }
 
 .About-Netmatters{
