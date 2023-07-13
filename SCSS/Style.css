@@ -268,7 +268,17 @@ header {
 .glass {
   color: white;
   padding: 0.875em 0.9375em;
-  border-radius: 0.1875em;
+  border-radius: 1px 3px 3px 1px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .glass {
+    border-radius: 3px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .glass {
+    border-radius: 1px 3px 3px 1px;
+  }
 }
 
 .plane,
@@ -288,7 +298,13 @@ header {
 }
 @media screen and (max-width: 767px) {
   #logo {
+    width: 100%;
     display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  #logo {
+    width: 120%;
   }
 }
 
@@ -1652,7 +1668,7 @@ nav a:link {
 }
 @media screen and (min-width: 993px) and (max-width: 1260px) {
   #news_1 button {
-    margin-top: 47px;
+    margin-top: 32px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1908,8 +1924,8 @@ form {
   padding: 13px 13px;
   border-radius: 3px;
   font-size: 0.9375em;
-  margin-top: 0.625em;
-  width: 125px;
+  margin: 20px 0;
+  width: 115px;
   text-align: center;
 }
 
@@ -1968,8 +1984,14 @@ form {
 }
 
 .newsletter_sign_up h2,
-.newsletter_sign_up span {
+.newsletter_sign_up span,
+#checkbox_text a:link,
+#checkbox_text a:visited {
   color: #333645;
+}
+
+.newsletter_sign_up h2 {
+  margin: 29px 0 15px 0;
 }
 
 .newsletter_sign_up span {
@@ -1978,11 +2000,6 @@ form {
 
 .newsletter_sign_up p {
   font-weight: 500;
-}
-
-#newsletter_privacy:visited,
-#newsletter_privacy:link {
-  color: #333645;
 }
 
 #checkbox_text {
@@ -2025,12 +2042,6 @@ form {
   justify-content: center;
   align-items: center;
   color: white;
-}
-@media screen and (max-width: 767px) {
-  .checkbox-container input[type=checkbox]:checked {
-    justify-content: unset;
-    align-items: unset;
-  }
 }
 
 footer {

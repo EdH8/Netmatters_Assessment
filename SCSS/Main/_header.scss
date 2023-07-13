@@ -214,7 +214,15 @@ header{
 .glass{
     color: white;
     padding: em(14px) em(15px); 
-    border-radius: em(3px);
+    // border-radius: em(1px);
+    border-radius: 1px 3px 3px 1px;
+    @include laptop{
+        border-radius: 3px;
+    }
+    
+    @include tablet{
+        border-radius: 1px 3px 3px 1px;
+    }
 
 }
 
@@ -232,8 +240,11 @@ header{
         width: 100%;
     }
     @include mobile{
-        // width: 100%;
+        width: 100%;
         display: block;
+    }
+    @include small{
+        width: 120%
     }
 }
 

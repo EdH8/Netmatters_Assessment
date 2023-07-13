@@ -39,8 +39,8 @@ form{
     padding: 13px 13px;
     border-radius: 3px;
     font-size: em(15px);
-    margin-top: em(10px);
-    width: 125px;
+    margin: 20px 0;
+    width: 115px;
     text-align: center;
 }
 
@@ -148,8 +148,14 @@ form{
 
 
 .newsletter_sign_up h2,
-.newsletter_sign_up span{
+.newsletter_sign_up span,
+#checkbox_text a:link,
+#checkbox_text a:visited{
     color: #333645;
+}
+
+.newsletter_sign_up h2{
+    margin: 29px 0 15px 0;
 }
 
 .newsletter_sign_up span{
@@ -158,11 +164,6 @@ form{
 
 .newsletter_sign_up p{
     font-weight: 500;
-}
-
-#newsletter_privacy:visited,
-#newsletter_privacy:link{
-    color: #333645;
 }
 
 #checkbox_text{
@@ -208,8 +209,4 @@ form{
     justify-content: center;
     align-items: center;
     color: white;
-    @include mobile{
-        justify-content: unset;
-        align-items: unset;
-    }
 }
