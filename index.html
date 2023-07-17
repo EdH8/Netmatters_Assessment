@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" type="text/css" href="SCSS/Style.css">
+    <link rel="stylesheet" type="text/css" href="JS/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="JS/slick/slick-theme.css">
     <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
+
     <script src="https://kit.fontawesome.com/0748773ba3.js" crossorigin="anonymous"></script>
     <title>Netmatters Remake</title>
 </head>
@@ -369,16 +372,78 @@
 <!--Background HTML-->
 <!--======================================-->
 
-<div class="background_img">
-    <div class="wrapper">
-        <div class="background_text">
-            <h1>The East Of England's Leading Technology Company</h1>
-            <p>Performance-driven digital and technology services <br> with complete transparency.</p>
-            <button id="choose_us">WHY CHOOSE US? <i class="arrow fa-solid fa-arrow-right"></i></button>
+<div class="slides">
+    
+    <div class="background_img">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>The East Of England's Leading Technology Company</h1>
+                <p>Performance-driven digital and technology services <br> with complete transparency.</p>
+                <button id="choose_us">WHY CHOOSE US? <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bespoke_background">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>Bespoke Software</h1>
+                <p>Delivering expert bespoke software <br> solutions across a range of industries.</p>
+                <button id="choose_us">FIND OUT MORE <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="support_background">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>IT Support</h1>
+                <p>Fast and cost-effective IT support <br> services for your business.</p>
+                <button id="choose_us">FIND OUT MORE <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="marketing_background">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>Digital Marketing</h1>
+                <p>Generating your new business through <br> results-driven marketing activites.</p>
+                <button id="choose_us">FIND OUT MORE <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="telecoms_background">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>Telecoms Services</h1>
+                <p>A new approach to connectivity, see <br> how we can help your business.</p>
+                <button id="choose_us">FIND OUT MORE <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="design_background">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>Web Design</h1>
+                <p>For businesses loking to make a strong <br> and effective first impression.</p>
+                <button id="choose_us">FIND OUT MORE <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="security_background">
+        <div class="wrapper">
+            <div class="background_text">
+                <h1>Cyber Security</h1>
+                <p>Keeping businesses and their customers <br> sensitive information protected.</p>
+                <button id="choose_us">FIND OUT MORE <i class="arrow fa-solid fa-arrow-right"></i></button>
+            </div>
         </div>
     </div>
 </div>
-
 
 
 <!--======================================-->
@@ -758,7 +823,46 @@
     </footer>
 </div>
 
-<!-- </div> -->
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="JS/slick/slick.min.js"></script>
+<script src="JS/netmatters.js"></script>
+
+<script type="text/javascript">
+    $(".slides").slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        dots: true
+    })
+</script>
 </body>
 
 </html>
+
+
+
+
+
+<!-- <script type="text/javascript">
+    $(document).on('ready', function () {
+        $(".slides").slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 7,
+            adaptiveHeight: true
+        });
+    });
+</script> -->
+
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+$('.slides').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+</script> -->

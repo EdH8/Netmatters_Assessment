@@ -710,7 +710,30 @@ nav a:link {
   font-size: 10px;
 }
 
+.background_img,
+.bespoke_background,
+.support_background,
+.marketing_background,
+.telecoms_background,
+.design_background,
+.security_background {
+  height: 530px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .background_img,
+  .bespoke_background,
+  .support_background,
+  .marketing_background,
+  .telecoms_background,
+  .design_background,
+  .security_background {
+    height: 605px;
+  }
+}
+
 .background_img {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
   background-image: url("Images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -718,14 +741,106 @@ nav a:link {
   background-position: center center;
   z-index: -1;
 }
-@media screen and (max-width: 992px) {
-  .background_img {
-    background: rgba(0, 0, 0, 0.5);
-    background-blend-mode: darken;
-    background-image: url("Images/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+
+.bespoke_background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-image: url("Images/bespoke_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.125em 0 5em 0;
+  background-position: center center;
+  z-index: -1;
+  height: 536px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .bespoke_background {
+    height: 605px;
+  }
+}
+
+.support_background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-image: url("Images/support_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.125em 0 5em 0;
+  background-position: center center;
+  z-index: -1;
+  height: 536px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .support_background {
+    height: 605px;
+  }
+}
+
+.marketing_background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-image: url("Images/marketing_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.125em 0 5em 0;
+  background-position: center center;
+  z-index: -1;
+  height: 536px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .marketing_background {
+    height: 605px;
+  }
+}
+
+.telecoms_background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-image: url("Images/telecoms_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.125em 0 5em 0;
+  background-position: center center;
+  z-index: -1;
+  height: 536px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .telecoms_background {
+    height: 605px;
+  }
+}
+
+.design_background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-image: url("Images/design_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.125em 0 5em 0;
+  background-position: center center;
+  z-index: -1;
+  height: 536px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .design_background {
+    height: 605px;
+  }
+}
+
+.security_background {
+  background: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-image: url("Images/security_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.125em 0 5em 0;
+  background-position: center center;
+  z-index: -1;
+  height: 536px;
+}
+@media screen and (min-width: 993px) and (max-width: 1260px) {
+  .security_background {
+    height: 605px;
   }
 }
 

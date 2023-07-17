@@ -2,25 +2,126 @@
 //Background CSS/SASS:
 //======================================================
 
+//IMAGES
+.background_img,
+.bespoke_background,
+.support_background,
+.marketing_background,
+.telecoms_background,
+.design_background,
+.security_background{
+    height: 530px;
+    @include laptop{
+        height: 605px
+    }
+    // @include tablet{}
+}
 
 .background_img{
-    @include tablet{
-        background: rgba(0, 0, 0, 0.5); 
-        background-blend-mode: darken;
-        background-image: url("Images/background.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-    // background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
     background-image: url("Images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    // background-blend-mode: darken;
     padding: em(50px) 0 em(80px) 0;
     background-position: center center;
     z-index: -1;
 }
+
+.bespoke_background{
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    background-image: url("Images/bespoke_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+    z-index: -1;
+    height: 536px;
+    @include laptop{
+        height: 605px
+    }
+}
+
+.support_background{
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    background-image: url("Images/support_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+    z-index: -1;
+    height: 536px;
+    @include laptop{
+        height: 605px
+    }
+}
+
+.marketing_background{
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    background-image: url("Images/marketing_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+    z-index: -1;
+    height: 536px;
+    @include laptop{
+        height: 605px
+    }
+}
+
+.telecoms_background{
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    background-image: url("Images/telecoms_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+    z-index: -1;
+    height: 536px;
+    @include laptop{
+        height: 605px
+    }
+}
+
+.design_background{
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    background-image: url("Images/design_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+    z-index: -1;
+    height: 536px;
+    @include laptop{
+        height: 605px
+    }
+}
+
+.security_background{
+
+    background: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    background-image: url("Images/security_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: em(50px) 0 em(80px) 0;
+    background-position: center center;
+    z-index: -1;
+    height: 536px;
+    @include laptop{
+        height: 605px
+    }
+}
+
+
+
+//==========================
 
 .background_text,
 #choose_us{
