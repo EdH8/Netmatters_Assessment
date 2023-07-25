@@ -2,15 +2,19 @@
     box-sizing: border-box;
 }
 
-html{
-    overflow: auto;
-}
+// html{
+//     overflow: auto;
+// }
 html,
 body{
     height: 100%;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     letter-spacing: .4px;
+}
+
+.wrapper.active{
+    left: -280px;
 }
 
 .wrapper{
@@ -28,12 +32,25 @@ body{
     }
 }
 
-#container{
+.container{
     min-height: 100vh;
     position: relative;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     height: 100%;
+}
+
+.container.active{
+    overflow-y: hidden;
+    // pointer-events: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9999;
 }
 
 button{

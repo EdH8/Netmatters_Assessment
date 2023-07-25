@@ -2,6 +2,20 @@
 //Background CSS/SASS:
 //======================================================
 
+.background_container{
+    margin-top: 221px;
+    @include tablet{
+        margin-top: 100px;
+    }
+    @include mobile{
+        margin-top: 200px;
+    }
+}
+
+.background_text p{
+    font-size: 20px;
+}
+
 //IMAGES
 .background_img,
 .bespoke_background,
@@ -124,7 +138,7 @@
 //==========================
 
 .background_text,
-#choose_us{
+.background_btn{
     display: flex;
     flex-direction: column;
     color: white;
@@ -143,7 +157,7 @@
 }
 
 
-#choose_us{
+.background_btn{
     flex-direction: unset;
     margin: 0 0;
     @include tablet{
@@ -172,12 +186,36 @@
     margin: em(10px) 0 em(40px) 0;
 }
 
-#choose_us{
+.background_btn{
     align-items: center;
     color: white;
-    background-color: #926fb1;
     padding: em(20px);
     border-radius: em(3px);
     font-size: medium;
     width: em(220px);
+}
+
+#choose_us,
+#design_btn{
+    background-color: #926fb1;
+}
+
+#bespoke_btn{
+    background-color: #566c88;
+}
+
+#support_btn{
+    background-color: #4183d7;
+}
+
+#marketing_btn{
+    background-color: #2ecc71;
+}
+
+#telecoms_btn{
+    background-color: #d64541;
+}
+
+#security_btn{
+    background-color: #f62459;
 }
