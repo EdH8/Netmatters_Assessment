@@ -1,64 +1,85 @@
 //STICKY HEADER
 
+  // Get the header element
+  const header = document.querySelector('.head_nav_container');
+
+  // Store the initial scroll position
+  let prevScrollPos = window.scrollY;
+
+  // Function to handle scroll event
+  function handleScroll() {
+    // Get the current vertical scroll position
+    const currentScrollPos = window.scrollY;
+
+    // Check the scrolling direction
+    const scrollingDown = currentScrollPos > prevScrollPos;
+
+    // Check if the user has scrolled down more than 10 pixels, then hide the header; otherwise, reveal it
+    if (scrollingDown && currentScrollPos > 200) {
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+
+    // Update the previous scroll position with the current one
+    prevScrollPos = currentScrollPos;
+  }
+
+  // Attach the scroll event listener to the window
+  window.addEventListener('scroll', handleScroll);
+
+
+
+
+
+
 //HAMBURGER NAVBAR
 
-const hamburger = document.getElementsByClassName('hamburger-menu')[0]
-const sideMenu = document.getElementsByClassName('side_menu')[0]
-const linksMenu = document.getElementsByClassName('menu_sections')[0]
-const sideNav = document.getElementsByClassName('side_nav')[0]
-// const disable  = document.getElementsByClassName('disable')[0]
-const container  = document.getElementsByClassName('container')[0]
-const pageDisable = document.getElementsByClassName('a')[0]
+const hamburger = document.getElementsByClassName('hamburger-menu')[0];
+const sideMenu = document.getElementsByClassName('side_menu')[0];
+const linksMenu = document.getElementsByClassName('menu_sections')[0];
+const sideNav = document.getElementsByClassName('side_nav')[0];
+const container = document.getElementsByClassName('container')[0];
 
-hamburger.addEventListener('click', () =>{
-    sideMenu.classList.add('active')
-    sideNav.classList.add('active')
-    // disable.classList.toggle('page-disabled')
-    pageDisable.classList.toggle('page-disabled')
-    container.classList.add('active')
-    console.log('button clicked')
-})
+hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('active');
+    sideNav.classList.toggle('active');
+    container.classList.toggle('active');
+    hamburger.classList.toggle('active')
+
+    if (container.classList.contains('active')) {
+        console.log('button clicked');
+    } else {
+        console.log('Disabled clicked');
+    }
+});
 
 linksMenu.addEventListener('click', () => {
-    sideMenu.classList.toggle('active')
-    hamburger.classList.toggle('active')
-    sideNav.classList.toggle('active')
-    // disable.classList.toggle('page-disabled')
-    container.classList.toggle('active')
-    console.log('link clicked')
-} )
+    sideMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+    sideNav.classList.remove('active');
+    container.classList.remove('active');
+    console.log('link clicked');
+});
 
 sideNav.addEventListener('click', () => {
   sideMenu.classList.toggle('active')
   hamburger.classList.toggle('active')
-  // disable.classList.toggle('page-disabled')
   container.classList.toggle('active')
   console.log('link clicked')
 } )
 
-// pageDisable.addEventListener('click', () =>{
-//   disable.classList.toggle('page-disabled')
-//   console.log('Disabled clicked')
-// })
-
-// if (pageDisable.classList.contains('page-disabled')) {
-//   pageDisable.addEventListener('click', () => {
-//       disable.classList.remove('page-disabled');
-//       pageDisable.classList.toggle('page-disabled')
-//       console.log('Disabled clicked');
-//   });
-// }
-
-// const hamMenu = document.querySelector('.hamburger-menu');
-// hamMenu.addEventListener('click', () => {
-//     hamMenu.classList.toggle('active');
-// });
+// Mousedown event listener to handle clicks inside the container area when it's active
+container.addEventListener('mousedown', (event) => {
+    if (container.classList.contains('active') && !sideMenu.contains(event.target)) {
+        sideMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        container.classList.remove('active');
+        console.log('Clicked inside the container area');
+    }
+});
 
 
-//   sideMenu.classList.remove('active')
-//   hamburger.classList.remove('active')
-//   sideNav.classList.remove('active')
-//   container.classList.remove('active')
 
 //COOKIE CONSENT
 
@@ -102,47 +123,6 @@ sideNav.addEventListener('click', () => {
 
 
 //IF NEEDED
-
-// const hamburger = document.getElementsByClassName('hamburger-menu')[0];
-// const sideMenu = document.getElementsByClassName('side_menu')[0];
-// const links = document.getElementsByClassName('menu_sections')[0];
-// const sideNav = document.getElementsByClassName('side_nav')[0];
-// const body = document.getElementsByClassName('hope')[0];
-
-// hamburger.addEventListener('click', () =>{
-//     sideMenu.classList.toggle('active');
-//     sideNav.classList.toggle('active');
-//     body.classList.toggle('page-disabled');
-//     console.log('button clicked');
-// });
-
-// links.addEventListener('click', () => {
-//     sideMenu.classList.toggle('active');
-//     hamburger.classList.toggle('active');
-//     sideNav.classList.toggle('active');
-//     console.log('link clicked');
-// });
-
-// const hamMenu = document.querySelector('.hamburger-menu');
-// hamMenu.addEventListener('click', () => {
-//     hamMenu.classList.toggle('active');
-// });
-
-// const disabledOverlay = document.querySelector(".page-disabled");
-
-// function handleClickOutsideDisabledArea(event) {
-//   // Check if the clicked element is the disabled overlay itself
-//   if (event.target === disabledOverlay) {
-//     // Remove the .active class from sideNav and sideMenu
-//     sideNav.classList.remove("active");
-//     sideMenu.classList.remove("active");
-//     body.classList.toggle('page-disabled');
-//   }
-// }
-
-// disabledOverlay.addEventListener("click", handleClickOutsideDisabledArea);
-
-
 
 
 // var lastScrollTop = 0;

@@ -13,13 +13,7 @@
 
 
 
-.head_nav_container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-  }
+
 
 //SIDE NAV
 
@@ -81,11 +75,11 @@
 
 //SIDE MENU
 
-.head_nav_container{
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-}
+// .head_nav_container{
+//     position: fixed;
+//     width: 100%;
+//     z-index: 100;
+// }
 
 .side_menu.active{
     display: unset; 
@@ -101,7 +95,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 500;
+    z-index: 700;
     background-color: #333645;
     @include tablet{
         width: 240px;
@@ -260,15 +254,36 @@
 
 
 
+//STICKY HEADER
 
-
-
-.scroll-down .head_nav_container {
-    transform: translate3d(0, -100%, 0);
-  }
-
-.scroll-up .head_nav_container {
-  transform: none;
-}
+// header, nav {
+//     transition: transform 0.3s ease;
+//   }
   
 
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     background-color: #ffffff; /* Customize the background color */
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+//     z-index: 1000; /* Make sure the sticky header is on top of other elements */
+//   }
+  
+
+.head_nav_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 400;
+    transition: transform 0.3s;
+  }
+  
+
+
+// .head_nav_container.hide-header {
+//   transform: translateY(-100%);
+//   transition: transform 0.3s ease-out; /* Optional: Add a smooth transition effect */
+// }
