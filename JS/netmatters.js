@@ -83,57 +83,56 @@ container.addEventListener('mousedown', (event) => {
 
 //COOKIE CONSENT
 
+  container.addEventListener('mousedown', (event) => {
+    if (!document.querySelector(".cookie_container").style.display === "block" &&
+        container.classList.contains('jko') && !sideMenu.contains(event.target)) {
+        sideMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        container.classList.remove('active');
+        console.log('Clicked inside the container area');
+    }
+});
 
-  // Function to close the cookie popup and set the cookie
-  function acceptCookies() {
+function acceptCookies() {
     document.querySelector(".cookie_container").style.display = "none";
     setCookie("cookie", true, 30);
-  }
+    container.classList.remove('jko'); 
+}
 
-  // CLOSE THE COOKIE MESSAGE WHEN THE USER CLICKS ON THE "THAT'S FINE" BUTTON
-  document.querySelector("#accept_cookies").addEventListener("click", acceptCookies);
+document.querySelector("#accept_cookies").addEventListener("click", acceptCookies);
 
-  // CREATES A COOKIE (EXPIRES IN 30 DAYS)
-  function setCookie(cName, cValue, expDays) {
+function setCookie(cName, cValue, expDays) {
     let date = new Date();
     date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-  }
+}
 
-  // CHECK IF A COOKIE EXISTS
-  function cookieMessage() {
-    // Check if the "cookie" exists in document.cookie
+function cookieMessage() {
     if (document.cookie.split(';').some((item) => item.trim().startsWith("cookie="))) {
-      // The "cookie" exists, hide the popup
-      document.querySelector(".cookie_container").style.display = "none";
+        document.querySelector(".cookie_container").style.display = "none";
+        container.classList.remove('jko');
     } else {
-      // The "cookie" doesn't exist, show the popup
-      document.querySelector(".cookie_container").style.display = "block";
+        document.querySelector(".cookie_container").style.display = "block";
+        container.classList.add('jko');
     }
-  }
+}
 
-  // CALL THE COOKIEMESSAGE() FUNCTION ON PAGE LOAD
-  window.addEventListener("load", cookieMessage);
-
+window.addEventListener("load", cookieMessage);
 
 
-
+//SLICK
 
 
 
-//IF NEEDED
 
 
-// var lastScrollTop = 0;
-//     navbar = document.getElementsByClassName("head_nav_container");
-// window.addEventListener("scroll", function(){
-//     var scrollTop = window.pageYOffset || document
-//         .documentElement.scrollTop;
-//     if (scrollTop > lastScrollTop){
-//         navbar.style.top="-80px";
-//     } else {
-//         navbar.style.top="0";
-//     }
-//     lastScrollTop = scrollTop;
-// })
+
+{/* <script src="slick/slick.min.js"></script>
+
+$(".slides").slick({
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  dots: true
+}) */}

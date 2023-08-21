@@ -37,17 +37,17 @@ body {
 }
 
 .container {
-  min-height: 100vh;
   position: relative;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  overflow: auto; /* Enable scrolling within the container */
 }
 
-.container.active {
-  overflow-y: hidden;
+.container.active,
+.container.jko {
+  overflow: hidden; /* Hide scrolling within the container */
 }
 
-.container.active:before {
+.container.active:before,
+.container.jko:before {
   content: "";
   position: fixed;
   top: 0;
@@ -2517,16 +2517,18 @@ a:hover .linkedin {
 .sideMenu_contact li {
   padding: 20px 0;
   margin: 20px 15px;
-  border: 1px solid #484b58;
   border-radius: 2px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
 .sideNav_header li {
   padding: 25px 0;
   margin: 20px 15px;
-  border: 1px solid #484b58;
   border-radius: 2px;
   line-height: 20px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
 .sideNav_header small {
@@ -2539,11 +2541,12 @@ a:hover .linkedin {
 }
 
 .sideNav_sections li {
-  padding: 20px 0;
+  padding: 15px 0;
   margin: 0 15px;
-  border: 1px solid rgba(28, 30, 38, 0.5);
   background-color: #262934;
   font-size: 14px;
+  border-bottom: 1px solid #1c1e26;
+  border-top: 1px solid #31343e;
 }
 
 @media screen and (max-width: 992px) {
@@ -2552,26 +2555,25 @@ a:hover .linkedin {
   }
 }
 
-.side_menu.active {
-  display: unset;
-  overflow: auto;
-  margin-left: 350px;
-}
-
 .side_menu {
-  display: none;
-  height: 100vh;
   width: 350px;
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 700;
+  right: -350px; /* Start off-screen to the right */
+  height: 100vh;
   background-color: #333645;
+  z-index: 999;
+  transition: right 0.5s ease-in-out; /* Use transition for the sliding effect */
 }
 @media screen and (max-width: 992px) {
   .side_menu {
     width: 240px;
   }
+}
+
+.active {
+  right: 0; /* Slide in the menu */
+  overflow: auto;
 }
 
 .header_sections {
@@ -2594,7 +2596,12 @@ a:hover .linkedin {
 
 .ulSection_sideMenu li {
   padding: 20px 15px;
-  border-top: 1px solid #1c1e26;
+  width: 335px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1c1e26;
+  border-top: 1px solid #31343e;
 }
 
 .ulHead_sideMenu,
@@ -2617,6 +2624,27 @@ a:hover .linkedin {
   font-size: 14px;
 }
 
+#services:hover #menuHead_services,
+#our_work:hover #ourWork_sections,
+#our_knowledge:hover #ourKnowledge_sections,
+#training_sideMenu:hover #train_sections,
+#our_company:hover #ourCompany_sections,
+#contact_us_sideMenu:hover #contactUs_sections,
+#covid:hover #CRA_sections {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media screen and (max-width: 992px) {
+  #services:hover #menuHead_services,
+  #our_work:hover #ourWork_sections,
+  #our_knowledge:hover #ourKnowledge_sections,
+  #training_sideMenu:hover #train_sections,
+  #our_company:hover #ourCompany_sections,
+  #contact_us_sideMenu:hover #contactUs_sections,
+  #covid:hover #CRA_sections {
+    background-color: unset;
+  }
+}
+
 .random {
   display: flex;
   justify-content: center;
@@ -2624,12 +2652,19 @@ a:hover .linkedin {
 }
 
 .cookie_container {
+  display: none;
   width: 580px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   background-color: white;
   position: fixed;
   top: 40%;
+  z-index: 750;
+}
+@media screen and (max-width: 767px) {
+  .cookie_container {
+    width: 92%;
+  }
 }
 
 .cookie_container.show {
@@ -2658,15 +2693,41 @@ a:hover .linkedin {
   border-top: 1px solid rgb(229, 229, 229);
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .cookie_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .change_settings {
   margin-right: 30px;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .change_settings {
+    margin: 0;
+  }
+}
 
 .change_settings,
 .accept_cookies {
   margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .change_settings,
+  .accept_cookies {
+    width: 90%;
+  }
+}
+
+.change_settings:hover button {
+  background-color: #6b6b6b;
+}
+
+.accept_cookies:hover button {
+  background-color: #79539a;
 }
 
 .change_settings button {
@@ -2684,6 +2745,18 @@ a:hover .linkedin {
   padding: 15px 50px;
   border-radius: 3px;
   font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  .change_settings button,
+  .accept_cookies button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .accept_cookies {
+    margin-bottom: 20px;
+  }
 }
 
 .head_nav_container {

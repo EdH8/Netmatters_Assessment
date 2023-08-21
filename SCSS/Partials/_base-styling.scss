@@ -32,20 +32,20 @@ body{
     }
 }
 
-.container{
-    min-height: 100vh;
+.container {
+    // min-height: 100vh;
     position: relative;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    // height: 100%;
+    overflow: auto; /* Enable scrolling within the container */
 }
 
-.container.active{
-    overflow-y: hidden;
-    // pointer-events: none;
+.container.active,
+.container.jko {
+    overflow: hidden; /* Hide scrolling within the container */
 }
 
-.container.active:before{
+
+.container.active:before,
+.container.jko:before{
     content: "";
     position: fixed;
     top: 0;

@@ -131,12 +131,12 @@
 .slick-dots li button:before {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1.4px;
   content: "•";
-  width: 20px;
-  height: 20px;
+  width: 0;
+  height: 0;
   font-family: "slick";
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   text-align: center;
   color: white;
@@ -147,4 +147,34 @@
 .slick-dots li.slick-active button:before {
   color: white;
   opacity: 0.75;
-}/*# sourceMappingURL=slick-theme.css.map */
+}
+
+/* Custom styling for Slick carousel dot buttons */
+.slick-dots li button {
+  width: 21px;
+  height: 21px;
+  /* Additional styling for the outer ring */
+  border: 2px solid transparent; /* Transparent border initially */
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Styling for the active dot button's outer ring */
+.slick-dots li.slick-active button {
+  border-color: white; /* Example color: red */
+}
+
+/* Styling for the perfectly centered outer ring */
+/* .slick-dots li.slick-active button:after { */
+  /* content: ''; */
+  /* position: absolute; */
+  /* top: -600px; */
+  /* left: -6px; */
+  /* right: -100px; */
+  /* bottom: -6px; */
+  /* border-radius: 50%; */
+/* } */
+
+
+
+/*# sourceMappingURL=slick-theme.css.map */

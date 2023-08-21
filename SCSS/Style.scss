@@ -35,16 +35,20 @@
 .sideMenu_contact li{
     padding: 20px 0;
     margin: 20px 15px;
-    border: 1px solid #484b58;
+    // border: 1px solid #484b58;
     border-radius: 2px;
+    outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
 }
 
 .sideNav_header li{
     padding: 25px 0;
     margin: 20px 15px;
-    border: 1px solid #484b58;
+    // border: 1px solid #484b58;
     border-radius: 2px;
     line-height: 20px;
+    outline: 1px solid rgba(0,0,0,.25);
+    border: 1px solid hsla(0,0%,100%,.1);
 }
 
 .sideNav_header small{
@@ -58,11 +62,13 @@
 
 
 .sideNav_sections li{
-    padding: 20px 0;
+    padding: 15px 0;
     margin: 0 15px;
-    border: 1px solid rgba(28, 30, 38, .5);
+    // border: 1px solid rgba(28, 30, 38, .5);
     background-color: #262934;
     font-size: 14px;
+    border-bottom: 1px solid #1c1e26;
+    border-top: 1px solid #31343e;
 }
 
 #menuHead_services li{
@@ -75,38 +81,60 @@
 
 //SIDE MENU
 
-// .head_nav_container{
-//     position: fixed;
-//     width: 100%;
-//     z-index: 100;
+// .side_menu.active{
+//     display: unset; 
+//     overflow: auto;
+//     margin-left: 350px;
+//     transform: translateX(0);
 // }
 
-.side_menu.active{
-    display: unset; 
-    overflow: auto;
-    margin-left: 350px;
-}
+// .side_menu{
+    // display: none;
+    // height: 100vh;
+    // width: 350px;
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // z-index: 700;
+    // background-color: #333645;
+    // transform: translateX(-100%);
+    // transition: transform 5s ease-in-out;
+// 
+//     @include tablet{
+//         width: 240px;
+//     }
+// }
 
-.side_menu{
-    display: none;
-
-    height: 100vh;
+.side_menu {
+    // display: none;
     width: 350px;
     position: fixed;
     top: 0;
-    right: 0;
-    z-index: 700;
+    right: -350px; /* Start off-screen to the right */
+    height: 100vh;
     background-color: #333645;
+    z-index: 999;
+    transition: right 0.5s ease-in-out; /* Use transition for the sliding effect */
     @include tablet{
         width: 240px;
     }
-
-    // margin-top: 300px;
-}
-
-// .sections a{
-//     padding: 100px 0;
-// }
+  }
+  
+  .active {
+    right: 0; /* Slide in the menu */
+    overflow: auto;
+    // display: unset;
+  }
+  
+//   .container {
+    // margin-right: 320px; /* Adjust for the menu width */
+    // transition: margin-right 0.5s ease-in-out;
+//   }
+  
+//   .container.active {
+    // margin-right: 0; /* Shift content when menu slides in */
+//   }
+  
 
 .header_sections{
     background-color: #333645;
@@ -121,15 +149,6 @@
     text-decoration: none;
 }
 
-// .sections{
-//     line-height: 50px;
-// }
-
-
-// .side_menu a{
-//     border-top: 5px solid rgba(0, 0, 0, 1)
-// }
-
 .ulHead_sideMenu li{
     padding: 25px 20px;
     border-top: 1px solid #484b58;
@@ -137,7 +156,12 @@
 
 .ulSection_sideMenu li{
     padding: 20px 15px;
-    border-top: 1px solid #1c1e26;
+    width: 335px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #1c1e26;
+    border-top: 1px solid #31343e;
 }
 
 
@@ -161,21 +185,19 @@
     font-size: 14px;
 }
 
-// .page-disabled {
-//     pointer-events: none;
-//     overflow: hidden;
-//   }
+#services:hover #menuHead_services,
+#our_work:hover #ourWork_sections,
+#our_knowledge:hover #ourKnowledge_sections,
+#training_sideMenu:hover #train_sections,
+#our_company:hover #ourCompany_sections,
+#contact_us_sideMenu:hover #contactUs_sections,
+#covid:hover #CRA_sections{
+    background-color: rgba(255, 255, 255, 0.1);
+    @include tablet{
+        background-color: unset;
+    }
+}
 
-// .page-disabled::before {
-//   content: "";
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.2);
-//   z-index: 9999;
-// }
 
 
 //COOKIE CONSENT
@@ -187,12 +209,17 @@
 }
 
 .cookie_container{
+    display: none;
     width: 580px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     background-color: white;
     position: fixed;
     top: 40%;
+    z-index: 750;
+    @include mobile{
+        width: 92%;
+    }
 }
 
 .cookie_container.show{
@@ -202,7 +229,6 @@
 .cookie_header h2{
     margin-top: 20px;
     margin-left: 20px;
-    // border-bottom: 2px solid rgba(229, 229, 229, 1);
 }
 
 .cookie_text p{
@@ -222,18 +248,36 @@
     justify-content: center;
     border-top: 1px solid rgba(229, 229, 229, 1);
     width: 100%;
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+    }
 }
 
 .change_settings{
     margin-right: 30px;
     margin-bottom: 20px;
+    @include mobile{
+        margin: 0;
+    }
 }
 
 .change_settings,
 .accept_cookies{
     margin-top: 20px;
+    @include mobile{
+        width: 90%;
+    }
 }
 
+.change_settings:hover button{
+    background-color: #6b6b6b;
+}
+
+.accept_cookies:hover button{
+    background-color: #79539a;
+}
 .change_settings button{
     background-color: #999aa2;
 }
@@ -248,29 +292,25 @@
     cursor: pointer;
     padding: 15px 50px;
     border-radius: 3px;
-    font-size:16px;
+    font-size: 16px;
+    @include mobile{
+        width: 100%;
+    }
     
 }
 
 
+.accept_cookies{
+    @include mobile{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
 
 //STICKY HEADER
-
-// header, nav {
-//     transition: transform 0.3s ease;
-//   }
-  
-
-// .sticky {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     background-color: #ffffff; /* Customize the background color */
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
-//     z-index: 1000; /* Make sure the sticky header is on top of other elements */
-//   }
-  
 
 .head_nav_container {
     position: fixed;
@@ -281,9 +321,3 @@
     transition: transform 0.3s;
   }
   
-
-
-// .head_nav_container.hide-header {
-//   transform: translateY(-100%);
-//   transition: transform 0.3s ease-out; /* Optional: Add a smooth transition effect */
-// }
