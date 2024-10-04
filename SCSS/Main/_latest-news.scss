@@ -166,7 +166,6 @@
     }
     @include mobile{
         margin: 0 25px 25px 25px;
-        // margin: 0 25px;
     }
 }
 
@@ -209,7 +208,6 @@
         margin-bottom: 20px;
     }
     @include mobile{
-        // margin-top: em(30px);
         margin-top: 0;
     }
 }
@@ -218,7 +216,6 @@
     margin-top: 60px;
     margin-bottom: em(20px);
     @include mobile{
-        // margin-top: em(30px);
         margin-top: 0;
     }
 }

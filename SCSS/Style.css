@@ -2348,8 +2348,7 @@ footer ul {
 
 footer,
 .Netmatters-Info,
-.footer-content,
-a {
+.footer-content {
   text-align: center;
 }
 
@@ -2645,7 +2644,7 @@ a:hover .linkedin {
   }
 }
 
-.random {
+.cookie_align {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2766,4 +2765,88 @@ a:hover .linkedin {
   width: 100%;
   z-index: 400;
   transition: transform 0.3s;
+}
+
+.contact_cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 250px;
+}
+
+.contactUs_offices {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.contact_cards h2 a {
+  color: #333645;
+}
+
+.contact_cards p {
+  color: #666;
+}
+
+.contactUs_offices {
+  margin-bottom: 20px;
+}
+
+.contact_viewMore {
+  width: 150px;
+  padding: 15px 25px;
+  color: white;
+  background-color: #926fb1;
+  border-radius: 2px;
+}
+
+.contact_telephone {
+  font-weight: 600;
+  font-size: 24px;
+  color: #926fb1;
+}
+
+.contact_cards a {
+  text-decoration: none;
+}
+
+.contactUs_offices {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+#london_card,
+#wymondham_card {
+  margin-right: 10px;
+}
+
+#cambridge_card,
+#yarmouth_card {
+  margin-left: 10px;
+}
+
+.contactUs_offices a,
+.contactUs_offices p,
+.contactUs_offices button {
+  margin-left: 25px;
+}
+
+#textarea_msg {
+  height: 300px;
+  width: 200px;
+}
+
+.contactUs_form {
+  background-color: #e6e7e9;
+  border-radius: 5px;
+}
+
+.contactUs_form input {
+  width: 200px;
+}
+
+.contactUs_names,
+.contactUs_otherInfo {
+  display: flex;
 }/*# sourceMappingURL=Style.css.map */

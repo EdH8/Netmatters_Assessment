@@ -35,7 +35,6 @@
 .sideMenu_contact li{
     padding: 20px 0;
     margin: 20px 15px;
-    // border: 1px solid #484b58;
     border-radius: 2px;
     outline: 1px solid rgba(0,0,0,.25);
     border: 1px solid hsla(0,0%,100%,.1);
@@ -44,7 +43,6 @@
 .sideNav_header li{
     padding: 25px 0;
     margin: 20px 15px;
-    // border: 1px solid #484b58;
     border-radius: 2px;
     line-height: 20px;
     outline: 1px solid rgba(0,0,0,.25);
@@ -64,7 +62,6 @@
 .sideNav_sections li{
     padding: 15px 0;
     margin: 0 15px;
-    // border: 1px solid rgba(28, 30, 38, .5);
     background-color: #262934;
     font-size: 14px;
     border-bottom: 1px solid #1c1e26;
@@ -81,32 +78,7 @@
 
 //SIDE MENU
 
-// .side_menu.active{
-//     display: unset; 
-//     overflow: auto;
-//     margin-left: 350px;
-//     transform: translateX(0);
-// }
-
-// .side_menu{
-    // display: none;
-    // height: 100vh;
-    // width: 350px;
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // z-index: 700;
-    // background-color: #333645;
-    // transform: translateX(-100%);
-    // transition: transform 5s ease-in-out;
-// 
-//     @include tablet{
-//         width: 240px;
-//     }
-// }
-
 .side_menu {
-    // display: none;
     width: 350px;
     position: fixed;
     top: 0;
@@ -123,17 +95,7 @@
   .active {
     right: 0; /* Slide in the menu */
     overflow: auto;
-    // display: unset;
   }
-  
-//   .container {
-    // margin-right: 320px; /* Adjust for the menu width */
-    // transition: margin-right 0.5s ease-in-out;
-//   }
-  
-//   .container.active {
-    // margin-right: 0; /* Shift content when menu slides in */
-//   }
   
 
 .header_sections{
@@ -202,7 +164,7 @@
 
 //COOKIE CONSENT
 
-.random{
+.cookie_align{
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -321,3 +283,94 @@
     transition: transform 0.3s;
   }
   
+
+
+//CONTACT US CSS
+
+.contact_cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 250px;
+}
+
+.contactUs_offices{
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding-bottom: 10px;
+}
+
+.contact_cards h2 a{
+    color: #333645;
+}
+
+.contact_cards p{
+    color: #666;
+}
+
+.contactUs_offices{
+    margin-bottom: 20px;
+}
+
+.contact_viewMore{
+    width: 150px;
+    padding: 15px 25px;
+    color: white;
+    background-color: #926fb1;
+    border-radius: 2px;
+}
+
+
+.contact_telephone{
+    font-weight: 600;
+    font-size: 24px;
+    color: #926fb1;
+}
+
+.contact_cards a{
+    text-decoration: none;
+}
+
+.contactUs_offices{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#london_card,
+#wymondham_card{
+    margin-right: 10px;
+}
+
+#cambridge_card,
+#yarmouth_card{
+    margin-left: 10px;
+}
+
+.contactUs_offices a,
+.contactUs_offices p,
+.contactUs_offices button{
+    margin-left: 25px;
+}
+
+
+#textarea_msg{
+    height: 300px;
+    width: 200px;
+}
+
+.contactUs_form{
+    background-color: #e6e7e9;
+    border-radius: 5px;
+}
+
+.contactUs_form input{
+    width: 200px;
+
+}
+
+.contactUs_names,
+.contactUs_otherInfo{
+    display: flex;
+
+}

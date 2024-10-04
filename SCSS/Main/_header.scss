@@ -3,7 +3,6 @@
 //======================================================
 
 
-
 header{
     position: relative;
     display: block;
@@ -80,11 +79,7 @@ header{
 }
 
 .Header-Row{
-    // padding: em(20px) 0 em(20px) em(10px);
     padding: 20px 0;
-    // @include mobile{
-    //     padding: em(20px) em(10px);
-    // }
 }
 
 #telephone{
@@ -219,7 +214,6 @@ header{
 .glass{
     color: white;
     padding: em(14px) em(15px); 
-    // border-radius: em(1px);
     border-radius: 1px 3px 3px 1px;
     @include laptop{
         border-radius: 3px;
@@ -238,7 +232,6 @@ header{
 
 #logo{
     @include laptop{
-        // padding-right: em(30px);
         margin-right: em(15px);
     }
     @include tablet{

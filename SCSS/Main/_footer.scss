@@ -53,23 +53,18 @@ footer ul{
 
 .social-media{
     text-align: left;
-    // padding: em(16px) em(22px);
     margin: em(30px) 92px em(30px) 0;
 
     @include laptop{
-        // padding: em(16px) 0 0 0;
-        // margin: 0 0 em(15px) em(70px);
         margin: 0 0 20px 0;
     }
 
     @include tablet{
          grid-area: Social;
          margin: 0 0 em(10px) 0;
-        // margin: unset;
     }
 
     @include mobile{
-        // padding-left: em(15px);
         margin: 0 0;
     }
 }
@@ -81,9 +76,6 @@ footer ul{
     @include laptop{
         flex-direction: row;
         flex-wrap: wrap;
-        // padding: 0 55px;
-        // margin-left: 15px;
-        // padding: 0 em(50px);
     }
 
     @include tablet{
@@ -92,13 +84,11 @@ footer ul{
             "Social Social"
             "About Services"
             "Industries Locations";
-        // padding: 0 em(40px) 0 em(40px);
     }
 
     @include mobile{
         display: flex;
         flex-direction: column;
-        // padding: 0 em(15px);
     }
 }
 
@@ -108,8 +98,7 @@ footer ul{
 
 footer, 
 .Netmatters-Info,
-.footer-content,
-a{
+.footer-content{
     text-align: center;
 }
 
@@ -148,20 +137,16 @@ a{
     text-align: left;
     line-height:26px;
     width: 140px;
-    // padding: 0 0 0 15px;
     margin: 0 0 16px em(52px);
 
     @include laptop{
         width: 215px;
-        // margin: 0 24px;
         margin: unset;
     }
 
     @include tablet{
         width: 320px;
         margin: unset;
-        // padding-bottom: 0;
-        // margin-bottom: 0;
     }
 
     @include mobile{
@@ -169,10 +154,6 @@ a{
         padding: 0 0;
     }
 }
-
-// .Locations{
-//     margin: 0 0 16px 20px;
-// }
 
 .facebook, 
 .linkedin, 

@@ -62,9 +62,7 @@
 
 .welcome_net{
     width: 700px;
-    // padding: 0 25px;
     padding-right: 10px;
-    // margin: 0 em(15px) em(15px) em(70px);
     @include laptop{
         margin: 0;
         width: 450px
@@ -76,15 +74,12 @@
     }
     @include mobile{
         width: 100%;
-        // margin-left: 10px;
     }
 }
 
 .client_reviews{
     width: 800px;
-    // padding: 0 25px;
     padding-left: 10px;
-    // margin: 0 em(90px) em(15px) em(50px);
     @include laptop{
         margin: 0;
         width: 450px
@@ -96,7 +91,6 @@
     }
     @include mobile{
         width: 100%;
-        // margin-left: 10px;
     }
 }
 

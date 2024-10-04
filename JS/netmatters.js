@@ -119,20 +119,3 @@ function cookieMessage() {
 }
 
 window.addEventListener("load", cookieMessage);
-
-
-//SLICK
-
-
-
-
-
-
-{/* <script src="slick/slick.min.js"></script>
-
-$(".slides").slick({
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  dots: true
-}) */}

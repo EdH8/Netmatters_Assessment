@@ -2,9 +2,6 @@
     box-sizing: border-box;
 }
 
-// html{
-//     overflow: auto;
-// }
 html,
 body{
     height: 100%;
@@ -33,7 +30,6 @@ body{
 }
 
 .container {
-    // min-height: 100vh;
     position: relative;
     overflow: auto; /* Enable scrolling within the container */
 }
